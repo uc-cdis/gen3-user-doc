@@ -43,8 +43,8 @@ Contact:
 * For Submission/Access Questions:   gen3-support@datacommons.io
 
 * * *
-
 ## 1. Review and sign legal agreement
+* * *
 
 To use a Gen3 commons, please review and sign the following agreements and return them to info@gen3.org.   The most current versions (and past versions for transparency) of all of the below documents can be found at:  
 [https://www.gen3.org/data-governance/](https://www.gen3.org/data-governance/)
@@ -55,7 +55,6 @@ To use a Gen3 commons, please review and sign the following agreements and retur
 &nbsp;
 If you only wish to contribute data, you do not need to sign the DUA.  
 &nbsp;
-
 * * *
 
 These documents may also reference the:
@@ -64,18 +63,14 @@ These documents may also reference the:
 
 
 * * *
-
 ## 2. Complete the data inventory form
-
 * * *
 Prepare a pre-submission [data inventory form](https://goo.gl/forms/)
 
 Having this information helps the Gen3 submission team prepare for your project and setup your storage access credentials using the authentication method you provide in the form.  
 
 * * *
-
 ## 3. Receive project name / API credentials
-
 * * *
 &nbsp;
 Once you have completed the [data inventory form, link to step](link), you will receive an email with your project name (associated with project data), username (used to login to Virtual Private Cloud (VPC) headnode), and instructions to access the metadata submission portal and an object storage for your project.  
@@ -100,9 +95,7 @@ NOTE2:   Your project folder will have a prefix appended to it to identify the c
 "BPA_<mycompanyname>_P0001_T1"
 ```
 * * *
-
 ## 4. Prepare metadata that fits the data model
-
 * * *
 <h3> Overview </h3>
 Gen3 data contributors will need to prepare metadata for their submission in tab-separated value (tsv) files, login to a portal provided for submission, and upload and validate their metadata submission.   This is simultaneously the most challenging and crucial part of contributing data to a Gen3 commons.   This page details the preparation and ordering of the tsvs that will be submitted.   The next two pages cover submission virtual machine (VM) access and uploading and validating your metadata tsv submission.   
