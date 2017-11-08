@@ -1,6 +1,7 @@
-## Data Access Overview
-
 * * *
+## Data Access Overview
+* * *
+
 ## 1. Send credentials and get welcome email
 * * *
 <h3>Send SSH Key and Oauth to Gen3 commons team.</h3>
