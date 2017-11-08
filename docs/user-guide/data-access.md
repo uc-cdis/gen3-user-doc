@@ -1,7 +1,8 @@
-# Data Access Overview
+## Data Access Overview
 
+* * *
 ## 1. Send credentials and get welcome email
-
+* * *
 <h3>Send SSH Key and Oauth to Gen3 commons team.</h3>
 
 To access the VPC, users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to Gen3-support@datacommons.io.   
