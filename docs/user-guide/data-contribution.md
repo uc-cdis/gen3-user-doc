@@ -3,8 +3,8 @@
 * * *
 
 * Sign documents, fill out forms, get credentials
-* Prepare and submit metadata tsvs to submission VM
-* Prepare and submit full dataset w/o metadata tsvs to object storage.
+* Prepare and submit metadata to commons API
+* Prepare and submit full dataset (w/o metadata tsvs) to object storage.
 
 <h3>Steps to Contribute a Project to the Gen3 Commons</h3>
 
@@ -17,10 +17,9 @@
 7. [Get and configure s3 data storage credentials](data-contribution/#7-get-and-configure-s3-data-storage-credentials)
 8. [Upload "raw" data to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
 
-
-
-&nbsp;
 * NOTE:  Gen3 members are encouraged to submit multiple projects to the commons.   To do so, repeat steps 2-8 above.
+
+* * *
 
 <h3>Why Do Gen3 Commons Use a Data Model?</h3>
 * Having all participating members use the same data model:
@@ -30,16 +29,17 @@
     * Helps automate the validation of submitted data.   
 &nbsp;
 
-For the most current model, go to: https://github.com/occ-data/gen3dictionary
-For the most current graph of the model, go to: https://www.gen3.org/data-group/
+Here is the most [current data model](https://github.com/occ-data/gen3dictionary).
+
+Here is the most current [graph of the model](https://www.gen3.org/data-group/).
 
 If you have an submission element that you believe can't be described in the model, we'd be glad to work with you to find a home for the element or update the model.   
 
-* * *
-
-< Questions?
+<h3> Questions? </h3>
 Contact:
+
 * For Legal:  gen3-legal@occ-data.org
+
 * For Submission/Access Questions:   gen3-support@datacommons.io
 
 * * *
