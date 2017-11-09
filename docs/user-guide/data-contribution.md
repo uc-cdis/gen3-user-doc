@@ -16,8 +16,8 @@
 6. [Submit and validate project metadata tsvs](data-contribution/#6-submit-and-validate-project-metadata-tsvs)
 7. [Get and configure s3 data storage credentials](data-contribution/#7-get-and-configure-s3-data-storage-credentials)
 8. [Upload "raw" data to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
-     &nbsp;     
-* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons.   To do so, repeat steps 2-8 above.
+
+\* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons.   To do so, repeat steps 2-8 above.
 
 * * *
 
@@ -27,7 +27,7 @@
     * Permits flexible and scaleable API generation based on data commons software that reads the data model schema.   
     * Lets users query the commons API so that an ecosystem of applications can be built.
     * Helps automate the validation of submitted data.   
-&nbsp;
+
 
 Here is the most [current data model](https://github.com/occ-data/gen3dictionary).
 
