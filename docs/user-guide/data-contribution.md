@@ -120,7 +120,7 @@ If you submit a file out of order, the validator will reject the submission on t
 <h3>Sample Diagram of TSV Submission Order</h3>
 While this diagram represents an earlier version of the Gen3 data model, the required submission logic for current versions of the model will be very similar.
 
-![Submission Order Diagram](docs/img/submission-order.png)
+![Submission Order Diagram](/img/submission-order.png)
 
 * * *
 ## 5. Access metadata submission portal
