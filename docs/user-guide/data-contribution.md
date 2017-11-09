@@ -16,7 +16,7 @@
 6. [Submit and validate project metadata tsvs](data-contribution/#6-submit-and-validate-project-metadata-tsvs)
 7. [Get and configure s3 data storage credentials](data-contribution/#7-get-and-configure-s3-data-storage-credentials)
 8. [Upload "raw" data to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
-
+&nbsp;
 * NOTE:  Gen3 members are encouraged to submit multiple projects to the commons.   To do so, repeat steps 2-8 above.
 
 * * *
@@ -46,7 +46,7 @@ Contact:
 ## 1. Review and sign legal agreement
 * * *
 
-To use a Gen3 commons, please review and sign the following agreements and return them to info@gen3.org.   The most current versions (and past versions for transparency) of all of the below documents can be found at:  
+To use the Gen3 commons, please review and sign the following agreements and return them to info@gen3.org.   The most current versions (and past versions for transparency) of all of the below documents can be found at:  
 [https://www.gen3.org/data-governance/](https://www.gen3.org/data-governance/)
 &nbsp;
 * Data Contributor Agreement (DCA)
