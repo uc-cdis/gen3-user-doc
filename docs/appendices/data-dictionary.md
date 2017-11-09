@@ -10,6 +10,8 @@
 * Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
 
 ![Dictionary Button](/img/dd-button.png)
-
+![Dictionary Table](/img/dd-table.png)
+![Dictionary Graph Details](/img/dd-graph-details.png)
+![Dictionary Graph](/img/dd-graph.png)
 
 ![Data Dictionary Viewer](/img/dd-viewer.gif)
