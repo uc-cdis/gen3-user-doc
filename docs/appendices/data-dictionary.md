@@ -7,16 +7,19 @@
 
 * In addition to drilling down on the properties of each node, the Data Dictionary Viewer will also let you toggle views and browse the nodes as a graph and as tables.  
 
-<h4>Viewing data dictionary as a graph:</h4>
+* * *
+Viewing data dictionary as a graph:
 ![Dictionary Graph Details](/img/dd-graph-details.png)
+
+Toggling the graph view:
 ![Dictionary Graph](/img/dd-graph.png)
 
-<h4>Viewing data dictionary as tables:</h4>
+Viewing data dictionary as tables:
 ![Dictionary Table](/img/dd-table.png)
-
-
-* Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
+* * *
+Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
 
 ![Dictionary Button](/img/dd-button.png)
 
 ![Data Dictionary Viewer](/img/dd-viewer.gif)
+* * * 
