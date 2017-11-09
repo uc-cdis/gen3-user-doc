@@ -52,32 +52,28 @@ To use the Gen3 commons, please review and sign the following agreements and ret
 
 * [Data Contributor Agreement (DCA)](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/59e4dc6ddc2b4a1166d7157a/1508170862005/Gen3-Data-Contributor-Agreement_2017.pd.pdf)
 * [Data Services/Use Agreement (DUA)](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/59e4dc87ace86425635ae05b/1508170887770/Gen3-Data+Use+Ageement.pdf)
-* [Privacy and Security Agreement](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58c1fff66b8f5b630c9d367e/1489108983165/Gen3-Privacy-Security-Policy-16-v4.pdf)
-
 
 If you only wish to contribute data, you do not need to sign the DUA.  
-
-* * *
-
 These documents may also reference the:
-* Privacy and Security Agreement
-* Intellectual Property Rights (IPR) Policy
+
+* [Privacy and Security Agreement](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58c1fff66b8f5b630c9d367e/1489108983165/Gen3-Privacy-Security-Policy-16-v4.pdf)
+* [Intellectual Property Rights (IPR) Policy](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58ac8debf7e0ab22fa54afe9/1487703531906/BloodPAC-ipr-13-v1.pdf)
 
 
 * * *
 ## 2. Complete the data inventory form
 * * *
-Prepare a pre-submission [data inventory form](https://goo.gl/forms/)
+Prepare a pre-submission [data inventory form](https://goo.gl/forms/).
 
 Having this information helps the Gen3 submission team prepare for your project and setup your storage access credentials using the authentication method you provide in the form.  
 
 * * *
 ## 3. Receive project name / API credentials
 * * *
-&nbsp;
-Once you have completed the [data inventory form, link to step](link), you will receive an email with your project name (associated with project data), username (used to login to Virtual Private Cloud (VPC) headnode), and instructions to access the metadata submission portal and an object storage for your project.  
-&nbsp;
-The project name will be used to create the project node from which you can build out the rest of your submission and is an essential identifier. For example, the project name will need to be provided when you [submit the metadata, link to metadata submission](https://www.synapse.org/#!Synapse:syn8011461/wiki/413154) for your experiment nodes.
+
+Once you have completed the [data inventory form](#2-complete-the-data-inventory-form), you will receive an email with your project name (associated with project data), username (used to login to Virtual Private Cloud headnode), and instructions to access the metadata submission portal and an object storage for your project.  
+
+The project name will be used to create the project node from which you can build out the rest of your submission and is an essential identifier. For example, the project name will need to be provided when you [submit the metadata](#6-submit-and-validate-project-metadata-tsvs) for your experiment nodes.
 
 <h3>Project name example</h3>
 
