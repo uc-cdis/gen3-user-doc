@@ -116,7 +116,7 @@ Blank TSV templates can be found [here](/appendices/template-tsvs.md).
 <h3>Determine Submission Order</h3>
 Before we discuss the actual submission process, we must first mention that the files must be submitted in a specific order. Once again referring back to the [graph model](https://www.gen3.org/data-group), you cannot submit a node without submitting the nodes to which it points.
 
-If you submit a file out of order, the validator will reject the submission on the basis that the dependency you point to is not present (e.g. the read_groups.submitter_id in assay_result.tsv will be pointing to a node that doesn’t exist).  The [Data Dictionary viewer](/appencies/data-dictionary/) can help you determine these dependencies.
+If you submit a file out of order, the validator will reject the submission on the basis that the dependency you point to is not present (e.g. the read_groups.submitter_id in assay_result.tsv will be pointing to a node that doesn’t exist).  The [Data Dictionary viewer](/appendices/data-dictionary/) can help you determine these dependencies.
 
 <h3>Sample Diagram of TSV Submission Order</h3>
 While this diagram represents an earlier version of the Gen3 data model, the required submission logic for current versions of the model will be very similar.
