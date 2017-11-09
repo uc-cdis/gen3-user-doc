@@ -4,6 +4,7 @@
 
 This documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:
 
+
 * [How to submit your data to the Gen3 data commons](/user-guide/data-contribution/)
 * [How to query, access, and analyze data in the Gen3 commons](/user-guide/data-access/)
 
