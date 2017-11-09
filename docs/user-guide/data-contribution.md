@@ -113,13 +113,14 @@ Blank TSV templates can be found [here](/appendices/template-tsvs.md)
     * Field types and limitations can be gleaned from a careful read of the associated [yaml files](https://github.com/occ-data/gen3dictionary/tree/develop/gen3dictionary/schemas)
 
 <h3>Determine Submission Order</h3>
-Before we discuss the actual submission process, we must first mention that the files must be submitted in a specific order. Once again referring back to the graph model at https://www.bloodpac.org/data-group, you cannot submit a node without submitting the nodes to which it points.
+Before we discuss the actual submission process, we must first mention that the files must be submitted in a specific order. Once again referring back to the [graph model](https://www.gen3.org/data-group), you cannot submit a node without submitting the nodes to which it points.
 
-If you submit a file out of order, the validator will reject the submission on the basis that the dependency you point to (e.g. the read_groups.submitter_id in assay_result.tsv will be pointing to a node that doesn’t exist) is not present.   The Data Dictionary viewer can help you determine these dependencies.
+If you submit a file out of order, the validator will reject the submission on the basis that the dependency you point to is not present (e.g. the read_groups.submitter_id in assay_result.tsv will be pointing to a node that doesn’t exist).  The Data Dictionary viewer can help you determine these dependencies.
 
 <h3>Sample Diagram of TSV Submission Order</h3>
-While this diagram represents an earlier version of the BloodPAC data model, the required submission logic for current versions of the model will be very similar.
-${image?fileName=blood%5Fatlas%5F010617%5Fmarkup%2Epng&align=None&responsive=true}
+While this diagram represents an earlier version of the Gen3 data model, the required submission logic for current versions of the model will be very similar.
+
+![Submission Order Diagram](docs/img/submission-order.png)
 
 * * *
 ## 5. Access metadata submission portal
