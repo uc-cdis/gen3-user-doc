@@ -19,7 +19,6 @@
 
 \* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons.   To do so, repeat steps 2-8 above.
 
-* * *
 
 <h3>Why Do Gen3 Commons Use a Data Model?</h3>
 * Having all participating members use the same data model:
@@ -35,6 +34,7 @@ Here is the most current [graph of the model](https://www.gen3.org/data-group/).
 
 If you have an submission element that you believe can't be described in the model, we'd be glad to work with you to find a home for the element or update the model.   
 
+
 <h3> Questions? </h3>
 Contact:
 
@@ -48,13 +48,15 @@ Contact:
 
 To use the Gen3 commons, please review and sign the following agreements and return them to info@gen3.org.   The most current versions (and past versions for transparency) of all of the below documents can be found at:  
 [https://www.gen3.org/data-governance/](https://www.gen3.org/data-governance/)
-&nbsp;
-* Data Contributor Agreement (DCA)
-* Data Services/Use Agreement (DUA)
 
-&nbsp;
+
+* [Data Contributor Agreement (DCA)](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/59e4dc6ddc2b4a1166d7157a/1508170862005/Gen3-Data-Contributor-Agreement_2017.pd.pdf)
+* [Data Services/Use Agreement (DUA)](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/59e4dc87ace86425635ae05b/1508170887770/Gen3-Data+Use+Ageement.pdf)
+* [Privacy and Security Agreement](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58c1fff66b8f5b630c9d367e/1489108983165/Gen3-Privacy-Security-Policy-16-v4.pdf)
+
+
 If you only wish to contribute data, you do not need to sign the DUA.  
-&nbsp;
+
 * * *
 
 These documents may also reference the:
