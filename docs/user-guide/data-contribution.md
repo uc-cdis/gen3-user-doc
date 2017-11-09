@@ -83,31 +83,32 @@ The project name will be used to create the project node from which you can buil
 <mycompanyname>_P0001_T2
 ```
 <h3>Breakdown:</h3>
-* "<mycompanyname>" identifies the submitter organization
+* "\<mycompanyname\>" identifies the submitter organization
 * "P000x" identifies the submission number for said organization in said train
 * "Tx" identifies the train number
-&nbsp;
+
 NOTE:  the Gen3 data submission calendar is broken up into different trains.
-NOTE2:   Your project folder will have a prefix appended to it to identify the commons.  eg - BloodPAC (BPA):
+NOTE2:   Your project folder will have a prefix appended to it to identify the commons.  eg - Gen3:
+
 ```
-"BPA_<mycompanyname>_P0001_T1"
+"Gen3_<mycompanyname>_P0001_T1"
 ```
 * * *
 ## 4. Prepare metadata that fits the data model
 * * *
 <h3> Overview </h3>
-Gen3 data contributors will need to prepare metadata for their submission in tab-separated value (tsv) files, login to a portal provided for submission, and upload and validate their metadata submission.   This is simultaneously the most challenging and crucial part of contributing data to a Gen3 commons.   This page details the preparation and ordering of the tsvs that will be submitted.   The next two pages cover submission virtual machine (VM) access and uploading and validating your metadata tsv submission.   
+Gen3 data contributors will need to prepare metadata for their submission in tab-separated value (tsv) files, login to a portal provided for submission, and upload and validate their metadata submission.   This is simultaneously the most challenging and crucial part of contributing data to a Gen3 commons.   This page details the preparation and ordering of the tsvs that will be submitted.   The next two pages cover submission virtual machine (VM) access and uploading/validating your metadata tsv submission.   
 
 <h3> Review and understand the data model</h3>
-Now that you have your project name, you can begin building out the rest of your metadata. Reference the most recent graph model of your commons at https://www.Gen3.org/data-group/ to help guide you on the necessary components in your submission. As you can see, from project you build up to experiment then to case and so on. For the properties that are allowed within this submission, please take some time to read through the dictionary schemas.   The raw schema can be found at: <link.to.schemas.Gen3.org>. Descriptions for each property as well as the valid submission values can be found in those schemas.
-&nbsp;
-Once you have [access to submission portal, link to submission portal doc](https://www.synapse.org/#!Synapse:syn8011461/wiki/413159), we recommend using the [Data Dictionary Viewer, link to dict viewer](https://www.synapse.org/#!Synapse:syn8011461/wiki/424047) to review the schema and determine which properties best describe your submission.   This tool will help you understand the field types, requirements, and node dependencies for your submission.
+Now that you have your project name, you can begin building out the rest of your metadata. Reference the most recent [graph model of your commons](https://www.Gen3.org/data-group/) to help guide you on the necessary components in your submission. As you can see, from project you build up to experiment then to case and so on. For the properties that are allowed within this submission, please take some time to read through the [dictionary schemas](https://github.com/occ-data/gen3dictionary/tree/develop/gen3dictionary/schemas). Descriptions for each property as well as the valid submission values can be found in those schemas.
+
+Once you have [access to submission portal](#5-access-metadata-submission-portal), we recommend using the [Data Dictionary Viewer](#appendix-data-dictionary-viewer) to review the schema and determine which properties best describe your submission.   This tool will help you understand the field types, requirements, and node dependencies for your submission.
 
 <h3>Create your TSVs</h3>
-&nbsp;
+
 It may be helpful to think of each TSV as a node in the graph of the data model.   Each node can have multiple components, for example a project could have multiple experiments in a node.  
-&nbsp;
-* Blank TSV templates can be found at https://www.synapse.org/#!Synapse:syn10268802
+
+Blank TSV templates can be found [here](https://www.synapse.org/#!Synapse:syn10268802)
     * Note there are wiki pages associated with each potential tsv or node in the templates.   They show example fields and information about data provenance.  
     * Field types and limitations can be cleaned from a careful read of the associated yaml files at:  https://github.com/occ-data/bpadictionary/tree/develop/gdcdictionary/schemas  
 
@@ -121,7 +122,7 @@ While this diagram represents an earlier version of the BloodPAC data model, the
 ${image?fileName=blood%5Fatlas%5F010617%5Fmarkup%2Epng&align=None&responsive=true}
 
 * * *
-## 5. Access metadata that fits the data model
+## 5. Access metadata submission portal
 * * *
 
 <h3>What is the metadata submission portal?</h3>
