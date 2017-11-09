@@ -2,14 +2,12 @@
 ![CDIS Logo](/img/cdis.png)
 
 * * *
-
 ## Welcome to Gen3 Documentation
-
 * * *
 
 <h3> Overview </h3>
 
-The Gen3 commons allows approved researchers access to raw unprocessed datasets in a scalable, reproducible, privacy and security protected manner.
+The Gen3 data commons allows approved researchers access to raw unprocessed datasets in a scalable, reproducible, privacy and security protected manner. This documentation describes the commons and provides a [user guide](/user-guide/guide-overview/) to assist contributors.
 
 <h3> Mission </h3>
 

@@ -9,6 +9,7 @@ edit_uri: ""
 pages:
     - Home: index.md
     - User Guide:
+        - Guide Overview: user-guide/guide-overview.md
         - Data Contribution: user-guide/data-contribution.md
         - Data Access: user-guide/data-access.md
         - Data Dictionary: appendices/data-dictionary.md
