@@ -15,7 +15,7 @@ pages:
         - Minimal Technical Data Elements: appendices/mtde.md
         - Working with the Proxy and Whitelist: appendices/proxy-whitelist.md
         - Working with the API: appendices/api.md
-        - Template tsvs: appendices/template-tsvs.md
+        - Template TSVs: appendices/template-tsvs.md
     - DEMOs:
         - BloodPAC: demos/bloodpac-demo.md
 
