@@ -83,7 +83,7 @@ The project name will be used to create the project node from which you can buil
 <mycompanyname>_P0001_T2
 ```
 <h3>Breakdown:</h3>
-* "\<mycompanyname\>" identifies the submitter organization
+* "<mycompanyname>" identifies the submitter organization
 * "P000x" identifies the submission number for said organization in said train
 * "Tx" identifies the train number
 
@@ -346,14 +346,14 @@ Other useful commands and AWS CLI documentation can be found at: https://www.ope
 ## Appendix: Data Dictionary Viewer
 * * *
 &nbsp;
-The Data Dictionary Viewer is designed to make it easier to understand the data model, the field types associated with each node, and the potential values associated with each field.   Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
+The [Data Dictionary Viewer](../appendices/data-dictionary/) is designed to make it easier to understand the data model, the field types associated with each node, and the potential values associated with each field.   Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
 &nbsp;
 The Data Dictionary Viewer lets you browse and understand the available fields in a node and review the dependencies a given node has to the existence of a prior node.  This is an invaluable tool for both the submission of data and later analysis of the entire commons.   
 &nbsp;
 In addition to drilling down on the properties of each node, the Data Dictionary Viewer will also let you toggle views and browse the nodes as a graph and as tables.  
 &nbsp;
 
-${image?fileName=datadictionary%5Fv2%2Egif&align=None&scale=100&responsive=true}
+![Data Dictionary Viewer](/img/dd-viewer.gif)
 
 * * *
 ## Appendix: Managing timepoints in a submission
