@@ -2,7 +2,8 @@
 ## User Guide Overview
 * * *
 
-This documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:
+
+<p style="text-align:left">This documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:</p>
 
 
 * [How to submit your data to the Gen3 data commons](/user-guide/data-contribution/)
