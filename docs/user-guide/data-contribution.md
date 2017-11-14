@@ -83,7 +83,7 @@ The project name will be used to create the project node from which you can buil
 <mycompanyname>_P0001_T2
 ```
 <h3>Breakdown:</h3>
-* "<mycompanyname>" identifies the submitter organization
+* "<mycompanyname\>" identifies the submitter organization
 * "P000x" identifies the submission number for said organization in said train
 * "Tx" identifies the train number
 
@@ -110,8 +110,8 @@ It may be helpful to think of each TSV as a node in the graph of the data model.
 
 Blank TSV templates can be found [here](/appendices/template-tsvs.md).
 
-    * Note there are wiki pages associated with each potential tsv or node in the templates. They show example fields and information about data provenance.  
-    * Field types and limitations can be gleaned from a careful read of the associated [yaml files](https://github.com/occ-data/gen3dictionary/tree/develop/gen3dictionary/schemas).
+* Note there are wiki pages associated with each potential tsv or node in the templates. They show example fields and information about data provenance.  
+* Field types and limitations can be gleaned from a careful read of the associated [yaml files](https://github.com/occ-data/gen3dictionary/tree/develop/gen3dictionary/schemas).
 
 <h3>Determine Submission Order</h3>
 Before we discuss the actual submission process, we must first mention that the files must be submitted in a specific order. Once again referring back to the [graph model](https://www.gen3.org/data-group), you cannot submit a node without submitting the nodes to which it points.
