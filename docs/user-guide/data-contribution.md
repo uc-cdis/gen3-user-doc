@@ -144,7 +144,7 @@ Links to Gen3 Commons Submission portals:
 
 <h3> Begin your submission</h3>
 
-From the submission portal select the project for which you wish to submit metadata.   Remembering the order in which you need to submit your tsvs (see [step 5, Determine Submission Order](https://www.synapse.org/#!Synapse:syn8011461/wiki/413155) for details) begin your submission by uploading or copying in your first tsv (likely "experiment.tsv").   NOTE:   If you would prefer submitting nodes in json to tsv the submission portal also accepts json.  
+From the submission portal select the project for which you wish to submit metadata.   Remembering the order in which you need to submit your tsvs (see [Determine Submission Order](#4-prepare-metadata-that-fits-the-data-model) for details) begin your submission by uploading or copying in your first tsv (likely "experiment.tsv").   NOTE:   If you would prefer submitting nodes in json to tsv the submission portal also accepts json.  
 
 >   To get you started, the first node - "project" has already been created for you.
 
@@ -179,16 +179,16 @@ On a successful submission, the API will return something like above. The action
 <h3> Troubleshooting and finishing your submission</h3>
 
 If, against all odds, your submission is perfect on the first try, you are finished with submission of that node, and you can move on to the next node. However, if the submission throws errors or claims your submission to be invalid, you will need to fix your submission.
-&nbsp;
+
 The best first step is to go through the outputs from the individual entities. In the errors field will be a rough description of what tripped our validation check. The most common problems are simple issues such as spelling errors or mislabeled fields.
-&nbsp;
+
 Other errors include the one I mentioned earlier about submitting out of order and errors from not adhering to valid values as defined in our dictionary.
-&nbsp;
+
 If you don't receive any output it usually means your TSV is invalid and must be edited.
-&nbsp;
+
 
 <h4> Submission Failure Example </h4>
-![Submission Failure Example](http://g.recordit.co/Q9mb2wNCN8.gif)
+![Submission Failure Example](/img/submission_fail.gif)
 
 <h4> ALTERNATIVE in BETA:  Form submission </h4>
 Using tsvs allows users to bulk submit their metadata.   This is ultimately a much faster process for users with larger datasets.   If you wish, you can also use form submission to insert properties into a node.   
@@ -197,16 +197,15 @@ NOTE:   if you use the same submitter ID, and submit again to the same node, it 
 
 NOTE2:   it is not currently possible to remove values submitted in error using the form submission method.
 
-${image?fileName=formSubmission%2Egif&align=None&scale=100&responsive=true}
+![Form Submission](/img/submission_form.gif)
 
 <h4> Query the API </h4>
 
-If helpful you can use query the API in the submission portal to confirm or correct your submission, to delete nodes, or to submit json queries to learn more about your submission or all the data in the commons.   To learn more visit the API section of the wiki:  
-https://www.synapse.org/#!Synapse:syn8011461/wiki/415875
+If helpful you can query the API in the submission portal to confirm or correct your submission, to delete nodes, or to submit json queries to learn more about your submission or all the data in the commons.   To learn more visit the [API section of the wiki](/appendices/api/).
 
 <h4>Check the commons matrices</h4>
 
-Read ["What's an example of the API at work?"](https://www.synapse.org/#!Synapse:syn8011461/wiki/415875) to learn more about how the [data matrices](https://www.bloodpac.org/data-group/) work.   Suffice to say, you can check them hourly to see relevant metadata you submit appear!
+Read ["What's an example of the API at work?"](/appendices/api/) to learn more about how the [data matrices](https://www.gen3.org/data-group/) work.   Suffice to say, you can check them hourly to see relevant metadata you submit appear!
 
 <h4>Provide feedback</h4>
 You may receive errors for what you think is a valid submission. If you feel what you have provided for a particular entity is valid, please contact the Gen3 support team at gen3-support@occ-data.org. We will be happy to accommodate any necessary changes. We can always add new nodes, properties, or values.
@@ -229,7 +228,7 @@ When you are viewing a project, there is a "browse nodes" feature.   From here y
 <h4>What happens if i need to resubmit a tsv that was already accepted?</h4>
 When you resubmit (aka submit to a node with the same submitter id), you will update the existing node.
 
-&nbsp;
+
 For example, if you submit a sample with `sample_type`, `composition`, and `tube_type`, and you later realize that the tube type was wrong for that submission, if you were to resubmit a tsv that has just the `submitter_id` and `tube_type` it will overwrite ONLY the tube type. The `sample_type` and composition from the previous submission will still be in the database.  What this means is that if you had previously submitted something you DON'T want, like say you realize that you accidentally submitted the `tube_type` as `method_of_sample_procurement`, simply renaming the header in your TSV would not overwrite the existing data in the node.  You would need to submit null/empty values for `method_of_sample_procurement` to get rid of it.
 
 <h4> I was part of the very first submission group, in Nov/Dec 2016 when we added TSVs directly into an object store.   Where is the `project.submitter_id` field? </h4>
@@ -250,7 +249,7 @@ EXAMPLE:
 <h3>Overview</h3>
 Now that you've successfully submitted and validated your project metadata, it's time to upload your 'raw' data to the Gen3 Commons.   The Gen3 commons utilize [object storage](https://en.wikipedia.org/wiki/Object_storage).   
 &nbsp;
-This page details how users gain and manage the credentials to access a project folder.   The [following page](https://www.synapse.org/#!Synapse:syn8011461/wiki/413158) will detail submitting data to the project folder.   
+This page details how users gain and manage the credentials to access a project folder.   The [following page](#8-upload-raw-data-to-object-storage) will detail submitting data to the project folder.   
 
 > Why should we use command line to submit data instead of some kind of website?
 >> Because for transfer of large files or many files, there can be time-out issues, encryption issues, or corruption issues.   Using the command line ensures secure and complete transfer.
@@ -258,7 +257,7 @@ This page details how users gain and manage the credentials to access a project 
 > NOTE:  if you only have small files and are uncomfortable operating on the command line, you may want to try using a GUI tool like [Cyberduck](https://cyberduck.io/) to connect to S3 and manage your upload instead.  
 
 <h3> Obtain S3 credentials </h3>
-1.	Go to https://bionimbus-pdc.opensciencedatacloud.org/storage/ Select and use the authentication method you gave in the [data inventory form](https://www.synapse.org/#!Synapse:syn8011461/wiki/413153)
+1.	Go to https://bionimbus-pdc.opensciencedatacloud.org/storage/ Select and use the authentication method you gave in the [data inventory form](#2-complete-the-data-inventory-form)
 2.	Download access keys by selecting the appropriate button next to the information for your username, e.g., under "Available BPA Datasets". The button is labeled “Generate S3 credential.” See Figure 1.
 3.	Credentials appear as comma-separated values including an access key and a secret key. The secret key should remain secret.  Do not share these keys.
 
@@ -267,8 +266,7 @@ This page details how users gain and manage the credentials to access a project 
 > If you need to obtain new credentials, repeat steps (2.a) through (2.c). The button will now say “Rotate key” button, which will deactivate previous credentials and provide new ones.
 
 <h4> Figure 1 </h4>
-${image?fileName=bionimbussubmit%2Epng&align=None&responsive=true}
-
+![Bionimbus Credentials](/img/bionimbus_submit.png)
 >KNOWN ISSUE: Safari will not provide S3 credentials on the first try. After generating keys once, press the “Rotate key” button.
 
 <h3> Install AWS CLI </h3>
@@ -284,7 +282,7 @@ sudo easy_install awscli
 If prompted, enter your device’s password.
 
 <h4> Windows </h4>
-Download and run one of the windows installers at: https://aws.amazon.com/cli/
+Download and run one of the windows installers at: <https://aws.amazon.com/cli/>
 
 <h3> Configure AWS CLI with the downloaded project credentials </h3>
 
@@ -332,22 +330,24 @@ Data files such as BAMs, FASTQs, or PDFs should be uploaded directly to the obje
 Please prepare a single folder with all of submission files in the same directory.   No sub directories.   
 
 <h3> Uploading your data </h3>
-You can now upload all the files in the prepared folder on your local computer using the AWS CLI and the profiles you configured in [step 7](https://www.synapse.org/#!Synapse:syn8011461/wiki/413157). Below is the command to copy a folder filled with all your submission files on your local computer to your project folder in a commons. You need to change the name of /path/folder/ to the name of the path of the folder you want to upload.
-&nbsp;
+You can now upload all the files in the prepared folder on your local computer using the AWS CLI and the profiles you configured in [step 7](#7-get-and-configure-s3-data-storage-credentials). Below is the command to copy a folder filled with all your submission files on your local computer to your project folder in a commons. You need to change the name of /path/folder/ to the name of the path of the folder you want to upload.
+
 
 ```
 aws s3 cp --sse AES256 [/path/folder/] s3://bpa-data/[foldername] --recursive --profile [profilename]
 ```
 > EXTRA:  In an object store, a "folder" or "dir" can't exist with nothing in it.   Thus, if you were to 'ls' before moving any files into it, you wouldn't see the project folder you have access to.   In the example above you're essentially uploading all your data and "creating a folder" in a single step.   
 
-Other useful commands and AWS CLI documentation can be found at: https://www.opensciencedatacloud.org/support/pdc.html and https://aws.amazon.com/cli/
+Other useful commands and AWS CLI documentation can be found at:
+ <https://www.opensciencedatacloud.org/support/pdc.html> and
+ <https://aws.amazon.com/cli/>
 
 * * *
 ## Appendix: Data Dictionary Viewer
 * * *
-&nbsp;
+
 The [Data Dictionary Viewer](../appendices/data-dictionary/) is designed to make it easier to understand the data model, the field types associated with each node, and the potential values associated with each field.   Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
-&nbsp;
+
 The Data Dictionary Viewer lets you browse and understand the available fields in a node and review the dependencies a given node has to the existence of a prior node.  This is an invaluable tool for both the submission of data and later analysis of the entire commons.   
 &nbsp;
 In addition to drilling down on the properties of each node, the Data Dictionary Viewer will also let you toggle views and browse the nodes as a graph and as tables.  
