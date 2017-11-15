@@ -265,7 +265,6 @@ This page details how users gain and manage the credentials to access a project 
 
 > If you need to obtain new credentials, repeat steps (2.a) through (2.c). The button will now say “Rotate key” button, which will deactivate previous credentials and provide new ones.
 
-<h4> Figure 1 </h4>
 ![Bionimbus Credentials](/img/bionimbus_submit.png)
 >KNOWN ISSUE: Safari will not provide S3 credentials on the first try. After generating keys once, press the “Rotate key” button.
 
@@ -294,8 +293,9 @@ aws configure --profile <CREATE YOUR PROFILE NAME>
 
 > **Pro-tip:**  Profile management will be very important as groups submit multiple projects.   Your downloaded s3 credentials only give you access to the project folder for which they are created.   If you are only submitting one project, you don't need profiles.   If you are submitting multiple, you will want to carefully pick project names for each project.   eg - P0001_T1 and P0002_T1.
 >> Some good sources on managing multiple profiles:
->> * OSX/Linux: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-multiple-profiles
->> * Windows powershell: http://docs.aws.amazon.com/powershell/latest/userguide/specifying-your-aws-credentials.html
+
+>> OSX/Linux: >><http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-multiple-profiles>
+>> Windows powershell: >><http://docs.aws.amazon.com/powershell/latest/userguide/specifying-your-aws-credentials.html>
 
 After pressing Enter/Return, you will be prompted for your Access Key ID and Secret Access Key. These are the S3 credentials you downloaded earlier. Enter keys as prompted, pressing Enter/Return after each step.
 
@@ -326,7 +326,7 @@ aws s3 ls s3://bpa-data/ --profile <profilename>
 
 <h3> Preparing your data </h3>
 Data files such as BAMs, FASTQs, or PDFs should be uploaded directly to the object store.  The metadata TSVs you prepared should not be submitted to the object store, as they have already been submitted via the API.
-&nbsp;
+
 Please prepare a single folder with all of submission files in the same directory.   No sub directories.   
 
 <h3> Uploading your data </h3>
@@ -349,9 +349,9 @@ Other useful commands and AWS CLI documentation can be found at:
 The [Data Dictionary Viewer](../appendices/data-dictionary/) is designed to make it easier to understand the data model, the field types associated with each node, and the potential values associated with each field.   Gen3 members can use it through the 'dictionary' icon at data.Gen3.org or directly at: <https://data.Gen3.org/dd/>
 
 The Data Dictionary Viewer lets you browse and understand the available fields in a node and review the dependencies a given node has to the existence of a prior node.  This is an invaluable tool for both the submission of data and later analysis of the entire commons.   
-&nbsp;
+
 In addition to drilling down on the properties of each node, the Data Dictionary Viewer will also let you toggle views and browse the nodes as a graph and as tables.  
-&nbsp;
+
 
 ![Data Dictionary Viewer](/img/dd-viewer.gif)
 
@@ -362,7 +362,7 @@ In addition to drilling down on the properties of each node, the Data Dictionary
 <br>
 Some elements of submitted datasets could be related to each other in time.   To stay in compliance with HIPAA, Gen3 commons create timelines without using real dates.   Every other date field is anchored by the "index_date" in the "case" node.  
 <br>
-In this field you can have things like "Study Enrollment" or "Diagnosis".   Study the case node in the dictionary for more information on the index_date field:  https://data.Gen3.org/dd/case
+In this field you can have things like "Study Enrollment" or "Diagnosis".   Study the case node in the dictionary for more information on the index_date field:  <https://data.Gen3.org/dd/case>
 
 <h3> Examples of submissions using multiple date times</h3>
 
@@ -386,30 +386,36 @@ The days_to_procurement and days_to_collection are required fields. If you do no
 
 ## Appendix: Minimum Technical Data Elements
 
-&nbsp;
-To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the “Minimum Technical Data Elements” (MTDE).   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  
+
+To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the [“Minimum Technical Data Elements” (MTDE)](../appendices/mtde/).   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  
+
+For example:
 
 [Biospecimen Node](https://data.bloodpac.org/dd/biospecimen)
-&nbsp;
-* Blood Tube Type
-* Procurement Temperature
-* Shipment Temperature
+
+	* Blood Tube Type
+	* Procurement Temperature
+	* Shipment Temperature
 
 [Sample Node](https://data.bloodpac.org/dd/sample)
-* Composition
-* Blood Fractionation Method
-* Hours to Fractionation Upper/Lower
-   * From blood draw to completion of fractionation
+
+	* Composition
+	* Blood Fractionation Method
+	* Hours to Fractionation Upper/Lower
+		* From blood draw to completion of fractionation
 
 [Aliquot Node](https://data.bloodpac.org/dd/aliquot)
-* Clinical or Contrived
-* Hours to Freezer Upper/Lower
-   * From completion of fractionation to freezing
-* Storage Temperature
 
-<h4> [Analyte Node](https://data.bloodpac.org/dd/analyte) </h4>
-* Analyte Isolation Method
+	* Clinical or Contrived
+	* Hours to Freezer Upper/Lower
+		* From completion of fractionation to freezing
+	* Storage Temperature
+
+[Analyte Node](https://data.bloodpac.org/dd/analyte)
+
+	* Analyte Isolation Method
 
 [Quantification Assay Node](https://data.bloodpac.org/dd/quantification_assay)
-* Assay Method
-  * DNA quantification method
+
+	* Assay Method
+	* DNA quantification method
