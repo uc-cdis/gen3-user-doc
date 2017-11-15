@@ -1,5 +1,5 @@
 * * *
-## Gen3 Commons Architecture
+## Gen3 Data Commons Architecture
 * * *
 
 User access to the Gen3 Commons runs through a VPC or Virtual Private Cloud.   Access to data and analysis tools through a Virtual Private Cloud (VPC) allows for balance of usability and security.   All access is through a monitored head node.  Data is not directly accessed from the Internet.  
