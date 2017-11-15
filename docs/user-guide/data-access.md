@@ -6,7 +6,7 @@
 * * *
 <h3>Send SSH Key and Oauth to Gen3 commons team.</h3>
 
-To access the VPC, users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to Gen3-support@datacommons.io.   
+To access the VPC, users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <Gen3-support@datacommons.io>.   
 
 > NOTE:   Do not send your private ssh key.   This is confidential and should never be shared with anyone.  
 
@@ -15,15 +15,16 @@ The pubkey will be used to access the login node and any VMs setup for the user.
 * [Bionimbus](http://bionimbus-pdc.opensciencedatacloud.org/storage/) to receive s3 data storage credentials
 * [data.Gen3.org]( https://data.Gen3.org/) for browser based querying of metadata.
 
->NOTE:  for Gen3 members that were also their organization's contact for data submission, you already have access to your s3 credentials and data.Gen3.org.   Just send your pubkey.  
+>NOTE:  for Gen3 members that were also their organization's contact for data submission, you already have access to your s3 credentials and the commons metadata API <data.Gen3.org>.   Just send your pubkey.  
 
 <h4> I'm not familiar with SSH - how do I generate a keypair? </h4>
 
-[Github has a very nice tutorial](https://help.github.com/articles/connecting-to-github-with-ssh/) with step by step instructions for Mac, Windows (users with gitbash installed), and Linux users.   If you're new to using SSH we'd recommend reviewing the links:
+[Github has a very nice tutorial](https://help.github.com/articles/connecting-to-github-with-ssh/) with step-by-step instructions for Mac, Windows (users with gitbash installed), and Linux users.   If you're new to using SSH we'd recommend reviewing the links:
+
 * [About SSH](https://help.github.com/articles/about-ssh/)
 * [Checking for Existing SSH Keys](https://help.github.com/articles/checking-for-existing-ssh-keys/)
 * [Generating a new SSH key and adding it to the SSH Agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
-&nbsp;
+
 >NOTE:  For Windows users, we recommend installing [Git for Windows](https://git-for-windows.github.io/) and using the Git Bash feature to interact on the command line, manage ssh keys, and s3 credentials.   
 
 <h3>Receive a welcome email</h3>
@@ -34,17 +35,12 @@ Gen3 members with the appropriate signed legal documents will be sent an email t
 * an IP associated with your new VM
 
 * * *
-
-
-
-
-
 ## 2. SSH to Virtual Machine: config
+* * *
 
 <h3>How will I access the Login Node and my Virtual Machine (VM)?</h3>
 
-Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the VPC, visit: https://www.synapse.org/#!Synapse:syn8011461/wiki/414186
-&nbsp;
+Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](../appendices/architecture/)
 
 In your [welcome email](https://cgmeyer.github.io/gen3-user-doc/Data%20Access/1sendcred.html) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
 
