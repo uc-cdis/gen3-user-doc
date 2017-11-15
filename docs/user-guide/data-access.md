@@ -19,7 +19,7 @@ The pubkey will be used to access the login node and any VMs setup for the user.
 
 <h4> I'm not familiar with SSH - how do I generate a keypair? </h4>
 
-[Github has a very nice tutorial](https://help.github.com/articles/connecting-to-github-with-ssh/) with step-by-step instructions for Mac, Windows (users with gitbash installed), and Linux users.   If you're new to using SSH we'd recommend reviewing the links:
+Github has a very nice [ssh tutorial](https://help.github.com/articles/connecting-to-github-with-ssh/) with step-by-step instructions for Mac, Windows (users with gitbash installed), and Linux users.   If you're new to using SSH we'd recommend reviewing the links:
 
 * [About SSH](https://help.github.com/articles/about-ssh/)
 * [Checking for Existing SSH Keys](https://help.github.com/articles/checking-for-existing-ssh-keys/)
@@ -40,7 +40,7 @@ Gen3 members with the appropriate signed legal documents will be sent an email t
 
 <h3>How will I access the Login Node and my Virtual Machine (VM)?</h3>
 
-Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](../appendices/architecture/)
+Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](/appendices/architecture/)
 
 In your [welcome email](https://cgmeyer.github.io/gen3-user-doc/Data%20Access/1sendcred.html) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
 
