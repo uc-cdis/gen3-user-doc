@@ -42,13 +42,15 @@ Gen3 members with the appropriate signed legal documents will be sent an email t
 
 Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](/appendices/architecture/)
 
-In your [welcome email](https://cgmeyer.github.io/gen3-user-doc/Data%20Access/1sendcred.html) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
+In your [welcome email](#1-send-credentials-and-get-welcome-email) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
 
 1.   SSH to login node:   `ssh -A <username>@34.197.164.18`
 2.   SSH from login node to your VM:  `ssh -A ubuntu@<my_VM_ip>`
 
->NOTE 1:   34.197.164.18 is the IP for the login node.   This is unlikely to change.   
->NOTE 2:  the `-A` flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the [previous step](https://www.synapse.org/#!Synapse:syn8011461/wiki/414183).
+>NOTE 1:   `34.197.164.18` is the IP for the login node.   This is unlikely to change.   
+
+>NOTE 2:  the `-A` flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the [previous step](#1-send-credentials-and-get-welcome-email).
+
 >NOTE 3:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  
 
 Advanced users can manage these connections however they see fit.   For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel.  To 'multihop' in this context is to use a single command to get to your VM.    What follows are instructions for updating your `.ssh/config` file to get to your VM in a single command.
