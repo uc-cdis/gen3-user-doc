@@ -13,7 +13,7 @@ To access the VPC, users will need to send their public ssh key (or "pubkey") an
 The pubkey will be used to access the login node and any VMs setup for the user.    The email will be used to permit access to:
 
 * [Bionimbus](http://bionimbus-pdc.opensciencedatacloud.org/storage/) to receive s3 data storage credentials
-* [data.Gen3.org]( https://data.Gen3.org/) for browser based querying of metadata.
+* [data.Gen3.org](https://data.Gen3.org/) for browser based querying of metadata.
 
 >NOTE:  for Gen3 members that were also their organization's contact for data submission, you already have access to your s3 credentials and the commons metadata API <data.Gen3.org>.   Just send your pubkey.  
 
@@ -40,7 +40,7 @@ Gen3 members with the appropriate signed legal documents will be sent an email t
 
 <h3>How will I access the Login Node and my Virtual Machine (VM)?</h3>
 
-Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](/appendices/architecture/).
+Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](../appendices/architecture/).
 
 In your [welcome email](#1-send-credentials-and-get-welcome-email) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
 
