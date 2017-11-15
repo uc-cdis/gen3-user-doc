@@ -40,7 +40,7 @@ Gen3 members with the appropriate signed legal documents will be sent an email t
 
 <h3>How will I access the Login Node and my Virtual Machine (VM)?</h3>
 
-Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](../appendices/architecture/).
+Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](/appendices/architecture/).
 
 In your [welcome email](#1-send-credentials-and-get-welcome-email) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
 
@@ -55,7 +55,9 @@ In your [welcome email](#1-send-credentials-and-get-welcome-email) you received 
 
 Advanced users can manage these connections however they see fit.   For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel.  To 'multihop' in this context is to use a single command to get to your VM.    What follows are instructions for updating your `.ssh/config` file to get to your VM in a single command.
 
+* * *
 ## 3. Setting up an ssh config for 'multihop'
+* * *
 
 To start, go to your .ssh directory in your laptop home directory.
 
@@ -86,6 +88,8 @@ Host BPA
     ForwardAgent yes
 ```
 
+Where /path/to/YOUR_CREDFILE might be, e.g., `~/.ssh/id_rsa`
+
 The username will be provided to you by the BloodPAC support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the BloodPAC head-node using this host:
 
 ```
@@ -104,36 +108,42 @@ Once again you will receive the Hostname IP from the BloodPAC support team in st
 
 ```
 ssh analysis
-````
+```
 
 If you've done everything correctly, you should now be in the analysis VM.  
 
+* * *
 ## 4. Access "raw" data storage from Virtual Machine
+* * *
 
 <h3> Add s3 'raw' data storage credentials to your VM </h3>
-Now you'll need to add your storage credentials to your analysis VM.   Details on getting your credentials from the [Bionimbus storage portal](https://bionimbus-pdc.opensciencedatacloud.org/storage/) are outlined in the [data contribution section](https://www.synapse.org/#!Synapse:syn8011461/wiki/413157) of the wiki.   If you are only accessing data and did not contribute, please follow those directions to acquire your keys using the Oauth you provided in [Step 1](https://www.synapse.org/#!Synapse:syn8011461/wiki/414183) of the Data Access section.   
+Now you'll need to add your storage credentials to your analysis VM.   Details on getting your credentials from the [Bionimbus storage portal](https://bionimbus-pdc.opensciencedatacloud.org/storage/) are outlined in the [data contribution section](/user-guide/data-contribution/) of this documentation.   If you are only accessing data and did not contribute, please follow those directions to acquire your keys using the Oauth you provided in [Step 1](#1-send-credentials-and-get-welcome-email) of the Data Access section.   
 
 If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the BloodPAC commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  
 
-As a reminder, the command to setup a profile is: `aws configure --profile <CREATE YOUR PROFILE NAME>`
-<h4> Example:  Configure an S3 profile in your VM </h4>
-${image?fileName=S3%5FVM%5FprofileLoop%2Egif&align=Center&responsive=true}
+As a reminder, the command to setup a profile is:
+`aws configure --profile <CREATE YOUR PROFILE NAME>`
+
+<h4> Example:  Configure an s3 profile in your VM </h4>
+![Configure s3 Profile](/img/configure-S3.gif)
 
 <h3>Review contents of the Gen3 Commons</h3>
 
 You can now review the 'raw' data folders in the Gen3 object storage.   
+
 `aws s3 ls s3://commons-data/ --profile <profilename>`
 
 To peek inside a folder:
+
 `aws s3 ls s3://commons-data/<foldername>/ --profile <profilename>`
 
-You can use other commands to pull files from the s3 object storage into your VM.    If you're not familiar with AWScli commands, we recommend reviewing the [high-level docs](http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html) or the [complete documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/).
+You can use other commands to pull files from the s3 object storage into your VM. If you're not familiar with AWScli commands, we recommend reviewing the [high-level docs](http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html) or the [complete documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/).
 
 >NOTE:   Remember, that since your access is read only (except any projects you've submitted associated with your keys), you will only be able to read, not write to the project folders in the commons.   
 >NOTE2:   If you are using keys with write access to your project folders in the commons, be VERY CAREFUL.   Don't delete any data you'll have to resubmit later.      
 
 <h3> Ready to work! </h3>
 
-You're ready to use whatever tools you wish to analyze data in the commons within your VM.   For requests for alternative configurations, analysis storage, or other needs please contact gen3-support@datacommons.io.
+You're ready to use whatever tools you wish to analyze data in the commons within your VM.   For requests for alternative configurations, analysis storage, or other needs please contact <gen3-support@datacommons.io>.
 
 For an example of how you could use a Jupyter Notebook to run analysis in the browser on your local computer, please continue on to the [next section](../demos/bloodpac-demo.md).    There are lots of good examples that may be useful to you.    
