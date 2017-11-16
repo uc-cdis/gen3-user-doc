@@ -2,12 +2,13 @@
 
 /* navbar */
 .navbar-default {
-    background-color: #F8F8F8;
-    border-color: #E7E7E7;
+    background-color: #DDCD33;
+    border-color: #c6b82d
+;
 }
 /* Title */
 .navbar-default .navbar-brand {
-    color: #777;
+    color: #c6b82d;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
