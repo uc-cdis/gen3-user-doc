@@ -24,11 +24,26 @@ background: #222c32;
 background: #222c32;
 }
 
+.rst-versions{
+border-top:solid 10px #222c32;
+}
 
 
 
-
-
+.navbar {
+    background-image: -webkit-linear-gradient(#39304A,#DDCD33 60%,#6A3937);
+    background-image: linear-gradient(#39304A,#DDCD33 60%,#6A3937);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #202030;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDCD33',endColorstr='#6B654B',GradientType=0);
+    filter: none;
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
+.navbar-default {
+    background-color: #2fa4e7;
+    border-color: #1995dc;
+}
 
 
 
