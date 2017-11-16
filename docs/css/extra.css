@@ -89,10 +89,10 @@ h3 {color: #202030;}
 h4 {color: #202030;}
 
 
-a:link    { color: #c00 }  /* unvisited links */
-a:visited { color: #0c0 }  /* visited links   */
-a:hover   { color: #00c }  /* user hovers     */
-a:active  { color: #ccc }  /* active links    */
+a:link    { color: #6A3937 }  /* unvisited links */
+a:visited { color: ##784c4b }  /* visited links   */
+a:hover   { color: #6B654B }  /* user hovers     */
+a:active  { color: #6A3937 }  /* active links    */
 
 
 
