@@ -1,4 +1,13 @@
-
+.navbar {
+    background-image: -webkit-linear-gradient(#6A3937,#DDCD33 60%,#6A3937);
+    background-image: linear-gradient(#6A3937,#DDCD33 60%,#6A3937);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #6A3937;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6A3937',endColorstr='#DDCD33',GradientType=0);
+    filter: none;
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+}
 
 /* navbar */
 .navbar-default {
@@ -91,7 +100,7 @@ h4 {color: #202030;}
 
 
 a:link    { color: #6A3937 }  /* unvisited links */
-a:visited { color: ##784c4b }  /* visited links   */
+a:visited { color: #784c4b }  /* visited links   */
 a:hover   { color: #6B654B }  /* user hovers     */
 a:active  { color: #6A3937 }  /* active links    */
 
