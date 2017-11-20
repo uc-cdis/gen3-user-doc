@@ -171,13 +171,41 @@
           <div role="main">
             <div class="section">
               
-                <hr />
-<h1 id="bloodpac-demo-using-a-jupyter-notebook-for-analysis">BloodPAC DEMO: Using a Jupyter notebook for analysis<a class="headerlink" href="#bloodpac-demo-using-a-jupyter-notebook-for-analysis" title="Permanent link"></a></h1>
+                <h1 id="bloodpac-demo-using-a-jupyter-notebook-for-analysis">BloodPAC DEMO: Using a Jupyter notebook for analysis<a class="headerlink" href="#bloodpac-demo-using-a-jupyter-notebook-for-analysis" title="Permanent link"></a></h1>
 <hr />
 <p>The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a starting python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: <a href="https://github.com/occ-data/bpa-functions">https://github.com/occ-data/bpa-functions</a>.    The Gen3 community is encouraged to add to the functions library or improve the notebook.  </p>
 <blockquote>
-<p>NOTE:   As the Gen3 community updates repositories, you can keep them up to date using <code>git pull origin master</code> in the <code>functions</code> folder.   It has already been initialized to sync with this repository.</p>
+<p>NOTE:   As the Gen3 community updates repositories, you can keep them up to date using <code>git pull origin master</code> in the <code>functions</code> folder.   It has already been initialized to sync with this repository.
+NOTE2: If you receive an error when trying to do <code>git pull</code>, you may need to set proxies and/or either save or drop any changes you've made:</p>
 </blockquote>
+<ul>
+<li>
+<p>set proxies:
+export http_proxy="http://cloud-proxy.internal.io:3128";
+export https_proxy="http://cloud-proxy.internal.io:3128"
+(<code>cat /etc/environment</code> to see proxy settings)</p>
+</li>
+<li>
+<p>to drop changes:
+ <code>git stash save --keep-index</code>
+ <code>git stash drop</code></p>
+</li>
+<li>
+<p>or save changes
+<code>git commit .</code></p>
+</li>
+<li>
+<p>Update CDIS utils python libraries:
+<code>git clone https://github.com/uc-cdis/cdis-python-utils.git</code>
+<code>cd cdis-python-utils</code>
+<code>sudo -E python setup.py install</code></p>
+</li>
+<li>
+<p>unset proxies to get juypter notebook to work again
+<code>unset http_proxy;</code>
+<code>unset https_proxy;</code></p>
+</li>
+</ul>
 <p>What follows in this wiki is a guide to setting up this Jupyter notebook so that you can run everything in your browser.   In the notebook, you'll learn about basic Gen3 commons operations like:  </p>
 <ul>
 <li>Querying the API for metadata associated with submissions</li>
