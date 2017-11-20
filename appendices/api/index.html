@@ -188,9 +188,13 @@
 <p>Like your credentials that let you access "raw" data in the object store or your ssh keys that let you access a VM, there is also a credential that lets you query the API.    For users granted data access, these are in a .secrets file in the home directory of your VM.   These are used for every API call.   </p>
 <p>For example:   If you're doing the <a href="../../demos/bloodpac-demo/">Jupyter notebook demo</a> from your analysis VM, your secrets file is loaded early in the demo so you can query.   If you're using the submission portal to query, your secrets file is setup in a DB associated with your login credentials.  </p>
 <p>If you receive an error like "You don't have access to this data", then you will most likely need to update your API keys and enter them into your VM's .secrets file:
-<img alt="No Access Key" src="../../img/no-key.png" />
-<img alt="Create Access Key" src="../../img/create-key.png" />
-<img alt="vim .secrets" src="../../img/vim-secrets.png" />
+1) Click "Create access key" button:
+<img alt="No Access Key" src="../../img/no-key.png" /></p>
+<p>2) Copy the keys:
+<img alt="Create Access Key" src="../../img/create-key.png" /></p>
+<p>3) In your VM, open your .secrets file with a text editor:
+<img alt="vim .secrets" src="../../img/vim-secrets.png" /></p>
+<p>4) Paste your new keys into the .secrets file and save it:
 <img alt="Save .secrets" src="../../img/save-secrets.png" /></p>
 <h2 id="queries-in-the-submission-portal">Queries in the submission portal<a class="headerlink" href="#queries-in-the-submission-portal" title="Permanent link"></a></h2>
 <p>You can run queries directly in the submission portal by clicking the magnifying glass or directly at: <a href="https://data.gen3.org/graphql">https://data.gen3.org/graphql</a>.    Queries are essential as you begin analysis.   The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find what they need.</p>
