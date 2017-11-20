@@ -1,11 +1,7 @@
 
-p {color: #202030;}
+p,body {color: #202030;}
 
-h1 {color: #202030;}
-h2 {color: #202030;}
-h3 {color: #202030;}
-h4 {color: #202030;}
-
+h1,h2,h3,h4 {color: #202030;}
 
 a:link    { color: #6A3937 }  /* unvisited links */
 a:visited { color: #784c4b }  /* visited links   */
