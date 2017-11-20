@@ -31,7 +31,9 @@ Example templates have been setup [here](/appendices/template-tsvs/).
 ![GraphQL Query](/img/gQL-query.gif)
 
 ### Extra:   Default = first 10 entries
-Queries by defult return the first 10 entries.   If you want more than that, you can specify it in the query call.   Updating the example template [`details from experiment`](https://www.synapse.org/#!Synapse:syn8302051) sample query to call the first 1000, the call becomes:  
+Queries by defult return the first 10 entries.   If you want more than that, you can specify it in the query call: ```(first:1000)```
+
+Updating the example template [`details from experiment`](/assets/details_from_experiment.json/) sample query to call the first 1000, the call becomes:  
 
 ```
 {
