@@ -14,15 +14,15 @@ a:active  { color: #6A3937 }  /* active links    */
 
 
 .wy-side-nav-search {
-background: #DDCD33;
+background: #39304A;
 }
 .wy-nav-side {
-background: #DDCD33;
+background: #39304A;
 }
 .rst-versions .rst-current-version {
-background: #DDCD33;
+background: #39304A;
 }
 
 .rst-versions{
-border-top:solid 10px #DDCD33;
+border-top:solid 10px #202030;
 }
