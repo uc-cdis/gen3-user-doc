@@ -7,36 +7,27 @@ The bioinformatics team at the Center for Data Intensive Science (CDIS) at Unive
 
 > NOTE2: If you receive an error when trying to do `git pull`, you may need to set proxies and/or either save or drop any changes you've made:
 
-* set proxies:
 ```
+# set proxies:
 export http_proxy="http://cloud-proxy.internal.io:3128"
 export https_proxy="http://cloud-proxy.internal.io:3128"
-```
 
-* to drop changes:
-```
+# to drop changes:
 git stash save --keep-index
 git stash drop
-```
 
-* or save changes
-```
+# or save changes
 git commit .
-```
 
-* Update CDIS utils python libraries:
-```
+# Update CDIS utils python libraries:
 git clone https://github.com/uc-cdis/cdis-python-utils.git
 cd cdis-python-utils
 sudo -E python setup.py install
-```
-* unset proxies to get juypter notebook to work again
-```
+
+# unset proxies to get juypter notebook to work again
 unset http_proxy;
 unset https_proxy;
 ```
-
-
 
 What follows in this wiki is a guide to setting up this Jupyter notebook so that you can run everything in your browser.   In the notebook, you'll learn about basic Gen3 commons operations like:  
 
@@ -46,24 +37,30 @@ What follows in this wiki is a guide to setting up this Jupyter notebook so that
 * Plotting the results
 
 In the Jupyter notebook, many of the calls rely on more complex functions described in the [analysis_functions file](https://github.com/occ-data/bpa-functions/blob/master/analysis_functions_v2.py).   It is worth taking the time to understand how this file works so you can use and customize it or build your own tools.    
-&nbsp;
-We would gladly publish and share any tools, Docker images, function libraries, notebooks, etc via Github or via this Sage Synapse profile.   Just contact Gen3-support@datacommons.io for more information.
+
+We would gladly publish and share any tools, Docker images, function libraries, notebooks, etc via Github or via this Sage Synapse profile.   Just contact <gen3-support@datacommons.io> for more information.
 
 ## Running the notebook in your VM
 
 After we're logged in to our analysis VM and in the functions directory (from home: `cd functions`), run the jupyter notebook server.  
 
-Run the notebook server: ```jupyter notebook --no-browser --port=8889```
+Run the notebook server:
+```
+jupyter notebook --no-browser --port=8889
+```
 
 >NOTE:   You can stop a Juptyer server at anytime via `ctrl + c`
 
 ## Port forwarding to your VM
 
-Next you'll want to set up a connection so that you can access the notebook being served from the VM to a browser in your local machine.   On a terminal session from your local machine (not in the VM) setup the connection.   
-&nbsp;
-Setup connection:   `ssh -N -L localhost:8888:localhost:8889 analysis`
+Next you'll want to set up a connection so that you can access the notebook being served from the VM to a browser in your local machine.   
 
-> NOTE:   In the example above "analysis" is the name of the ssh shortcut we [setup back in step 2](/data-access/#2-ssh-to-virtual-machine-config).
+On a terminal session from your local machine (not in the VM) setup the connection:
+```
+ssh -N -L localhost:8888:localhost:8889 analysis
+```
+
+> NOTE:   In the example above "analysis" is the name of the ssh shortcut we [setup back in step 2](/user-guide/data-access/#2-ssh-to-virtual-machine-config).
 
 ## Access the notebook in via browser
 
