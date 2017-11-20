@@ -22,7 +22,10 @@ Like your credentials that let you access "raw" data in the object store or your
 For example:   If you're doing the [Jupyter notebook demo](/demos/bloodpac-demo/) from your analysis VM, your secrets file is loaded early in the demo so you can query.   If you're using the submission portal to query, your secrets file is setup in a DB associated with your login credentials.  
 
 If you receive an error like "You don't have access to this data", then you will most likely need to update your API keys and enter them into your VM's .secrets file:
-![Update Keys](/img/update-secrets.gif)
+![No Access Key](/img/no-key.png)
+![Create Access Key](/img/create-key.png)
+![vim .secrets](/img/vim-secrets.png)
+![Save .secrets](/img/save-secrets.png)
 
 ## Queries in the submission portal    
 You can run queries directly in the submission portal by clicking the magnifying glass or directly at: <https://data.gen3.org/graphql>.    Queries are essential as you begin analysis.   The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find what they need.
@@ -34,12 +37,13 @@ Example templates have been setup [here](/appendices/template-tsvs/).
 ### Extra:   Default = first 10 entries
 Queries by defult return the first 10 entries.   If you want more than that, you can specify it in the query call: ```(first:1000)```
 
-In the case that too many results are returned, you may receive a timeout error. In that case, you may want to use [pagination](http://graphql.org/learn/pagination/). For example, if there are 2,550 records returned, and your query is timing out with ```(first:3000)```, then break your query into multiple pages with an offset:
+In the case that too many results are returned, you may receive a timeout error. In that case, you may want to use [pagination](http://graphql.org/learn/pagination/). For example, if there are 2,550 records returned, and your graphiQL query is timing out with ```(first:3000)```, then break your query into multiple queries with offsets:
 
-```(first:1000, offset:0)``` - this will return records 0-1000
-```(first:1000,offset:1000)``` - this will return records 1000-2000
-```(first:1000,offset:2000)``` - this will return records 2000-2,550
-
+```
+(first:1000, offset:0) 		# this will return records 0-1000
+(first:1000, offset:1000) 	# this will return records 1000-2000
+(first:1000, offset:2000) 	# this will return records 2000-2,550
+```
 Updating the example template [`details from experiment`](/assets/details_from_experiment.json) sample query to call the first 1000, the call becomes:  
 
 ```
