@@ -1,0 +1,4 @@
+
+{
+	"query":" query Test { experiment (submitter_id: \"<INSERT submitter_id>\") {  experimental_intent experimental_description number_samples_per_experimental_group type_of_sample type_of_specimen}} "
+}
