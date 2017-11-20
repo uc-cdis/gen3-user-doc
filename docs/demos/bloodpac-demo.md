@@ -1,10 +1,33 @@
-* * *
 # BloodPAC DEMO: Using a Jupyter notebook for analysis
 * * *
 
 The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a starting python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: [https://github.com/occ-data/bpa-functions](https://github.com/occ-data/bpa-functions).    The Gen3 community is encouraged to add to the functions library or improve the notebook.  
 
 > NOTE:   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master` in the `functions` folder.   It has already been initialized to sync with this repository.
+> NOTE2: If you receive an error when trying to do `git pull`, you may need to set proxies and/or either save or drop any changes you've made:
+
+* set proxies:
+export http_proxy="http://cloud-proxy.internal.io:3128";
+export https_proxy="http://cloud-proxy.internal.io:3128"
+(`cat /etc/environment` to see proxy settings)
+
+* to drop changes:
+ `git stash save --keep-index`
+ `git stash drop`
+
+* or save changes
+`git commit .`
+
+* Update CDIS utils python libraries:
+`git clone https://github.com/uc-cdis/cdis-python-utils.git`
+`cd cdis-python-utils`
+`sudo -E python setup.py install`
+
+* unset proxies to get juypter notebook to work again
+`unset http_proxy;`
+`unset https_proxy;`
+
+
 
 What follows in this wiki is a guide to setting up this Jupyter notebook so that you can run everything in your browser.   In the notebook, you'll learn about basic Gen3 commons operations like:  
 
