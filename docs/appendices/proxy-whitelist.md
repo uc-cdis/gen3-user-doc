@@ -18,4 +18,4 @@ https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://bpa-data/ --prof
 
 <h4> Whitelists </h4>
 
-Additionally, to aid Gen3 Commons security, tool installation from outside sources is managed through a whitelist.   If you have problems installing a tool you need for your work, contact Gen3-support@datacommons.io and with a list of any sites you might wish to install tools from.    After passing a security review,  these can be added to the whitelist to facilitate access.
+Additionally, to aid Gen3 Commons security, tool installation from outside sources is managed through a whitelist.   If you have problems installing a tool you need for your work, contact <Gen3-support@datacommons.io> and with a list of any sites you might wish to install tools from.    After passing a security review,  these can be added to the whitelist to facilitate access.
