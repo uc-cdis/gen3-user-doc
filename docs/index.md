@@ -48,8 +48,10 @@ Other secure and compliant Gen3 member systems (including cloud based systems) c
 		900 East 57th Street
 		10th Floor, Room 10148
 		Chicago, IL 60616
-<br>
-* Email:
 
+<br>
+
+* Email:
 	* General Inquiries: <cdis@uchicago.edu>
 	* Technical Support: <support@opensciencedatacloud.org>
+* * *
