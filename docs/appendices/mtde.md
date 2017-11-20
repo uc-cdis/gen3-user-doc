@@ -1,6 +1,6 @@
 # Minimum Technical Data Elements (MTDE)
+* * *
 
-&nbsp;
 To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the “Minimum Technical Data Elements”.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  
 
 ### [Study](https://data.bloodpac.org/dd/study)

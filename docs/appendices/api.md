@@ -1,6 +1,5 @@
 # Working with the API
-
-***
+* * *
 
 ## What does the API do?
 

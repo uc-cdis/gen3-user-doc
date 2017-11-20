@@ -1,4 +1,3 @@
-* * *
 ## Data Dictionary Viewer
 * * *
 

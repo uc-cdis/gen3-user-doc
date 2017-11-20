@@ -1,4 +1,3 @@
-* * *
 ## Project Submission Overview
 * * *
 

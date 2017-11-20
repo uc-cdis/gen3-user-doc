@@ -1,4 +1,3 @@
-* * *
 ## Gen3 Data Commons Architecture
 * * *
 
