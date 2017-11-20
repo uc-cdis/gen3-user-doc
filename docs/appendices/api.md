@@ -51,15 +51,16 @@ Updating the example template [`details from experiment`](/assets/details_from_e
 
 ## Browsing by project node    
 
-The metadata submission portal [https://data.bloodpac.org/](https://data.bloodpac.org/) can be used to browse an individual submission by node.   Just select a project and then click the "browse nodes" button to the right.    From there, you'll get a screen like below where you can query by node in the dropdown at the left.
+The metadata submission portal [https://data.gen3.org/](https://data.gen3.org/) can be used to browse an individual submission by node.   Just select a project and then click the "browse nodes" button to the right.    From there, you'll get a screen like below where you can query by node in the dropdown at the left.
 
-### Example:  Browse by node
-${image?fileName=Screen Shot 2017%2D03%2D17 at 10%2E02%2E39 AM%2Epng&align=Center&responsive=true}
+<h4> Example:  Browse by node </h4>
+![Browse by node](/img/browse-by-node.png)
 
 You can also use this feature to download the tsv associated with the node, or if you have "write" access to the this project, delete existing nodes.   
 
 ## Graphing a project
 
 You can also review a graph of an individual project, toggling between views of the completed nodes and the full graph.  
-#### Example:  Graphing a project
-${image?fileName=viewProject%2Egif&align=None&scale=100&responsive=true}
+
+<h5> Example:  Graphing a project </h5>
+![Graphing a project](/img/graph-a-project.gif)
