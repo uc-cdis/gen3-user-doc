@@ -178,38 +178,24 @@
 <p>NOTE:   As the Gen3 community updates repositories, you can keep them up to date using <code>git pull origin master</code> in the <code>functions</code> folder.   It has already been initialized to sync with this repository.</p>
 <p>NOTE2: If you receive an error when trying to do <code>git pull</code>, you may need to set proxies and/or either save or drop any changes you've made:</p>
 </blockquote>
-<ul>
-<li>set proxies:</li>
-</ul>
-<pre><code>export http_proxy=&quot;http://cloud-proxy.internal.io:3128&quot;
+<pre><code># set proxies:
+export http_proxy=&quot;http://cloud-proxy.internal.io:3128&quot;
 export https_proxy=&quot;http://cloud-proxy.internal.io:3128&quot;
-</code></pre>
 
-<ul>
-<li>to drop changes:</li>
-</ul>
-<pre><code>git stash save --keep-index
+# to drop changes:
+git stash save --keep-index
 git stash drop
-</code></pre>
 
-<ul>
-<li>or save changes</li>
-</ul>
-<pre><code>git commit .
-</code></pre>
+# or save changes
+git commit .
 
-<ul>
-<li>Update CDIS utils python libraries:</li>
-</ul>
-<pre><code>git clone https://github.com/uc-cdis/cdis-python-utils.git
+# Update CDIS utils python libraries:
+git clone https://github.com/uc-cdis/cdis-python-utils.git
 cd cdis-python-utils
 sudo -E python setup.py install
-</code></pre>
 
-<ul>
-<li>unset proxies to get juypter notebook to work again</li>
-</ul>
-<pre><code>unset http_proxy;
+# unset proxies to get juypter notebook to work again
+unset http_proxy;
 unset https_proxy;
 </code></pre>
 
@@ -220,21 +206,25 @@ unset https_proxy;
 <li>Running a simple analysis over a file and collection of files</li>
 <li>Plotting the results</li>
 </ul>
-<p>In the Jupyter notebook, many of the calls rely on more complex functions described in the <a href="https://github.com/occ-data/bpa-functions/blob/master/analysis_functions_v2.py">analysis_functions file</a>.   It is worth taking the time to understand how this file works so you can use and customize it or build your own tools.  <br />
-&nbsp;
-We would gladly publish and share any tools, Docker images, function libraries, notebooks, etc via Github or via this Sage Synapse profile.   Just contact Gen3-support@datacommons.io for more information.</p>
+<p>In the Jupyter notebook, many of the calls rely on more complex functions described in the <a href="https://github.com/occ-data/bpa-functions/blob/master/analysis_functions_v2.py">analysis_functions file</a>.   It is worth taking the time to understand how this file works so you can use and customize it or build your own tools.    </p>
+<p>We would gladly publish and share any tools, Docker images, function libraries, notebooks, etc via Github or via this Sage Synapse profile.   Just contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;">&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;</a> for more information.</p>
 <h2 id="running-the-notebook-in-your-vm">Running the notebook in your VM<a class="headerlink" href="#running-the-notebook-in-your-vm" title="Permanent link"></a></h2>
 <p>After we're logged in to our analysis VM and in the functions directory (from home: <code>cd functions</code>), run the jupyter notebook server.  </p>
-<p>Run the notebook server: <code>jupyter notebook --no-browser --port=8889</code></p>
+<p>Run the notebook server:</p>
+<pre><code>jupyter notebook --no-browser --port=8889
+</code></pre>
+
 <blockquote>
 <p>NOTE:   You can stop a Juptyer server at anytime via <code>ctrl + c</code></p>
 </blockquote>
 <h2 id="port-forwarding-to-your-vm">Port forwarding to your VM<a class="headerlink" href="#port-forwarding-to-your-vm" title="Permanent link"></a></h2>
-<p>Next you'll want to set up a connection so that you can access the notebook being served from the VM to a browser in your local machine.   On a terminal session from your local machine (not in the VM) setup the connection. <br />
-&nbsp;
-Setup connection:   <code>ssh -N -L localhost:8888:localhost:8889 analysis</code></p>
+<p>Next you'll want to set up a connection so that you can access the notebook being served from the VM to a browser in your local machine.   </p>
+<p>On a terminal session from your local machine (not in the VM) setup the connection:</p>
+<pre><code>ssh -N -L localhost:8888:localhost:8889 analysis
+</code></pre>
+
 <blockquote>
-<p>NOTE:   In the example above "analysis" is the name of the ssh shortcut we <a href="../../data-access/#2-ssh-to-virtual-machine-config">setup back in step 2</a>.</p>
+<p>NOTE:   In the example above "analysis" is the name of the ssh shortcut we <a href="../../user-guide/data-access/#2-ssh-to-virtual-machine-config">setup back in step 2</a>.</p>
 </blockquote>
 <h2 id="access-the-notebook-in-via-browser">Access the notebook in via browser<a class="headerlink" href="#access-the-notebook-in-via-browser" title="Permanent link"></a></h2>
 <p>In your preferred browser and enter http://localhost:8888/;   Then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.</p>
