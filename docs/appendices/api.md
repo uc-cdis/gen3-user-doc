@@ -21,10 +21,11 @@ Like your credentials that let you access "raw" data in the object store or your
 
 For example:   If you're doing the [Jupyter notebook demo](/demos/bloodpac-demo/) from your analysis VM, your secrets file is loaded early in the demo so you can query.   If you're using the submission portal to query, your secrets file is setup in a DB associated with your login credentials.  
 
-Your secrets file helps define what metadata you can read or write to.
+If you receive an error like "You don't have access to this data", then you will most likely need to update your API keys and enter them into your VM's .secrets file:
+![Update Keys](/img/update-secrets.gif)
 
 ## Queries in the submission portal    
-You can run queries directly in the submission portal by clicking the magnifying glass or directly at: https://data.gen3.org/graphql.    Queries are essential as you begin analysis.   The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find what they need.
+You can run queries directly in the submission portal by clicking the magnifying glass or directly at: <https://data.gen3.org/graphql>.    Queries are essential as you begin analysis.   The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find what they need.
 
 Example templates have been setup [here](/appendices/template-tsvs/).
 
