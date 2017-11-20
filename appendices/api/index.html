@@ -193,7 +193,8 @@
 <p>Example templates have been setup <a href="../../appendices/template-tsvs/">here</a>.</p>
 <p><img alt="GraphQL Query" src="../../img/gQL-query.gif" /></p>
 <h3 id="extra-default-first-10-entries">Extra:   Default = first 10 entries<a class="headerlink" href="#extra-default-first-10-entries" title="Permanent link"></a></h3>
-<p>Queries by defult return the first 10 entries.   If you want more than that, you can specify it in the query call.   Updating the example template <a href="https://www.synapse.org/#!Synapse:syn8302051"><code>details from experiment</code></a> sample query to call the first 1000, the call becomes:  </p>
+<p>Queries by defult return the first 10 entries.   If you want more than that, you can specify it in the query call: <code>(first:1000)</code></p>
+<p>Updating the example template <a href="../../assets/details_from_experiment.json/"><code>details from experiment</code></a> sample query to call the first 1000, the call becomes:  </p>
 <pre><code>{
     &quot;query&quot;:&quot; query Test {
         experiment (first:1000, submitter_id: &quot;&lt;INSERT submitter_id&gt;&quot;) {  
