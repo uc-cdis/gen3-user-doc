@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Data Access - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data Access";
+    var mkdocs_page_input_path = "user-guide/data-access.md";
+    var mkdocs_page_url = "/user-guide/data-access/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data-contribution/">Data Contribution</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Data Access</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#data-access-overview">Data Access Overview</a></li>
+    
+
+    <li class="toctree-l3"><a href="#1-send-credentials-and-get-welcome-email">1. Send credentials and get welcome email</a></li>
+    
+
+    <li class="toctree-l3"><a href="#2-ssh-to-virtual-machine-config">2. SSH to Virtual Machine: config</a></li>
+    
+
+    <li class="toctree-l3"><a href="#3-setting-up-an-ssh-config-for-multihop">3. Setting up an ssh config for 'multihop'</a></li>
+    
+
+    <li class="toctree-l3"><a href="#4-access-raw-data-storage-from-virtual-machine">4. Access "raw" data storage from Virtual Machine</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/mtde/">Minimal Technical Data Elements</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/api/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">DEMOs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../demos/bloodpac-demo/">BloodPAC</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User Guide &raquo;</li>
+        
+      
+    
+    <li>Data Access</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <hr />
+<h2 id="data-access-overview">Data Access Overview<a class="headerlink" href="#data-access-overview" title="Permanent link"></a></h2>
+<hr />
+<h2 id="1-send-credentials-and-get-welcome-email">1. Send credentials and get welcome email<a class="headerlink" href="#1-send-credentials-and-get-welcome-email" title="Permanent link"></a></h2>
+<hr />
+<p><h3>Send SSH Key and Oauth to Gen3 commons team.</h3></p>
+<p>To access the VPC, users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#71;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;">&#71;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;</a>.   </p>
+<blockquote>
+<p>NOTE:   Do not send your private ssh key.   This is confidential and should never be shared with anyone.  </p>
+</blockquote>
+<p>The pubkey will be used to access the login node and any VMs setup for the user.    The email will be used to permit access to:</p>
+<ul>
+<li><a href="http://bionimbus-pdc.opensciencedatacloud.org/storage/">Bionimbus</a> to receive s3 data storage credentials</li>
+<li><a href="https://data.Gen3.org/">data.Gen3.org</a> for browser based querying of metadata.</li>
+</ul>
+<blockquote>
+<p>NOTE:  for Gen3 members that were also their organization's contact for data submission, you already have access to your s3 credentials and the commons metadata API <data.Gen3.org>.   Just send your pubkey.  </p>
+</blockquote>
+<h4> I'm not familiar with SSH - how do I generate a keypair? </h4>
+
+<p>Github has a very nice <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">ssh tutorial</a> with step-by-step instructions for Mac, Windows (users with gitbash installed), and Linux users.   If you're new to using SSH we'd recommend reviewing the links:</p>
+<ul>
+<li><a href="https://help.github.com/articles/about-ssh/">About SSH</a></li>
+<li><a href="https://help.github.com/articles/checking-for-existing-ssh-keys/">Checking for Existing SSH Keys</a></li>
+<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">Generating a new SSH key and adding it to the SSH Agent</a></li>
+</ul>
+<blockquote>
+<p>NOTE:  For Windows users, we recommend installing <a href="https://git-for-windows.github.io/">Git for Windows</a> and using the Git Bash feature to interact on the command line, manage ssh keys, and s3 credentials.   </p>
+</blockquote>
+<h3>Receive a welcome email</h3>
+
+<p>Gen3 members with the appropriate signed legal documents will be sent an email that gives the following unique information:</p>
+<ul>
+<li>username (this is used to ssh to the VPC login node) - eg:  <code>ssh -A &lt;username&gt;@34.197.164.18</code></li>
+<li>an IP associated with your new VM</li>
+</ul>
+<hr />
+<h2 id="2-ssh-to-virtual-machine-config">2. SSH to Virtual Machine: config<a class="headerlink" href="#2-ssh-to-virtual-machine-config" title="Permanent link"></a></h2>
+<hr />
+<h3>How will I access the Login Node and my Virtual Machine (VM)?</h3>
+
+<p>Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the <a href="../../appendices/architecture/">VPC architecture</a>.</p>
+<p>In your <a href="#1-send-credentials-and-get-welcome-email">welcome email</a> you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:</p>
+<ol>
+<li>SSH to login node:   <code>ssh -A &lt;username&gt;@34.197.164.18</code></li>
+<li>SSH from login node to your VM:  <code>ssh -A ubuntu@&lt;my_VM_ip&gt;</code></li>
+</ol>
+<blockquote>
+<p>NOTE 1:   <code>34.197.164.18</code> is the IP for the login node.   This is unlikely to change.   </p>
+<p>NOTE 2:  the <code>-A</code> flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the <a href="#1-send-credentials-and-get-welcome-email">previous step</a>.</p>
+<p>NOTE 3:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  </p>
+</blockquote>
+<p>Advanced users can manage these connections however they see fit.   For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel.  To 'multihop' in this context is to use a single command to get to your VM.    What follows are instructions for updating your <code>.ssh/config</code> file to get to your VM in a single command.</p>
+<hr />
+<h2 id="3-setting-up-an-ssh-config-for-multihop">3. Setting up an ssh config for 'multihop'<a class="headerlink" href="#3-setting-up-an-ssh-config-for-multihop" title="Permanent link"></a></h2>
+<hr />
+<p>To start, go to your .ssh directory in your laptop home directory.</p>
+<pre><code>cd ~/.ssh
+</code></pre>
+
+<p>If this directory does not exist, make one.</p>
+<pre><code>mkdir -p ~/.ssh
+cd ~/.ssh
+</code></pre>
+
+<p>Within this directory create a file named "config" [Note: I use vim here but any text editor will do]:</p>
+<pre><code>vim config
+</code></pre>
+
+<p>In this file you can specify various hosts for access via ssh. Your host for the BPA head node should look something like this:</p>
+<pre><code>Host BPA
+    Hostname 34.197.164.18
+    User YOUR_USERNAME
+    IdentityFile /path/to/YOUR_CREDFILE
+    ForwardAgent yes
+</code></pre>
+
+<p>Where /path/to/YOUR_CREDFILE might be, e.g., <code>~/.ssh/id_rsa</code></p>
+<p>The username will be provided to you by the BloodPAC support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the BloodPAC head-node using this host:</p>
+<pre><code>ssh BPA
+</code></pre>
+
+<p>Exit the BPA head node and return to your local machine. Back in your config file, add a new host for the BPA submission VM:</p>
+<pre><code>Host analysis
+    Hostname YOUR_VM_IP
+    User ubuntu
+    ProxyCommand ssh -q -AXY BPA -W %h:%p
+</code></pre>
+
+<p>Once again you will receive the Hostname IP from the BloodPAC support team in step 4.  This host will route you through the BPA head node and take you directly to your personal BloodPAC analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:</p>
+<pre><code>ssh analysis
+</code></pre>
+
+<p>If you've done everything correctly, you should now be in the analysis VM.  </p>
+<hr />
+<h2 id="4-access-raw-data-storage-from-virtual-machine">4. Access "raw" data storage from Virtual Machine<a class="headerlink" href="#4-access-raw-data-storage-from-virtual-machine" title="Permanent link"></a></h2>
+<hr />
+<h3> Add s3 'raw' data storage credentials to your VM </h3>
+
+<p>Now you'll need to add your storage credentials to your analysis VM.   Details on getting your credentials from the <a href="https://bionimbus-pdc.opensciencedatacloud.org/storage/">Bionimbus storage portal</a> are outlined in the <a href="../../user-guide/data-contribution/">data contribution section</a> of this documentation.   If you are only accessing data and did not contribute, please follow those directions to acquire your keys using the Oauth you provided in <a href="#1-send-credentials-and-get-welcome-email">Step 1</a> of the Data Access section.   </p>
+<p>If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the BloodPAC commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  </p>
+<p>As a reminder, the command to setup a profile is:
+<code>aws configure --profile &lt;CREATE YOUR PROFILE NAME&gt;</code></p>
+<h4> Example:  Configure an s3 profile in your VM </h4>
+
+<p><img alt="Configure s3 Profile" src="../../img/configure-S3.gif" /></p>
+<h3>Review contents of the Gen3 Commons</h3>
+
+<p>You can now review the 'raw' data folders in the Gen3 object storage.   </p>
+<p><code>aws s3 ls s3://commons-data/ --profile &lt;profilename&gt;</code></p>
+<p>To peek inside a folder:</p>
+<p><code>aws s3 ls s3://commons-data/&lt;foldername&gt;/ --profile &lt;profilename&gt;</code></p>
+<p>You can use other commands to pull files from the s3 object storage into your VM. If you're not familiar with AWScli commands, we recommend reviewing the <a href="http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html">high-level docs</a> or the <a href="http://docs.aws.amazon.com/cli/latest/reference/s3/">complete documentation</a>.</p>
+<blockquote>
+<p>NOTE:   Remember, that since your access is read only (except any projects you've submitted associated with your keys), you will only be able to read, not write to the project folders in the commons. <br />
+NOTE2:   If you are using keys with write access to your project folders in the commons, be VERY CAREFUL.   Don't delete any data you'll have to resubmit later.      </p>
+</blockquote>
+<h3> Ready to work! </h3>
+
+<p>You're ready to use whatever tools you wish to analyze data in the commons within your VM.   For requests for alternative configurations, analysis storage, or other needs please contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;">&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;</a>.</p>
+<p>For an example of how you could use a Jupyter Notebook to run analysis in the browser on your local computer, please continue on to the <a href="../../demos/bloodpac-demo/">next section</a>.    There are lots of good examples that may be useful to you.    </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../appendices/data-dictionary/" class="btn btn-neutral float-right" title="Data Dictionary">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../data-contribution/" class="btn btn-neutral" title="Data Contribution"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../data-contribution/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../appendices/data-dictionary/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

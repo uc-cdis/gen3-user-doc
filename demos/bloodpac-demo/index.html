@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>BloodPAC - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "BloodPAC";
+    var mkdocs_page_input_path = "demos/bloodpac-demo.md";
+    var mkdocs_page_url = "/demos/bloodpac-demo/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/mtde/">Minimal Technical Data Elements</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/api/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">DEMOs</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">BloodPAC</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#bloodpac-demo-using-a-jupyter-notebook-for-analysis">BloodPAC DEMO: Using a Jupyter notebook for analysis</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#running-the-notebook-in-your-vm">Running the notebook in your VM</a></li>
+        
+            <li><a class="toctree-l4" href="#port-forwarding-to-your-vm">Port forwarding to your VM</a></li>
+        
+            <li><a class="toctree-l4" href="#access-the-notebook-in-via-browser">Access the notebook in via browser</a></li>
+        
+            <li><a class="toctree-l4" href="#review-and-follow-the-notebook">Review and follow the notebook</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>DEMOs &raquo;</li>
+        
+      
+    
+    <li>BloodPAC</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <hr />
+<h1 id="bloodpac-demo-using-a-jupyter-notebook-for-analysis">BloodPAC DEMO: Using a Jupyter notebook for analysis<a class="headerlink" href="#bloodpac-demo-using-a-jupyter-notebook-for-analysis" title="Permanent link"></a></h1>
+<hr />
+<p>The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a starting python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: <a href="https://github.com/occ-data/bpa-functions">https://github.com/occ-data/bpa-functions</a>.    The Gen3 community is encouraged to add to the functions library or improve the notebook.  </p>
+<blockquote>
+<p>NOTE:   As the Gen3 community updates repositories, you can keep them up to date using <code>git pull origin master</code> in the <code>functions</code> folder.   It has already been initialized to sync with this repository.</p>
+</blockquote>
+<p>What follows in this wiki is a guide to setting up this Jupyter notebook so that you can run everything in your browser.   In the notebook, you'll learn about basic Gen3 commons operations like:  </p>
+<ul>
+<li>Querying the API for metadata associated with submissions</li>
+<li>Pulling data into your VM for analysis</li>
+<li>Running a simple analysis over a file and collection of files</li>
+<li>Plotting the results</li>
+</ul>
+<p>In the Jupyter notebook, many of the calls rely on more complex functions described in the <a href="https://github.com/occ-data/bpa-functions/blob/master/analysis_functions_v2.py">analysis_functions file</a>.   It is worth taking the time to understand how this file works so you can use and customize it or build your own tools.  <br />
+&nbsp;
+We would gladly publish and share any tools, Docker images, function libraries, notebooks, etc via Github or via this Sage Synapse profile.   Just contact Gen3-support@datacommons.io for more information.</p>
+<h2 id="running-the-notebook-in-your-vm">Running the notebook in your VM<a class="headerlink" href="#running-the-notebook-in-your-vm" title="Permanent link"></a></h2>
+<p>After we're logged in to our analysis VM and in the functions directory (from home: <code>cd functions</code>), run the jupyter notebook server.<br />
+&nbsp;
+Run the notebook server: <code>jupyter notebook --no-browser --port=8889</code></p>
+<blockquote>
+<p>NOTE:   You can stop a Juptyer server at anytime via <code>ctrl + c</code></p>
+</blockquote>
+<h2 id="port-forwarding-to-your-vm">Port forwarding to your VM<a class="headerlink" href="#port-forwarding-to-your-vm" title="Permanent link"></a></h2>
+<p>Next you'll want to set up a connection so that you can access the notebook being served from the VM to a browser in your local machine.   On a terminal session from your local machine (not in the VM) setup the connection. <br />
+&nbsp;
+Setup connection:   <code>ssh -N -L localhost:8888:localhost:8889 analysis</code></p>
+<blockquote>
+<p>NOTE:   In the example above "analysis" is the name of the ssh shortcut we <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/414184">setup back in step 2</a>.</p>
+</blockquote>
+<h2 id="access-the-notebook-in-via-browser">Access the notebook in via browser<a class="headerlink" href="#access-the-notebook-in-via-browser" title="Permanent link"></a></h2>
+<p>In your preferred browser and enter http://localhost:8888/;   Then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.</p>
+<h4 id="example-run-server-port-forward-access-notebook-in-browser">Example:   Run Server, port forward, access notebook in browser<a class="headerlink" href="#example-run-server-port-forward-access-notebook-in-browser" title="Permanent link"></a></h4>
+<p>${image?fileName=jupyter%2Egif&amp;align=Center&amp;responsive=true}</p>
+<h2 id="review-and-follow-the-notebook">Review and follow the notebook<a class="headerlink" href="#review-and-follow-the-notebook" title="Permanent link"></a></h2>
+<h4 id="credentials">Credentials<a class="headerlink" href="#credentials" title="Permanent link"></a></h4>
+<p>The notebook makes use of both a <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/415875">.secrets file</a> that came preloaded in your VM in the home directory that lets you query the metadata API from the VM, and the s3 profile you created back in <a href="https://www.synapse.org/#!Synapse:syn8011461/wiki/415865">step 3</a> to pull 'raw' data into your VM for analysis.
+&nbsp;
+The first thing you'll want to do is update the "profile" variable in the first cell to whatever the name of your s3 profile is.       </p>
+<blockquote>
+<p>NOTE:  If you have forgotten what you called your profile, you can always take a look at the credential file to review.  From the VM run:  <code>vi ~/.aws/credentials</code>.  </p>
+</blockquote>
+<h4 id="jupyter-basics">Jupyter Basics<a class="headerlink" href="#jupyter-basics" title="Permanent link"></a></h4>
+<p>If you're not familiar with Jupyter notebooks, you have a few options to run the commands inside.   You can review line by line (select cell - <code>Shift+Enter</code>) or you can run all from the "Kernel" menu at the top of the browser.   </p>
+<h4 id="shutting-down-your-server">Shutting Down your Server<a class="headerlink" href="#shutting-down-your-server" title="Permanent link"></a></h4>
+<p>When you're done working, we encourage you to shut down your Jupyter server via <code>ctrl + c</code> in the VM that's running it.  You don't have to do this every time, but you should do it when you don't need it any more.   </p>
+<h4 id="vm-termination">VM Termination<a class="headerlink" href="#vm-termination" title="Permanent link"></a></h4>
+<p>At this point in the Gen3 commons development, you should contact Gen3-support@datacommons.io when you no longer need your VM active.   Active VMs accrue hourly charges (currently paid for by the Consortium and grants), so it's important to not waste valuable resources.   </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../appendices/architecture/" class="btn btn-neutral" title="Data Commons Architecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../appendices/architecture/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

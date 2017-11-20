@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Minimal Technical Data Elements - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Minimal Technical Data Elements";
+    var mkdocs_page_input_path = "appendices/mtde.md";
+    var mkdocs_page_url = "/appendices/mtde/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Minimal Technical Data Elements</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#minimum-technical-data-elements-mtde">Minimum Technical Data Elements (MTDE)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#study">Study</a></li>
+        
+            <li><a class="toctree-l4" href="#biospecimen-node">Biospecimen Node</a></li>
+        
+            <li><a class="toctree-l4" href="#sample-node">Sample Node</a></li>
+        
+            <li><a class="toctree-l4" href="#aliquot-node">Aliquot Node</a></li>
+        
+            <li><a class="toctree-l4" href="#analyte-node">Analyte Node</a></li>
+        
+            <li><a class="toctree-l4" href="#quantification-assay-node">Quantification Assay Node</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../api/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../template-tsvs/">Template TSVs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../architecture/">Data Commons Architecture</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">DEMOs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../demos/bloodpac-demo/">BloodPAC</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User Guide &raquo;</li>
+        
+      
+    
+    <li>Minimal Technical Data Elements</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="minimum-technical-data-elements-mtde">Minimum Technical Data Elements (MTDE)<a class="headerlink" href="#minimum-technical-data-elements-mtde" title="Permanent link"></a></h1>
+<p>&nbsp;
+To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the “Minimum Technical Data Elements”.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  </p>
+<h3 id="study"><a href="https://data.bloodpac.org/dd/study">Study</a><a class="headerlink" href="#study" title="Permanent link"></a></h3>
+<h3 id="biospecimen-node"><a href="https://data.bloodpac.org/dd/biospecimen">Biospecimen Node</a><a class="headerlink" href="#biospecimen-node" title="Permanent link"></a></h3>
+<ul>
+<li>Blood Tube Type</li>
+<li>Procurement Temperature</li>
+<li>Shipment Temperature</li>
+</ul>
+<h3 id="sample-node"><a href="https://data.bloodpac.org/dd/sample">Sample Node</a><a class="headerlink" href="#sample-node" title="Permanent link"></a></h3>
+<ul>
+<li>Composition</li>
+<li>Blood Fractionation Method</li>
+<li>Hours to Fractionation Upper/Lower</li>
+<li>From blood draw to completion of fractionation</li>
+</ul>
+<h3 id="aliquot-node"><a href="https://data.bloodpac.org/dd/aliquot">Aliquot Node</a><a class="headerlink" href="#aliquot-node" title="Permanent link"></a></h3>
+<ul>
+<li>Clinical or Contrived</li>
+<li>Hours to Freezer Upper/Lower</li>
+<li>From completion of fractionation to freezing</li>
+<li>Storage Temperature</li>
+</ul>
+<h3 id="analyte-node"><a href="https://data.bloodpac.org/dd/analyte">Analyte Node</a><a class="headerlink" href="#analyte-node" title="Permanent link"></a></h3>
+<ul>
+<li>Analyte Isolation Method</li>
+</ul>
+<h3 id="quantification-assay-node"><a href="https://data.bloodpac.org/dd/quantification_assay">Quantification Assay Node</a><a class="headerlink" href="#quantification-assay-node" title="Permanent link"></a></h3>
+<ul>
+<li>Assay Method</li>
+<li>DNA quantification method</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../proxy-whitelist/" class="btn btn-neutral float-right" title="Working with the Proxy and Whitelist">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../data-dictionary/" class="btn btn-neutral" title="Data Dictionary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../data-dictionary/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../proxy-whitelist/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
