@@ -1,5 +1,6 @@
+* * *
 # BloodPAC DEMO: Using a Jupyter notebook for analysis
-
+* * *
 
 The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a starting python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: [https://github.com/occ-data/bpa-functions](https://github.com/occ-data/bpa-functions).    The Gen3 community is encouraged to add to the functions library or improve the notebook.  
 

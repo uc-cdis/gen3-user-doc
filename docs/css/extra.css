@@ -1,9 +1,40 @@
+
+p {color: #202030;}
+
+h1 {color: #202030;}
+h2 {color: #202030;}
+h3 {color: #202030;}
+h4 {color: #202030;}
+
+
+a:link    { color: #6A3937 }  /* unvisited links */
+a:visited { color: #784c4b }  /* visited links   */
+a:hover   { color: #6B654B }  /* user hovers     */
+a:active  { color: #6A3937 }  /* active links    */
+
+
+
+.wy-side-nav-search {
+background: #222c32;
+}
+.wy-nav-side {
+background: #222c32;
+}
+.rst-versions .rst-current-version {
+background: #222c32;
+}
+
+.rst-versions{
+border-top:solid 10px #222c32;
+}
+
+
 .navbar {
     background-image: -webkit-linear-gradient(#6A3937,#DDCD33 60%,#6A3937);
     background-image: linear-gradient(#6A3937,#DDCD33 60%,#6A3937);
     background-repeat: no-repeat;
-    border-bottom: 1px solid #6A3937;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6A3937',endColorstr='#DDCD33',GradientType=0);
+    border-bottom: 1px solid #6A39;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff54b4eb',endColorstr='#ff1d9ce5',GradientType=0);
     filter: none;
     -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
     box-shadow: 0 1px 10px rgba(0,0,0,0.1);
@@ -21,7 +52,7 @@
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #5E5E5E;
+    color: #DDCD33;
 }
 /* Link */
 .navbar-default .navbar-nav > li > a {
@@ -29,7 +60,7 @@
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #333;
+    color: #6B654B;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -91,35 +122,8 @@
 
 
 
-p {color: #202030;}
-
-h1 {color: #202030;}
-h2 {color: #202030;}
-h3 {color: #202030;}
-h4 {color: #202030;}
 
 
-a:link    { color: #6A3937 }  /* unvisited links */
-a:visited { color: #784c4b }  /* visited links   */
-a:hover   { color: #6B654B }  /* user hovers     */
-a:active  { color: #6A3937 }  /* active links    */
-
-
-
-
-.wy-side-nav-search {
-background: #222c32;
-}
-.wy-nav-side {
-background: #222c32;
-}
-.rst-versions .rst-current-version {
-background: #222c32;
-}
-
-.rst-versions{
-border-top:solid 10px #222c32;
-}
 
 
 
