@@ -194,6 +194,10 @@
 <p><img alt="GraphQL Query" src="../../img/gQL-query.gif" /></p>
 <h3 id="extra-default-first-10-entries">Extra:   Default = first 10 entries<a class="headerlink" href="#extra-default-first-10-entries" title="Permanent link"></a></h3>
 <p>Queries by defult return the first 10 entries.   If you want more than that, you can specify it in the query call: <code>(first:1000)</code></p>
+<p>In the case that too many results are returned, you may receive a timeout error. In that case, you may want to use <a href="http://graphql.org/learn/pagination/">pagination</a>. For example, if there are 2,550 records returned, and your query is timing out with <code>(first:3000)</code>, then break your query into multiple pages with an offset:</p>
+<p><code>(first:1000, offset:0)</code> - this will return records 0-1000
+<code>(first:1000,offset:1000)</code> - this will return records 1000-2000
+<code>(first:1000,offset:2000)</code> - this will return records 2000-2,550</p>
 <p>Updating the example template <a href="../../assets/details_from_experiment.json"><code>details from experiment</code></a> sample query to call the first 1000, the call becomes:  </p>
 <pre><code>{
     &quot;query&quot;:&quot; query Test {
