@@ -94,14 +94,6 @@
             
     <li class="toctree-l3"><a href="#working-with-the-proxy-and-whitelists">Working with the proxy and whitelists</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l4" href="#working-with-the-proxy">Working with the Proxy</a></li>
-        
-            <li><a class="toctree-l4" href="#whitelists">Whitelists</a></li>
-        
-        </ul>
-    
 
     </ul>
                 </li>
@@ -167,8 +159,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="working-with-the-proxy-and-whitelists">Working with the proxy and whitelists<a class="headerlink" href="#working-with-the-proxy-and-whitelists" title="Permanent link"></a></h1>
-<h2 id="working-with-the-proxy">Working with the Proxy<a class="headerlink" href="#working-with-the-proxy" title="Permanent link"></a></h2>
+                <h2 id="working-with-the-proxy-and-whitelists">Working with the proxy and whitelists<a class="headerlink" href="#working-with-the-proxy-and-whitelists" title="Permanent link"></a></h2>
+<hr />
+<h4> Working with the Proxy </h4>
+
 <p>To prevent unauthorized traffic, the Gen3 VPC utilizes a proxy.   If you are using one of the custom VMs setup, there is already a line in your .bashrc file to handle traffic requests.   </p>
 <pre><code>export http_proxy=http://cloud-proxy.internal.io:3128
 export https_proxy=$http_proxy
@@ -178,7 +172,8 @@ export https_proxy=$http_proxy
 <pre><code>https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://bpa-data/ --profile &lt;profilename&gt;
 </code></pre>
 
-<h2 id="whitelists">Whitelists<a class="headerlink" href="#whitelists" title="Permanent link"></a></h2>
+<h4> Whitelists </h4>
+
 <p>Additionally, to aid Gen3 Commons security, tool installation from outside sources is managed through a whitelist.   If you have problems installing a tool you need for your work, contact Gen3-support@datacommons.io and with a list of any sites you might wish to install tools from.    After passing a security review,  these can be added to the whitelist to facilitate access.</p>
               
             </div>
