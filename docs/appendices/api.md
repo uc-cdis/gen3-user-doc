@@ -33,6 +33,12 @@ Example templates have been setup [here](/appendices/template-tsvs/).
 ### Extra:   Default = first 10 entries
 Queries by defult return the first 10 entries.   If you want more than that, you can specify it in the query call: ```(first:1000)```
 
+In the case that too many results are returned, you may receive a timeout error. In that case, you may want to use [pagination](http://graphql.org/learn/pagination/). For example, if there are 2,550 records returned, and your query is timing out with ```(first:3000)```, then break your query into multiple pages with an offset:
+
+```(first:1000, offset:0)``` - this will return records 0-1000
+```(first:1000,offset:1000)``` - this will return records 1000-2000
+```(first:1000,offset:2000)``` - this will return records 2000-2,550
+
 Updating the example template [`details from experiment`](/assets/details_from_experiment.json) sample query to call the first 1000, the call becomes:  
 
 ```
