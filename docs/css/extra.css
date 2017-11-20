@@ -11,3 +11,18 @@ a:link    { color: #6A3937 }  /* unvisited links */
 a:visited { color: #784c4b }  /* visited links   */
 a:hover   { color: #6B654B }  /* user hovers     */
 a:active  { color: #6A3937 }  /* active links    */
+
+
+.wy-side-nav-search {
+background: #DDCD33;
+}
+.wy-nav-side {
+background: #DDCD33;
+}
+.rst-versions .rst-current-version {
+background: #DDCD33;
+}
+
+.rst-versions{
+border-top:solid 10px #DDCD33;
+}
