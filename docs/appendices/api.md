@@ -21,7 +21,8 @@ Like your credentials that let you access "raw" data in the object store or your
 
 For example:   If you're doing the [Jupyter notebook demo](/demos/bloodpac-demo/) from your analysis VM, your secrets file is loaded early in the demo so you can query.   If you're using the submission portal to query, your secrets file is setup in a DB associated with your login credentials.  
 
-If you receive an error like "You don't have access to this data", then you will most likely need to update your API keys and enter them into your VM's .secrets file:
+If you receive an error like "You don't have access to this data", then you will most likely need to update your API keys and enter them into your VM's .secrets file.
+
 1) Click "Create access key" button:
 ![No Access Key](/img/no-key.png)
 
