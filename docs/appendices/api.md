@@ -26,7 +26,7 @@ If you receive an error like "You don't have access to this data", then you will
 1) Click "Create access key" button:
 ![No Access Key](/img/no-key.png)
 
-2) Copy the keys:
+2) Copy the displayed keys:
 ![Create Access Key](/img/create-key.png)
 
 3) In your VM, open your .secrets file with a text editor:
