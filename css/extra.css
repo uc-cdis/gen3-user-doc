@@ -43,3 +43,8 @@ border-top:solid 10px #202030;
 .navbar-brand > span {
   margin-left: 5rem;
 }
+
+.current .logo {
+    opacity: 1;
+    vertical-align: left;
+}
