@@ -1,31 +1,10 @@
 # Minimum Technical Data Elements (MTDE)
 * * *
 
-To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the “Minimum Technical Data Elements”.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  
+To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the “Minimum Technical Data Elements”.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the Gen3 “Data Experience” group.  
 
-### [Study](https://data.bloodpac.org/dd/study)
+For example, if a data commons was designed to accept gene/genome sequences, in order to facilitate analysis of genetic data across studies submitted by different groups, a node called "submitted aligned reads" may require the following metadata properties (MTDE):  
 
+Download template: [JSON](/assets/submitted_aligned_reads.json) | [TSV](/template-tsvs/submitted_aligned_reads.tsv)
 
-### [Biospecimen Node](https://data.bloodpac.org/dd/biospecimen)
-* Blood Tube Type
-* Procurement Temperature
-* Shipment Temperature
-
-### [Sample Node](https://data.bloodpac.org/dd/sample)
-* Composition
-* Blood Fractionation Method
-* Hours to Fractionation Upper/Lower
-   * From blood draw to completion of fractionation
-
-### [Aliquot Node](https://data.bloodpac.org/dd/aliquot)
-* Clinical or Contrived
-* Hours to Freezer Upper/Lower
-   * From completion of fractionation to freezing
-* Storage Temperature
-
-### [Analyte Node](https://data.bloodpac.org/dd/analyte)
-* Analyte Isolation Method
-
-### [Quantification Assay Node](https://data.bloodpac.org/dd/quantification_assay)
-* Assay Method
-  * DNA quantification method
+![Submitted Aligned Reads MTDE](/img/sar-mtde.png)
