@@ -1,5 +1,5 @@
 
-![CDIS Logo](/img/cdis.png)
+![CDIS Logo](/img/UC-CDIS-logo.png)
 
 * * *
 ## Welcome to Gen3 Documentation
