@@ -162,43 +162,13 @@
         }, 
         {
             "location": "/appendices/mtde/", 
-            "text": "Minimum Technical Data Elements (MTDE)\n\uf0c1\n\n\n\n\nTo facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the \u201cMinimum Technical Data Elements\u201d.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the \u201cData Experience\u201d Gen3 group.  \n\n\nStudy\n\uf0c1\n\n\nBiospecimen Node\n\uf0c1\n\n\n\n\nBlood Tube Type\n\n\nProcurement Temperature\n\n\nShipment Temperature\n\n\n\n\nSample Node\n\uf0c1\n\n\n\n\nComposition\n\n\nBlood Fractionation Method\n\n\nHours to Fractionation Upper/Lower\n\n\nFrom blood draw to completion of fractionation\n\n\n\n\nAliquot Node\n\uf0c1\n\n\n\n\nClinical or Contrived\n\n\nHours to Freezer Upper/Lower\n\n\nFrom completion of fractionation to freezing\n\n\nStorage Temperature\n\n\n\n\nAnalyte Node\n\uf0c1\n\n\n\n\nAnalyte Isolation Method\n\n\n\n\nQuantification Assay Node\n\uf0c1\n\n\n\n\nAssay Method\n\n\nDNA quantification method", 
+            "text": "Minimum Technical Data Elements (MTDE)\n\uf0c1\n\n\n\n\nTo facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the \u201cMinimum Technical Data Elements\u201d.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the Gen3 \u201cData Experience\u201d group.  \n\n\nFor example, if a data commons was designed to accept gene/genome sequences, in order to facilitate analysis of genetic data across studies submitted by different groups, a node called \"submitted aligned reads\" may require the following metadata properties (MTDE):  \n\n\nDownload template: \nJSON\n | \nTSV", 
             "title": "Minimal Technical Data Elements"
         }, 
         {
             "location": "/appendices/mtde/#minimum-technical-data-elements-mtde", 
-            "text": "To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the \u201cMinimum Technical Data Elements\u201d.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the \u201cData Experience\u201d Gen3 group.", 
+            "text": "To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the \u201cMinimum Technical Data Elements\u201d.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the Gen3 \u201cData Experience\u201d group.    For example, if a data commons was designed to accept gene/genome sequences, in order to facilitate analysis of genetic data across studies submitted by different groups, a node called \"submitted aligned reads\" may require the following metadata properties (MTDE):    Download template:  JSON  |  TSV", 
             "title": "Minimum Technical Data Elements (MTDE)"
-        }, 
-        {
-            "location": "/appendices/mtde/#study", 
-            "text": "", 
-            "title": "Study"
-        }, 
-        {
-            "location": "/appendices/mtde/#biospecimen-node", 
-            "text": "Blood Tube Type  Procurement Temperature  Shipment Temperature", 
-            "title": "Biospecimen Node"
-        }, 
-        {
-            "location": "/appendices/mtde/#sample-node", 
-            "text": "Composition  Blood Fractionation Method  Hours to Fractionation Upper/Lower  From blood draw to completion of fractionation", 
-            "title": "Sample Node"
-        }, 
-        {
-            "location": "/appendices/mtde/#aliquot-node", 
-            "text": "Clinical or Contrived  Hours to Freezer Upper/Lower  From completion of fractionation to freezing  Storage Temperature", 
-            "title": "Aliquot Node"
-        }, 
-        {
-            "location": "/appendices/mtde/#analyte-node", 
-            "text": "Analyte Isolation Method", 
-            "title": "Analyte Node"
-        }, 
-        {
-            "location": "/appendices/mtde/#quantification-assay-node", 
-            "text": "Assay Method  DNA quantification method", 
-            "title": "Quantification Assay Node"
         }, 
         {
             "location": "/appendices/proxy-whitelist/", 

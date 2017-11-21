@@ -90,22 +90,6 @@
             
     <li class="toctree-l3"><a href="#minimum-technical-data-elements-mtde">Minimum Technical Data Elements (MTDE)</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l4" href="#study">Study</a></li>
-        
-            <li><a class="toctree-l4" href="#biospecimen-node">Biospecimen Node</a></li>
-        
-            <li><a class="toctree-l4" href="#sample-node">Sample Node</a></li>
-        
-            <li><a class="toctree-l4" href="#aliquot-node">Aliquot Node</a></li>
-        
-            <li><a class="toctree-l4" href="#analyte-node">Analyte Node</a></li>
-        
-            <li><a class="toctree-l4" href="#quantification-assay-node">Quantification Assay Node</a></li>
-        
-        </ul>
-    
 
     </ul>
                 </li>
@@ -171,37 +155,10 @@
               
                 <h1 id="minimum-technical-data-elements-mtde">Minimum Technical Data Elements (MTDE)<a class="headerlink" href="#minimum-technical-data-elements-mtde" title="Permanent link"></a></h1>
 <hr />
-<p>To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the “Minimum Technical Data Elements”.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  </p>
-<h3 id="study"><a href="https://data.bloodpac.org/dd/study">Study</a><a class="headerlink" href="#study" title="Permanent link"></a></h3>
-<h3 id="biospecimen-node"><a href="https://data.bloodpac.org/dd/biospecimen">Biospecimen Node</a><a class="headerlink" href="#biospecimen-node" title="Permanent link"></a></h3>
-<ul>
-<li>Blood Tube Type</li>
-<li>Procurement Temperature</li>
-<li>Shipment Temperature</li>
-</ul>
-<h3 id="sample-node"><a href="https://data.bloodpac.org/dd/sample">Sample Node</a><a class="headerlink" href="#sample-node" title="Permanent link"></a></h3>
-<ul>
-<li>Composition</li>
-<li>Blood Fractionation Method</li>
-<li>Hours to Fractionation Upper/Lower</li>
-<li>From blood draw to completion of fractionation</li>
-</ul>
-<h3 id="aliquot-node"><a href="https://data.bloodpac.org/dd/aliquot">Aliquot Node</a><a class="headerlink" href="#aliquot-node" title="Permanent link"></a></h3>
-<ul>
-<li>Clinical or Contrived</li>
-<li>Hours to Freezer Upper/Lower</li>
-<li>From completion of fractionation to freezing</li>
-<li>Storage Temperature</li>
-</ul>
-<h3 id="analyte-node"><a href="https://data.bloodpac.org/dd/analyte">Analyte Node</a><a class="headerlink" href="#analyte-node" title="Permanent link"></a></h3>
-<ul>
-<li>Analyte Isolation Method</li>
-</ul>
-<h3 id="quantification-assay-node"><a href="https://data.bloodpac.org/dd/quantification_assay">Quantification Assay Node</a><a class="headerlink" href="#quantification-assay-node" title="Permanent link"></a></h3>
-<ul>
-<li>Assay Method</li>
-<li>DNA quantification method</li>
-</ul>
+<p>To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the “Minimum Technical Data Elements”.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the Gen3 “Data Experience” group.  </p>
+<p>For example, if a data commons was designed to accept gene/genome sequences, in order to facilitate analysis of genetic data across studies submitted by different groups, a node called "submitted aligned reads" may require the following metadata properties (MTDE):  </p>
+<p>Download template: <a href="../../assets/submitted_aligned_reads.json">JSON</a> | <a href="../../template-tsvs/submitted_aligned_reads.tsv">TSV</a></p>
+<p><img alt="Submitted Aligned Reads MTDE" src="../../img/sar-mtde.png" /></p>
               
             </div>
           </div>
