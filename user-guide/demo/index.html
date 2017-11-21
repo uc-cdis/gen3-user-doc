@@ -8,7 +8,7 @@
   
   <meta name="author" content="University of Chicago, CDIS">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>BloodPAC - Gen3 User Doc</title>
+  <title>DEMO - Gen3 User Doc</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "BloodPAC";
-    var mkdocs_page_input_path = "demos/bloodpac-demo.md";
-    var mkdocs_page_url = "/demos/bloodpac-demo/";
+    var mkdocs_page_name = "DEMO";
+    var mkdocs_page_input_path = "user-guide/demo.md";
+    var mkdocs_page_url = "/user-guide/demo/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -69,15 +69,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+    <a class="" href="../guide-overview/">Guide Overview</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+    <a class="" href="../data-contribution/">Data Contribution</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../user-guide/data-access/">Data Access</a>
+    <a class="" href="../data-access/">Data Access</a>
                 </li>
                 <li class="">
                     
@@ -106,32 +106,26 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <span class="caption-text">DEMOs</span>
-    <ul class="subnav">
-                <li class=" current">
-                    
-    <a class="current" href="./">BloodPAC</a>
+    <a class="current" href="./">DEMO</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#bloodpac-demo-using-a-jupyter-notebook-for-analysis">BloodPAC DEMO: Using a Jupyter notebook for analysis</a></li>
+    <li class="toctree-l2"><a href="#demo-using-a-jupyter-notebook-for-analysis">DEMO: Using a Jupyter notebook for analysis</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#running-the-notebook-in-your-vm">Running the notebook in your VM</a></li>
+            <li><a class="toctree-l3" href="#running-the-notebook-in-your-vm">Running the notebook in your VM</a></li>
         
-            <li><a class="toctree-l4" href="#port-forwarding-to-your-vm">Port forwarding to your VM</a></li>
+            <li><a class="toctree-l3" href="#port-forwarding-to-your-vm">Port forwarding to your VM</a></li>
         
-            <li><a class="toctree-l4" href="#access-the-notebook-in-via-browser">Access the notebook in via browser</a></li>
+            <li><a class="toctree-l3" href="#access-the-notebook-in-via-browser">Access the notebook in via browser</a></li>
         
-            <li><a class="toctree-l4" href="#review-and-follow-the-notebook">Review and follow the notebook</a></li>
+            <li><a class="toctree-l3" href="#review-and-follow-the-notebook">Review and follow the notebook</a></li>
         
         </ul>
     
 
-    </ul>
-                </li>
     </ul>
 	    </li>
           
@@ -156,12 +150,8 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>DEMOs &raquo;</li>
-        
-      
     
-    <li>BloodPAC</li>
+    <li>DEMO</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -171,9 +161,9 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="bloodpac-demo-using-a-jupyter-notebook-for-analysis">BloodPAC DEMO: Using a Jupyter notebook for analysis<a class="headerlink" href="#bloodpac-demo-using-a-jupyter-notebook-for-analysis" title="Permanent link"></a></h1>
+                <h1 id="demo-using-a-jupyter-notebook-for-analysis">DEMO: Using a Jupyter notebook for analysis<a class="headerlink" href="#demo-using-a-jupyter-notebook-for-analysis" title="Permanent link"></a></h1>
 <hr />
-<p>The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a starting python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: <a href="https://github.com/occ-data/bpa-functions">https://github.com/occ-data/bpa-functions</a>.    The Gen3 community is encouraged to add to the functions library or improve the notebook.  </p>
+<p>The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a starting python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: <a href="https://github.com/occ-data/gen3-functions">https://github.com/occ-data/gen3-functions</a>.    The Gen3 community is encouraged to add to the functions library or improve the notebook.  </p>
 <blockquote>
 <p>NOTE:   As the Gen3 community updates repositories, you can keep them up to date using <code>git pull origin master</code> in the <code>functions</code> folder.   It has already been initialized to sync with this repository.</p>
 <p>NOTE2: If you receive an error when trying to do <code>git pull</code>, you may need to set proxies and/or either save or drop any changes you've made:</p>
@@ -206,7 +196,7 @@ unset https_proxy;
 <li>Running a simple analysis over a file and collection of files</li>
 <li>Plotting the results</li>
 </ul>
-<p>In the Jupyter notebook, many of the calls rely on more complex functions described in the <a href="https://github.com/occ-data/bpa-functions/blob/master/analysis_functions_v2.py">analysis_functions file</a>.   It is worth taking the time to understand how this file works so you can use and customize it or build your own tools.    </p>
+<p>In the Jupyter notebook, many of the calls rely on more complex functions described in the <a href="https://github.com/occ-data/gen3-functions/blob/master/analysis_functions_v2.py">analysis_functions file</a>.   It is worth taking the time to understand how this file works so you can use and customize it or build your own tools.    </p>
 <p>We would gladly publish and share any tools, Docker images, function libraries, notebooks, etc via Github or via this Sage Synapse profile.   Just contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;">&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;</a> for more information.</p>
 <h2 id="running-the-notebook-in-your-vm">Running the notebook in your VM<a class="headerlink" href="#running-the-notebook-in-your-vm" title="Permanent link"></a></h2>
 <p>After we're logged in to our analysis VM and in the functions directory (from home: <code>cd functions</code>), run the jupyter notebook server.  </p>
@@ -228,7 +218,8 @@ unset https_proxy;
 </blockquote>
 <h2 id="access-the-notebook-in-via-browser">Access the notebook in via browser<a class="headerlink" href="#access-the-notebook-in-via-browser" title="Permanent link"></a></h2>
 <p>In your preferred browser and enter http://localhost:8888/;   Then from the VM terminal session, copy and paste the token from the notebook server into the requested spot in your browser.</p>
-<h4 id="example-run-server-port-forward-access-notebook-in-browser">Example:   Run Server, port forward, access notebook in browser<a class="headerlink" href="#example-run-server-port-forward-access-notebook-in-browser" title="Permanent link"></a></h4>
+<h5> Example:   Run Server, port forward, access notebook in browser</h5>
+
 <p><img alt="Jupyter notebook example" src="../../img/jupyter.gif" /></p>
 <h2 id="review-and-follow-the-notebook">Review and follow the notebook<a class="headerlink" href="#review-and-follow-the-notebook" title="Permanent link"></a></h2>
 <h4> Credentials </h4>
