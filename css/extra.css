@@ -23,3 +23,23 @@ background: #39304A;
 .rst-versions{
 border-top:solid 10px #202030;
 }
+
+
+.navbar > .container .navbar-brand {
+  font-size: 2em;
+  line-height: 21px !important;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  width: 295px;
+  height: 64px;
+  padding-top: 1.6rem;
+}
+
+.navbar-brand > img {
+  width:100%;
+  display: inline-block;
+}
+
+.navbar-brand > span {
+  margin-left: 5rem;
+}
