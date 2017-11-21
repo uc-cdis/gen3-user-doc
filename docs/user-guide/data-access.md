@@ -145,4 +145,4 @@ You can use other commands to pull files from the s3 object storage into your VM
 
 You're ready to use whatever tools you wish to analyze data in the commons within your VM.   For requests for alternative configurations, analysis storage, or other needs please contact <gen3-support@datacommons.io>.
 
-For an example of how you could use a Jupyter Notebook to run analysis in the browser on your local computer, please continue on to the [next section](../demos/bloodpac-demo.md).    There are lots of good examples that may be useful to you.    
+For an example of how you could use a Jupyter Notebook to run analysis in the browser on your local computer, please continue on to the [next section](/user-guide/demo/).    There are lots of good examples that may be useful to you.    
