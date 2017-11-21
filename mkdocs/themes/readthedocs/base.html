@@ -66,7 +66,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
     {%- block site_name %}
-		<a href="#"><img src="img/Gen3.png"></a>
+		<a href="#"><img src="img/Gen3.png"></a> <!-- added this for logo: cgm -->
         <!--
 		<a href="{{ nav.homepage.url }}" class="icon icon-home"> {{ config.site_name }}</a>
 		-->
@@ -80,6 +80,7 @@
         {%- block site_nav %}
 	<ul class="current">
 	  {% set navlevel = 1 %}
+	  <li class="logo"><a href="#"><img src="img/Gen3.png"></a></li> <!-- Added this: cgm -->
           {% for nav_item in nav %}
             <li class="toctree-l{{ navlevel }}{% if nav_item.active and not nav_item.children %} current{%endif%}">
 		{% include 'nav.html' %}
