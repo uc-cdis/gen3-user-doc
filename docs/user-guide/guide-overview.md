@@ -12,9 +12,9 @@
 ## Appendices
 * * *
 
-* [Working with the API](/appencies/api/)
-* [Working with the Proxy and Whitelist](/appencies/proxy-whitelist/)
+* [Working with the API](/appendices/api/)
+* [Working with the Proxy and Whitelist](/appendices/proxy-whitelist/)
 * [Minimum Technical Data Elements (MTDE)](/appendices/mtde/)
-* [Data Dictionary Viewer](/appencies/data-dictionary/)
-* [Template Metadata TSVs](/appencies/template-tsvs/)
-* [Managing Submission Timepoints](/appencies/timepoints/)
+* [Data Dictionary Viewer](/appendices/data-dictionary/)
+* [Template Metadata TSVs](/appendices/template-tsvs/)
+* [Managing Submission Timepoints](/appendices/timepoints/)
