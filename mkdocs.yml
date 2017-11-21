@@ -18,8 +18,7 @@ pages:
         - Working with the API: appendices/api.md
         - Template TSVs: appendices/template-tsvs.md
         - Data Commons Architecture: appendices/architecture.md
-    - DEMOs:
-        - BloodPAC: demos/bloodpac-demo.md
+    - DEMO: user-guide/demo.md
 
 theme: readthedocs
 
