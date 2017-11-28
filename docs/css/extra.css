@@ -9,10 +9,31 @@ a:hover   { color: #6B654B }  /* user hovers     */
 a:active  { color: #6A3937 }  /* active links    */
 
 
+.wy-side-nav-search:before{
+    width: 300px;
+    content: " ";
+    background-image: url(/img/Gen3.png);
+    background-position: center center;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .wy-side-nav-search {
+margin-top: 90px;
 background: #39304A;
 color: #DDCD33;
 }
+
+.wy-side-nav-search a:link    { color: #ffffff }  /* unvisited links */
+.wy-side-nav-search a:visited    { color: #ffffff }  /* unvisited links */
+.wy-side-nav-search a:hover    { color: #ffffff }  /* unvisited links */
+.wy-side-nav-search a:active    { color: #ffffff }  /* unvisited links */
+
 .wy-nav-side {
 background: #39304A;
 }
