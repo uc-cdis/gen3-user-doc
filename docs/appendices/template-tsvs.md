@@ -1,4 +1,3 @@
-* * *
 ## Template TSVs for metadata submission
 * * *
 

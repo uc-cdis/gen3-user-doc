@@ -1,0 +1,14 @@
+{
+  "read_groups": {
+    "submitter_id": null
+  }, 
+  "data_type": null, 
+  "file_name": null, 
+  "md5sum": null, 
+  "data_format": null, 
+  "submitter_id": null, 
+  "data_category": null, 
+  "file_size": null, 
+  "type": "submitted_aligned_reads", 
+  "experimental_strategy": null
+}
