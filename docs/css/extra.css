@@ -34,10 +34,10 @@ color: #DDCD33;
 .wy-side-nav-search a:hover    { color: #ffffff }  /* unvisited links */
 .wy-side-nav-search a:active    { color: #ffffff }  /* unvisited links */
 
-.wy-side-nav a:link    { color: #ffffff }  /* unvisited links */
-.wy-side-nav a:visited    { color: #ffffff }  /* unvisited links */
-.wy-side-nav a:hover    { color: #ffffff }  /* unvisited links */
-.wy-side-nav a:active    { color: #ffffff }  /* unvisited links */
+.wy-nav-side a:link    { color: #ffffff }  /* unvisited links */
+.wy-nav-side a:visited    { color: #ffffff }  /* unvisited links */
+.wy-nav-side a:hover    { color: #ffffff }  /* unvisited links */
+.wy-nav-side a:active    { color: #ffffff }  /* unvisited links */
 
 
 .wy-nav-side {
