@@ -37,6 +37,3 @@ google_analytics: ['UA-27795084-5', 'mkdocs.org']
 
 plugins:
     - search
-
-extra:
-    version: 1.0.0
