@@ -27,7 +27,7 @@
     * Lets users query the commons API so that an ecosystem of applications can be built.
     * Helps automate the validation of submitted data.   
 &nbsp;
-For the most current model, go to: https://github.com/occ-data/gen3dictionary
+For the most current model, go to: https://github.com/uc-cdis/datadictionary
 For the most current graph of the model, go to: https://www.gen3.org/data-group/
 
 If you have an submission element that you believe can't be described in the model, we'd be glad to work with you to find a home for the element or update the model.   
