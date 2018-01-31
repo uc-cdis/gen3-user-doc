@@ -244,7 +244,7 @@
 These documents may also reference the:</p>
 <ul>
 <li><a href="https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58c1fff66b8f5b630c9d367e/1489108983165/Gen3-Privacy-Security-Policy-16-v4.pdf">Privacy and Security Agreement</a></li>
-<li><a href="https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58ac8debf7e0ab22fa54afe9/1487703531906/BloodPAC-ipr-13-v1.pdf">Intellectual Property Rights (IPR) Policy</a></li>
+<li><a href="https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58ac8debf7e0ab22fa54afe9/1487703531906/gen3-ipr-13-v1.pdf">Intellectual Property Rights (IPR) Policy</a></li>
 </ul>
 <hr />
 <h2 id="2-complete-the-data-inventory-form">2. Complete the data inventory form<a class="headerlink" href="#2-complete-the-data-inventory-form" title="Permanent link"></a></h2>
@@ -309,7 +309,7 @@ Gen3 data contributors will need to prepare metadata for their submission in tab
 <h3>Where is the metadata submission portal?</h3>
 
 <p>Links to Gen3 Commons Submission portals:</p>
-<p><a href="https://data.bloodpac.org/">BloodPAC</a></p>
+<p><a href="https://data.gen3.org/">Gen3</a></p>
 <hr />
 <h2 id="6-submit-and-validate-project-metadata-tsvs">6. Submit and validate project metadata tsvs<a class="headerlink" href="#6-submit-and-validate-project-metadata-tsvs" title="Permanent link"></a></h2>
 <hr />
@@ -335,8 +335,8 @@ Gen3 data contributors will need to prepare metadata for their submission in tab
  'id': 'asdf21as-2q4a-2563-213k-8dn4kg8dsb3j',
  'related_cases': [],
  'type': 'case',
- 'unique_keys': [{'project_id': 'bpa-MyGroup_P0001_T1'
-   'submitter_id': u'BPA_MG_P0001_EX1_C1'}],
+ 'unique_keys': [{'project_id': 'gen3-MyGroup_P0001_T1'
+   'submitter_id': u'gen3_MG_P0001_EX1_C1'}],
  'valid': True,
  'warnings': []},
 </code></pre>
@@ -389,9 +389,9 @@ Gen3 data contributors will need to prepare metadata for their submission in tab
 
 <p><code>projects.submitter_id</code> has become <code>projects.code</code> now.   SO:</p>
 <p>EXAMPLE:
-<em> <code>program.name</code> = 'bpa'
+<em> <code>program.name</code> = 'gen3'
 </em> <code>project.code</code> ='MyOrg_P0001_T1'
-* <code>project_id</code> = <code>program.name</code> + '-' + <code>project.code</code> = 'bpa-MyOrg_P0001_T1'</p>
+* <code>project_id</code> = <code>program.name</code> + '-' + <code>project.code</code> = 'gen3-MyOrg_P0001_T1'</p>
 <hr />
 <h2 id="7-get-and-configure-s3-data-storage-credentials">7. Get and configure s3 data storage credentials<a class="headerlink" href="#7-get-and-configure-s3-data-storage-credentials" title="Permanent link"></a></h2>
 <hr />
@@ -411,7 +411,7 @@ This page details how users gain and manage the credentials to access a project 
 
 <ol>
 <li>Go to https://bionimbus-pdc.opensciencedatacloud.org/storage/ Select and use the authentication method you gave in the <a href="#2-complete-the-data-inventory-form">data inventory form</a></li>
-<li>Download access keys by selecting the appropriate button next to the information for your username, e.g., under "Available BPA Datasets". The button is labeled “Generate S3 credential.” See Figure 1.</li>
+<li>Download access keys by selecting the appropriate button next to the information for your username, e.g., under "Available Gen3 Datasets". The button is labeled “Generate S3 credential.” See Figure 1.</li>
 <li>Credentials appear as comma-separated values including an access key and a secret key. The secret key should remain secret.  Do not share these keys.</li>
 </ol>
 <blockquote>
@@ -465,8 +465,8 @@ AWS Secret Access Key [****************]:
 <pre><code>Default output format [None]:
 </code></pre>
 
-<p>You should now be able to see the folder names in the bpa-data bucket.   </p>
-<pre><code>aws s3 ls s3://bpa-data/ --profile &lt;profilename&gt;
+<p>You should now be able to see the folder names in the gen3-data bucket.   </p>
+<pre><code>aws s3 ls s3://gen3-data/ --profile &lt;profilename&gt;
 </code></pre>
 
 <hr />
@@ -479,7 +479,7 @@ AWS Secret Access Key [****************]:
 <h3> Uploading your data </h3>
 
 <p>You can now upload all the files in the prepared folder on your local computer using the AWS CLI and the profiles you configured in <a href="#7-get-and-configure-s3-data-storage-credentials">step 7</a>. Below is the command to copy a folder filled with all your submission files on your local computer to your project folder in a commons. You need to change the name of /path/folder/ to the name of the path of the folder you want to upload.</p>
-<pre><code>aws s3 cp --sse AES256 [/path/folder/] s3://bpa-data/[foldername] --recursive --profile [profilename]
+<pre><code>aws s3 cp --sse AES256 [/path/folder/] s3://gen3-data/[foldername] --recursive --profile [profilename]
 </code></pre>
 
 <blockquote>
@@ -522,27 +522,27 @@ Alternatively if they were diagnosed 2 years before the study began and you want
 <h2 id="appendix-minimum-technical-data-elements">Appendix: Minimum Technical Data Elements<a class="headerlink" href="#appendix-minimum-technical-data-elements" title="Permanent link"></a></h2>
 <p>To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the <a href="../../appendices/mtde/">“Minimum Technical Data Elements” (MTDE)</a>.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  </p>
 <p>For example:</p>
-<p><a href="https://data.bloodpac.org/dd/biospecimen">Biospecimen Node</a></p>
+<p><a href="https://data.gen3.org/dd/biospecimen">Biospecimen Node</a></p>
 <pre><code>* Blood Tube Type
 * Procurement Temperature
 * Shipment Temperature
 </code></pre>
-<p><a href="https://data.bloodpac.org/dd/sample">Sample Node</a></p>
+<p><a href="https://data.gen3.org/dd/sample">Sample Node</a></p>
 <pre><code>* Composition
 * Blood Fractionation Method
 * Hours to Fractionation Upper/Lower
     * From blood draw to completion of fractionation
 </code></pre>
-<p><a href="https://data.bloodpac.org/dd/aliquot">Aliquot Node</a></p>
+<p><a href="https://data.gen3.org/dd/aliquot">Aliquot Node</a></p>
 <pre><code>* Clinical or Contrived
 * Hours to Freezer Upper/Lower
     * From completion of fractionation to freezing
 * Storage Temperature
 </code></pre>
-<p><a href="https://data.bloodpac.org/dd/analyte">Analyte Node</a></p>
+<p><a href="https://data.gen3.org/dd/analyte">Analyte Node</a></p>
 <pre><code>* Analyte Isolation Method
 </code></pre>
-<p><a href="https://data.bloodpac.org/dd/quantification_assay">Quantification Assay Node</a></p>
+<p><a href="https://data.gen3.org/dd/quantification_assay">Quantification Assay Node</a></p>
 <pre><code>* Assay Method
 * DNA quantification method
 </code></pre>

@@ -206,7 +206,7 @@
 <h3>How will I access the Login Node and my Virtual Machine (VM)?</h3>
 
 <p>Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the <a href="../../appendices/architecture/">VPC architecture</a>.</p>
-<p>In your <a href="#1-send-credentials-and-get-welcome-email">welcome email</a> you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:</p>
+<p>In your <a href="#1-send-credentials-and-get-welcome-email">welcome email</a> you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the Gen3 commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:</p>
 <ol>
 <li>SSH to login node:   <code>ssh -A &lt;username&gt;@34.197.164.18</code></li>
 <li>SSH from login node to your VM:  <code>ssh -A ubuntu@&lt;my_VM_ip&gt;</code></li>
@@ -233,27 +233,27 @@ cd ~/.ssh
 <pre><code>vim config
 </code></pre>
 
-<p>In this file you can specify various hosts for access via ssh. Your host for the BPA head node should look something like this:</p>
-<pre><code>Host BPA
-    Hostname 34.197.164.18
-    User YOUR_USERNAME
-    IdentityFile /path/to/YOUR_CREDFILE
+<p>In this file you can specify various hosts for access via ssh. Your host for the head login node should look something like this:</p>
+<pre><code>Host login-node
+    Hostname &lt;ip.address.of.login.node&gt;
+    User &lt;YOUR_USERNAME&gt;
+    IdentityFile &lt;/path/to/YOUR_CREDFILE&gt;
     ForwardAgent yes
 </code></pre>
 
 <p>Where /path/to/YOUR_CREDFILE might be, e.g., <code>~/.ssh/id_rsa</code></p>
-<p>The username will be provided to you by the BloodPAC support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the BloodPAC head-node using this host:</p>
-<pre><code>ssh BPA
+<p>The username will be provided to you by the Gen3 support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the Gen3 head-node using this host:</p>
+<pre><code>ssh login-node
 </code></pre>
 
-<p>Exit the BPA head node and return to your local machine. Back in your config file, add a new host for the BPA submission VM:</p>
+<p>Exit the head login node and return to your local machine. Back in your config file, add a new host for your analysis VM:</p>
 <pre><code>Host analysis
-    Hostname YOUR_VM_IP
+    Hostname &lt;YOUR_VM_IP&gt;
     User ubuntu
-    ProxyCommand ssh -q -AXY BPA -W %h:%p
+    ProxyCommand ssh -q -AXY login-node -W %h:%p
 </code></pre>
 
-<p>Once again you will receive the Hostname IP from the BloodPAC support team in step 4.  This host will route you through the BPA head node and take you directly to your personal BloodPAC analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:</p>
+<p>Once again you will receive the Hostname IP from the Gen3 support team in step 4.  This host will route you through the head login node and take you directly to your personal Gen3 analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:</p>
 <pre><code>ssh analysis
 </code></pre>
 
@@ -264,7 +264,7 @@ cd ~/.ssh
 <h3> Add s3 'raw' data storage credentials to your VM </h3>
 
 <p>Now you'll need to add your storage credentials to your analysis VM.   Details on getting your credentials from the <a href="https://bionimbus-pdc.opensciencedatacloud.org/storage/">Bionimbus storage portal</a> are outlined in the <a href="../../user-guide/data-contribution/">data contribution section</a> of this documentation.   If you are only accessing data and did not contribute, please follow those directions to acquire your keys using the Oauth you provided in <a href="#1-send-credentials-and-get-welcome-email">Step 1</a> of the Data Access section.   </p>
-<p>If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the BloodPAC commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  </p>
+<p>If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the Gen3 commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  </p>
 <p>As a reminder, the command to setup a profile is:
 <code>aws configure --profile &lt;CREATE YOUR PROFILE NAME&gt;</code></p>
 <h4> Example:  Configure an s3 profile in your VM </h4>
