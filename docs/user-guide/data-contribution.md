@@ -56,7 +56,7 @@ If you only wish to contribute data, you do not need to sign the DUA.
 These documents may also reference the:
 
 * [Privacy and Security Agreement](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58c1fff66b8f5b630c9d367e/1489108983165/Gen3-Privacy-Security-Policy-16-v4.pdf)
-* [Intellectual Property Rights (IPR) Policy](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58ac8debf7e0ab22fa54afe9/1487703531906/BloodPAC-ipr-13-v1.pdf)
+* [Intellectual Property Rights (IPR) Policy](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58ac8debf7e0ab22fa54afe9/1487703531906/gen3-ipr-13-v1.pdf)
 
 
 * * *
@@ -134,7 +134,7 @@ The metadata submission portal is secure environment for submitting the tsv meta
 
 Links to Gen3 Commons Submission portals:
 
-[BloodPAC](https://data.bloodpac.org/)
+[Gen3](https://data.gen3.org/)
 
 
 * * *
@@ -167,8 +167,8 @@ Specifically, the message and success fields should provide you with whether you
  'id': 'asdf21as-2q4a-2563-213k-8dn4kg8dsb3j',
  'related_cases': [],
  'type': 'case',
- 'unique_keys': [{'project_id': 'bpa-MyGroup_P0001_T1'
-   'submitter_id': u'BPA_MG_P0001_EX1_C1'}],
+ 'unique_keys': [{'project_id': 'gen3-MyGroup_P0001_T1'
+   'submitter_id': u'gen3_MG_P0001_EX1_C1'}],
  'valid': True,
  'warnings': []},
 ```
@@ -235,9 +235,9 @@ For example, if you submit a sample with `sample_type`, `composition`, and `tube
 `projects.submitter_id` has become `projects.code` now.   SO:
 
 EXAMPLE:
-* `program.name` = 'bpa'
+* `program.name` = 'gen3'
 * `project.code` ='MyOrg_P0001_T1'
-* `project_id` = `program.name` + '-' + `project.code` = 'bpa-MyOrg_P0001_T1'
+* `project_id` = `program.name` + '-' + `project.code` = 'gen3-MyOrg_P0001_T1'
 
 * * *
 
@@ -257,7 +257,7 @@ This page details how users gain and manage the credentials to access a project 
 
 <h3> Obtain S3 credentials </h3>
 1.	Go to https://bionimbus-pdc.opensciencedatacloud.org/storage/ Select and use the authentication method you gave in the [data inventory form](#2-complete-the-data-inventory-form)
-2.	Download access keys by selecting the appropriate button next to the information for your username, e.g., under "Available BPA Datasets". The button is labeled “Generate S3 credential.” See Figure 1.
+2.	Download access keys by selecting the appropriate button next to the information for your username, e.g., under "Available Gen3 Datasets". The button is labeled “Generate S3 credential.” See Figure 1.
 3.	Credentials appear as comma-separated values including an access key and a secret key. The secret key should remain secret.  Do not share these keys.
 
 > NOTE:   Do not share the s3 credentials you gain below with anyone.  
@@ -311,10 +311,10 @@ Press return at the final prompt.
 ```
 Default output format [None]:
 ```
-You should now be able to see the folder names in the bpa-data bucket.   
+You should now be able to see the folder names in the gen3-data bucket.   
 
 ```
-aws s3 ls s3://bpa-data/ --profile <profilename>
+aws s3 ls s3://gen3-data/ --profile <profilename>
 ```
 
 * * *
@@ -333,7 +333,7 @@ You can now upload all the files in the prepared folder on your local computer u
 
 
 ```
-aws s3 cp --sse AES256 [/path/folder/] s3://bpa-data/[foldername] --recursive --profile [profilename]
+aws s3 cp --sse AES256 [/path/folder/] s3://gen3-data/[foldername] --recursive --profile [profilename]
 ```
 > EXTRA:  In an object store, a "folder" or "dir" can't exist with nothing in it.   Thus, if you were to 'ls' before moving any files into it, you wouldn't see the project folder you have access to.   In the example above you're essentially uploading all your data and "creating a folder" in a single step.   
 
@@ -390,31 +390,31 @@ To facilitate cross analysis and improve the usability of the Gen3 commons, all 
 
 For example:
 
-[Biospecimen Node](https://data.bloodpac.org/dd/biospecimen)
+[Biospecimen Node](https://data.gen3.org/dd/biospecimen)
 
 	* Blood Tube Type
 	* Procurement Temperature
 	* Shipment Temperature
 
-[Sample Node](https://data.bloodpac.org/dd/sample)
+[Sample Node](https://data.gen3.org/dd/sample)
 
 	* Composition
 	* Blood Fractionation Method
 	* Hours to Fractionation Upper/Lower
 		* From blood draw to completion of fractionation
 
-[Aliquot Node](https://data.bloodpac.org/dd/aliquot)
+[Aliquot Node](https://data.gen3.org/dd/aliquot)
 
 	* Clinical or Contrived
 	* Hours to Freezer Upper/Lower
 		* From completion of fractionation to freezing
 	* Storage Temperature
 
-[Analyte Node](https://data.bloodpac.org/dd/analyte)
+[Analyte Node](https://data.gen3.org/dd/analyte)
 
 	* Analyte Isolation Method
 
-[Quantification Assay Node](https://data.bloodpac.org/dd/quantification_assay)
+[Quantification Assay Node](https://data.gen3.org/dd/quantification_assay)
 
 	* Assay Method
 	* DNA quantification method

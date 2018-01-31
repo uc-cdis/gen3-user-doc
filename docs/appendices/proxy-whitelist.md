@@ -13,7 +13,7 @@ export https_proxy=$http_proxy
 Alternatively, if you have a different service or a tool that needs to call out, you can set the proxy with each command.  
 
 ```
-https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://bpa-data/ --profile <profilename>
+https_proxy=https://cloud-proxy.internal.io:3128 aws s3 ls s3://gen3-data/ --profile <profilename>
 ```
 
 <h4> Whitelists </h4>

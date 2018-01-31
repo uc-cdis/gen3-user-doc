@@ -7,7 +7,7 @@ In this field you can have things like "Study Enrollment" or "Diagnosis".   Stud
 
 <h4> Examples of submissions using multiple date times </h4>
 
-Patient A enrolls in a study on July 1, and has a blood sample taken on July 10. For patient A you would report:
+Patient A enrolls in a study on July 1, and has a sample taken on July 10. For patient A you would report:
 * case.index_date = "Study Enrollment"
 * biospecimen.days_to_procurement = July 10 - July 1 = 9
 

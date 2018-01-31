@@ -19,7 +19,7 @@ These query the API for the desired metadata and return the matrices.   They run
 
 Like your credentials that let you access "raw" data in the object store or your ssh keys that let you access a VM, there is also a credential that lets you query the API.    For users granted data access, these are in a .secrets file in the home directory of your VM.   These are used for every API call.   
 
-For example:   If you're doing the [Jupyter notebook demo](/demos/bloodpac-demo/) from your analysis VM, your secrets file is loaded early in the demo so you can query.   If you're using the submission portal to query, your secrets file is setup in a DB associated with your login credentials.  
+For example:   If you're doing the [Jupyter notebook demo](/demos/gen3-demo/) from your analysis VM, your secrets file is loaded early in the demo so you can query.   If you're using the submission portal to query, your secrets file is setup in a DB associated with your login credentials.  
 
 If you receive an error like "You don't have access to this data", then you will most likely need to update your API keys and enter them into your VM's .secrets file.
 

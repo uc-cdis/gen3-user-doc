@@ -77,13 +77,13 @@ Within this directory create a file named "config" [Note: I use vim here but any
 vim config
 ```
 
-In this file you can specify various hosts for access via ssh. Your host for the BPA head node should look something like this:
+In this file you can specify various hosts for access via ssh. Your host for the head login node should look something like this:
 
 ```
-Host BPA
-    Hostname 34.197.164.18
-    User YOUR_USERNAME
-    IdentityFile /path/to/YOUR_CREDFILE
+Host login-node
+    Hostname <ip.address.of.login.node>
+    User <YOUR_USERNAME>
+    IdentityFile </path/to/YOUR_CREDFILE>
     ForwardAgent yes
 ```
 
@@ -92,18 +92,18 @@ Where /path/to/YOUR_CREDFILE might be, e.g., `~/.ssh/id_rsa`
 The username will be provided to you by the Gen3 support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the Gen3 head-node using this host:
 
 ```
-ssh BPA
+ssh login-node
 ```
-Exit the BPA head node and return to your local machine. Back in your config file, add a new host for the BPA submission VM:
+Exit the head login node and return to your local machine. Back in your config file, add a new host for your analysis VM:
 
 ```
 Host analysis
-    Hostname YOUR_VM_IP
+    Hostname <YOUR_VM_IP>
     User ubuntu
-    ProxyCommand ssh -q -AXY BPA -W %h:%p
+    ProxyCommand ssh -q -AXY login-node -W %h:%p
 ```
 
-Once again you will receive the Hostname IP from the Gen3 support team in step 4.  This host will route you through the BPA head node and take you directly to your personal Gen3 analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:
+Once again you will receive the Hostname IP from the Gen3 support team in step 4.  This host will route you through the head login node and take you directly to your personal Gen3 analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:
 
 ```
 ssh analysis
