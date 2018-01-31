@@ -41,7 +41,7 @@ Gen3 members with the appropriate signed legal documents will be sent an email t
 
 Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](../appendices/architecture/).
 
-In your [welcome email](#1-send-credentials-and-get-welcome-email) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the BloodPAC commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
+In your [welcome email](#1-send-credentials-and-get-welcome-email) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the Gen3 commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
 
 1.   SSH to login node:   `ssh -A <username>@34.197.164.18`
 2.   SSH from login node to your VM:  `ssh -A ubuntu@<my_VM_ip>`
@@ -89,7 +89,7 @@ Host BPA
 
 Where /path/to/YOUR_CREDFILE might be, e.g., `~/.ssh/id_rsa`
 
-The username will be provided to you by the BloodPAC support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the BloodPAC head-node using this host:
+The username will be provided to you by the Gen3 support team and will be tied to the credential file that you provide us when setting up the account. Save this file and exit. Back in the command line terminal you should now be able to log in to the Gen3 head-node using this host:
 
 ```
 ssh BPA
@@ -103,7 +103,7 @@ Host analysis
     ProxyCommand ssh -q -AXY BPA -W %h:%p
 ```
 
-Once again you will receive the Hostname IP from the BloodPAC support team in step 4.  This host will route you through the BPA head node and take you directly to your personal BloodPAC analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:
+Once again you will receive the Hostname IP from the Gen3 support team in step 4.  This host will route you through the BPA head node and take you directly to your personal Gen3 analysis VM. Once again save the file and exit. In the terminal, try and log in to the submission VM:
 
 ```
 ssh analysis
@@ -118,7 +118,7 @@ If you've done everything correctly, you should now be in the analysis VM.
 <h3> Add s3 'raw' data storage credentials to your VM </h3>
 Now you'll need to add your storage credentials to your analysis VM.   Details on getting your credentials from the [Bionimbus storage portal](https://bionimbus-pdc.opensciencedatacloud.org/storage/) are outlined in the [data contribution section](/user-guide/data-contribution/) of this documentation.   If you are only accessing data and did not contribute, please follow those directions to acquire your keys using the Oauth you provided in [Step 1](#1-send-credentials-and-get-welcome-email) of the Data Access section.   
 
-If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the BloodPAC commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  
+If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the Gen3 commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  
 
 As a reminder, the command to setup a profile is:
 `aws configure --profile <CREATE YOUR PROFILE NAME>`
