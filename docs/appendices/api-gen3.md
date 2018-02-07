@@ -1,8 +1,7 @@
 # Working with the API
 * * *
-
 ## What does the API do?
-
+* * *
 The API is created programmatically based on the [Gen3 commons data model](https://github.com/occ-data/datadictionary).   All of the work Gen3 data contributors do to prepare their metadata powers the API (see steps [4-6 in the Data Contribution section](/user-guide/data-contribution/#4-prepare-metadata-that-fits-the-data-model)).   
 
 With the API in place, users can submit queries to find whatever metadata information they might like across the Gen3 commons.   The API can be queried programmatically or through provided tools like the submission portal.  
