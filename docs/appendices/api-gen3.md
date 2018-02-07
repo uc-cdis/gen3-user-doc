@@ -36,7 +36,7 @@ key =  { "api_key": "<actual-key>", "key_id": "<a-key-uuid>" }
 import requests
 
 # Pass the API key to the Gen3 API using "requests.post" to receive the access token:
-t = requests.post('https://gen3.kids-first.io/user/credentials/cdis/access_token', json=key)
+t = requests.post('https://gen3.commons.io/user/credentials/cdis/access_token', json=key)
 
 # Now you should see your access_token displayed when you enter:
 t.json()
