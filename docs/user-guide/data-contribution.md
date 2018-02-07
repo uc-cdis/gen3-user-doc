@@ -200,11 +200,11 @@ NOTE2:   it is not currently possible to remove values submitted in error using 
 
 <h4> Query the API </h4>
 
-If helpful you can query the API in the submission portal to confirm or correct your submission, to delete nodes, or to submit json queries to learn more about your submission or all the data in the commons.   To learn more visit the [API section of the wiki](/appendices/api/).
+If helpful you can query the API in the submission portal to confirm or correct your submission, to delete nodes, or to submit json queries to learn more about your submission or all the data in the commons.   To learn more visit the [API section of the wiki](/appendices/api-gen3/).
 
 <h4>Check the commons matrices</h4>
 
-Read ["What's an example of the API at work?"](/appendices/api/) to learn more about how the [data matrices](https://www.gen3.org/data-group/) work.   Suffice to say, you can check them hourly to see relevant metadata you submit appear!
+Read ["What's an example of the API at work?"](/appendices/api-gen3/) to learn more about how the [data matrices](https://www.gen3.org/data-group/) work.   Suffice to say, you can check them hourly to see relevant metadata you submit appear!
 
 <h4>Provide feedback</h4>
 You may receive errors for what you think is a valid submission. If you feel what you have provided for a particular entity is valid, please contact the Gen3 support team at gen3-support@occ-data.org. We will be happy to accommodate any necessary changes. We can always add new nodes, properties, or values.

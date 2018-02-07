@@ -15,7 +15,7 @@ pages:
         - Data Dictionary: appendices/data-dictionary.md
         - Minimal Technical Data Elements: appendices/mtde.md
         - Working with the Proxy and Whitelist: appendices/proxy-whitelist.md
-        - Working with the API: appendices/api.md
+        - Working with the API: appendices/api-gen3.md
         - Template TSVs: appendices/template-tsvs.md
         - Data Commons Architecture: appendices/architecture.md
     - DEMO: user-guide/demo.md
