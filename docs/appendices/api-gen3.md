@@ -65,7 +65,8 @@ If you receive an error like "You don't have access... ", then you will most lik
 
 * * *
 
-## Queries in the submission portal:   graphQL    
+## Queries in the submission portal:   graphQL
+* * *
 You can run queries directly in the submission portal by clicking the "Query" magnifying glass or directly at: <https://data.gen3.org/graphql>. Queries are essential as you begin analyses. The query portal has been optimized to autocomplete fields based on content, increase speed and responsiveness, and generally make it easier for Gen3 members to find what they need.
 
 ![GraphQL Query](/img/gQL-query.gif)
@@ -97,9 +98,8 @@ Updating the example template [`details from experiment`](/assets/details_from_e
 ```
 
 * * *
-
 ## Browsing by project node    
-
+* * *
 The metadata submission portal [https://data.gen3.org/](https://data.gen3.org/) can be used to browse an individual submission by node.   Just select a project and then click the "browse nodes" button to the right.    From there, you'll get a screen like below where you can query by node in the dropdown at the left.
 
 <h4> Example:  Browse by node </h4>
@@ -108,9 +108,8 @@ The metadata submission portal [https://data.gen3.org/](https://data.gen3.org/) 
 You can also use this feature to download the tsv associated with the node, or if you have "write" access to the this project, delete existing nodes.   
 
 * * *
-
 ## Graphing a project
-
+* * *
 You can also review a graph of an individual project, toggling between views of the completed nodes and the full graph.  
 
 <h5> Example:  Graphing a project </h5>
