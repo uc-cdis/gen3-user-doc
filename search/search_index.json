@@ -226,6 +226,16 @@
             "title": "Graphing a project"
         }, 
         {
+            "location": "/appendices/timepoints/", 
+            "text": "Managing timepoints in a submission\n\uf0c1\n\n\n\n\nSome elements of submitted datasets could be related to each other in time.   To stay in compliance with HIPAA, Gen3 commons create timelines without using real dates.   Every other date field is anchored by the \"index_date\" in the \"case\" node.  \n\n\nIn this field you can have things like \"Study Enrollment\" or \"Diagnosis\".   Study the case node in the dictionary for more information on the index_date field:  https://data.Gen3.org/dd/case\n\n\n Examples of submissions using multiple date times \n\n\n\nPatient A enrolls in a study on July 1, and has a sample taken on July 10. For patient A you would report:\n\n case.index_date = \"Study Enrollment\"\n\n biospecimen.days_to_procurement = July 10 - July 1 = 9\n\n\nAlternatively if they were diagnosed 2 years before the study began and you wanted to use that as the index_date nothing is stopping you:\n\n case.index_date = \"Diagnosis\"\n\n biospecimen.days_to_procurment = July 10, 2017 - July 1, 2015 =  739\n\n\n Negative Dates \n\n\n\nDays to values can also be negative. If you have an index_date event that occurs after the event, you would present those days_to values as negative. If Patient A had a biospecimen taken when they were initially diagnosed:\n\n case.index_date = \"Study Enrollment\"\n\n biospecimen.days_to_procurement = July 10, 2015 - July 1, 2017 = -721\n\n\n No Time Series \n\n\n\nThe days_to_procurement and days_to_collection are required fields. If you do not have any data for these, we allow escape values of \"Unknown\" and \"Not Applicable\". Please use \"Unknown\" in the instances where you have established a time series but are unable to pin down the date of the event. Use \"Not Applicable\" if you do not have a time series at all.", 
+            "title": "Managing Timepoints"
+        }, 
+        {
+            "location": "/appendices/timepoints/#managing-timepoints-in-a-submission", 
+            "text": "Some elements of submitted datasets could be related to each other in time.   To stay in compliance with HIPAA, Gen3 commons create timelines without using real dates.   Every other date field is anchored by the \"index_date\" in the \"case\" node.    In this field you can have things like \"Study Enrollment\" or \"Diagnosis\".   Study the case node in the dictionary for more information on the index_date field:  https://data.Gen3.org/dd/case", 
+            "title": "Managing timepoints in a submission"
+        }, 
+        {
             "location": "/appendices/template-tsvs/", 
             "text": "Template TSVs for metadata submission\n\uf0c1\n\n\n\n\nThis folder contains all potential entities that could be submitted to the Gen3 data model. Some of the entities are optional.\n\n\nYou can find a complete and detailed description of the new data dictionary \nhere\n.\n\n\nA project will need to be created and you need to be \ngranted submitter access\n before you submit everything under a project.  You will start your submission from \nstudy.tsv\n.\n\n\nstudy.tsv\n\n\ncase.tsv\n\n\nbiospecimen.tsv\n\n\nsample.tsv\n\n\naliquot.tsv\n\n\nanalyte.tsv", 
             "title": "Template TSVs"

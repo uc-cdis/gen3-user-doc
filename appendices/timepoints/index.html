@@ -8,7 +8,7 @@
   
   <meta name="author" content="University of Chicago, CDIS">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Guide Overview - Gen3 User Doc</title>
+  <title>Managing Timepoints - Gen3 User Doc</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Guide Overview";
-    var mkdocs_page_input_path = "user-guide/guide-overview.md";
-    var mkdocs_page_url = "/user-guide/guide-overview/";
+    var mkdocs_page_name = "Managing Timepoints";
+    var mkdocs_page_input_path = "appendices/timepoints.md";
+    var mkdocs_page_url = "/appendices/timepoints/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -67,61 +67,58 @@
 		
     <span class="caption-text">User Guide</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mtde/">Minimal Technical Data Elements</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../api-gen3/">Working with the API</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Guide Overview</a>
+    <a class="current" href="./">Managing Timepoints</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#user-guide-overview">User Guide Overview</a></li>
-    
-
-    <li class="toctree-l3"><a href="#appendices">Appendices</a></li>
+    <li class="toctree-l3"><a href="#managing-timepoints-in-a-submission">Managing timepoints in a submission</a></li>
     
 
     </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../data-contribution/">Data Contribution</a>
+    <a class="" href="../template-tsvs/">Template TSVs</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../data-access/">Data Access</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendices/data-dictionary/">Data Dictionary</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendices/mtde/">Minimal Technical Data Elements</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendices/api-gen3/">Working with the API</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendices/timepoints/">Managing Timepoints</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendices/template-tsvs/">Template TSVs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
+    <a class="" href="../architecture/">Data Commons Architecture</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../demo/">DEMO</a>
+    <a class="" href="../../user-guide/demo/">DEMO</a>
 	    </li>
           
         </ul>
@@ -150,7 +147,7 @@
         
       
     
-    <li>Guide Overview</li>
+    <li>Managing Timepoints</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -160,25 +157,26 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="user-guide-overview">User Guide Overview<a class="headerlink" href="#user-guide-overview" title="Permanent link"></a></h2>
+                <h2 id="managing-timepoints-in-a-submission">Managing timepoints in a submission<a class="headerlink" href="#managing-timepoints-in-a-submission" title="Permanent link"></a></h2>
 <hr />
-<p style="text-align:left">This documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:</p>
+<p>Some elements of submitted datasets could be related to each other in time.   To stay in compliance with HIPAA, Gen3 commons create timelines without using real dates.   Every other date field is anchored by the "index_date" in the "case" node.  </p>
+<p>In this field you can have things like "Study Enrollment" or "Diagnosis".   Study the case node in the dictionary for more information on the index_date field:  https://data.Gen3.org/dd/case</p>
+<h4> Examples of submissions using multiple date times </h4>
 
-<ul>
-<li><a href="../../user-guide/data-contribution/">How to submit your data to the Gen3 data commons</a></li>
-<li><a href="../../user-guide/data-access/">How to query, access, and analyze data in the Gen3 commons</a></li>
-</ul>
-<hr />
-<h2 id="appendices">Appendices<a class="headerlink" href="#appendices" title="Permanent link"></a></h2>
-<hr />
-<ul>
-<li><a href="../../appendices/api-gen3/">Working with the API</a></li>
-<li><a href="../../appendices/proxy-whitelist/">Working with the Proxy and Whitelist</a></li>
-<li><a href="../../appendices/mtde/">Minimum Technical Data Elements (MTDE)</a></li>
-<li><a href="../../appendices/data-dictionary/">Data Dictionary Viewer</a></li>
-<li><a href="../../appendices/template-tsvs/">Template Metadata TSVs</a></li>
-<li><a href="../../appendices/timepoints/">Managing Submission Timepoints</a></li>
-</ul>
+<p>Patient A enrolls in a study on July 1, and has a sample taken on July 10. For patient A you would report:
+<em> case.index_date = "Study Enrollment"
+</em> biospecimen.days_to_procurement = July 10 - July 1 = 9</p>
+<p>Alternatively if they were diagnosed 2 years before the study began and you wanted to use that as the index_date nothing is stopping you:
+<em> case.index_date = "Diagnosis"
+</em> biospecimen.days_to_procurment = July 10, 2017 - July 1, 2015 =  739</p>
+<h5> Negative Dates </h5>
+
+<p>Days to values can also be negative. If you have an index_date event that occurs after the event, you would present those days_to values as negative. If Patient A had a biospecimen taken when they were initially diagnosed:
+<em> case.index_date = "Study Enrollment"
+</em> biospecimen.days_to_procurement = July 10, 2015 - July 1, 2017 = -721</p>
+<h5> No Time Series </h5>
+
+<p>The days_to_procurement and days_to_collection are required fields. If you do not have any data for these, we allow escape values of "Unknown" and "Not Applicable". Please use "Unknown" in the instances where you have established a time series but are unable to pin down the date of the event. Use "Not Applicable" if you do not have a time series at all.</p>
               
             </div>
           </div>
@@ -186,10 +184,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data-contribution/" class="btn btn-neutral float-right" title="Data Contribution">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../template-tsvs/" class="btn btn-neutral float-right" title="Template TSVs">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../api-gen3/" class="btn btn-neutral" title="Working with the API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -219,10 +217,10 @@
           <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../api-gen3/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../data-contribution/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../template-tsvs/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
