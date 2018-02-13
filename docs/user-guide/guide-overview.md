@@ -12,7 +12,7 @@
 ## Appendices
 * * *
 
-* [Working with the API](/appendices/api/)
+* [Working with the API](/appendices/api-gen3/)
 * [Working with the Proxy and Whitelist](/appendices/proxy-whitelist/)
 * [Minimum Technical Data Elements (MTDE)](/appendices/mtde/)
 * [Data Dictionary Viewer](/appendices/data-dictionary/)

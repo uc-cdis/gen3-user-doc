@@ -16,6 +16,7 @@ pages:
         - Minimal Technical Data Elements: appendices/mtde.md
         - Working with the Proxy and Whitelist: appendices/proxy-whitelist.md
         - Working with the API: appendices/api-gen3.md
+        - Managing Timepoints: appendices/timepoints.md
         - Template TSVs: appendices/template-tsvs.md
         - Data Commons Architecture: appendices/architecture.md
     - DEMO: user-guide/demo.md
