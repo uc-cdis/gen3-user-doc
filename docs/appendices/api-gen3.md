@@ -46,10 +46,6 @@ token = requests.post('https://gen3.commons.io/user/credentials/cdis/access_toke
 token
 
 ```
-> ql = requests.post('https://data.braincommons.org/api/v0/submission/graphql/', json=query, headers=headers)
-> print(ql.text)
->
-
 
 When submitting a graphQL query to the Gen3 API, or requesting data download/upload, include the access token in your request header:
 
