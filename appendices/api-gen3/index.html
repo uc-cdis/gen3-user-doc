@@ -213,11 +213,6 @@ token
 
 </code></pre>
 
-<blockquote>
-<p>ql = requests.post('https://data.braincommons.org/api/v0/submission/graphql/', json=query, headers=headers)
-print(ql.text)
-</p>
-</blockquote>
 <p>When submitting a graphQL query to the Gen3 API, or requesting data download/upload, include the access token in your request header:</p>
 <pre><code>headers = {'Authorization': 'bearer '+ token['access_token']}
 
