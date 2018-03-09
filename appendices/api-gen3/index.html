@@ -206,23 +206,34 @@ key =  { &quot;api_key&quot;: &quot;&lt;actual-key&gt;&quot;, &quot;key_id&quot;
 import requests
 
 # Pass the API key to the Gen3 API using &quot;requests.post&quot; to receive the access token:
-t = requests.post('https://gen3.commons.io/user/credentials/cdis/access_token', json=key)
+token = requests.post('https://gen3.commons.io/user/credentials/cdis/access_token', json=key).json()
 
 # Now you should see your access_token displayed when you enter:
-t.json()
+token
 
 </code></pre>
 
-<p>When submitting a graphQL query to the Gen3 API, or requesting data download/upload, include the access token in your request:</p>
-<pre><code># a graphQL endpoint query using the &quot;key&quot; json:
-query = {'query':&quot;&quot;&quot;{case{submitter_id}}&quot;&quot;&quot;};
-output = requests.post('https://gen3.commons.io/api/v0/submission/graphql/', auth=t.json()['access_token'], json=query).text
+<blockquote>
+<p>ql = requests.post('https://data.braincommons.org/api/v0/submission/graphql/', json=query, headers=headers)
+print(ql.text)
+</p>
+</blockquote>
+<p>When submitting a graphQL query to the Gen3 API, or requesting data download/upload, include the access token in your request header:</p>
+<pre><code>headers = {'Authorization': 'bearer '+ token['access_token']}
+
+# a graphQL endpoint query using the &quot;key&quot; json:
+query = {'query':&quot;&quot;&quot;{project(first:0){project_id id}}&quot;&quot;&quot;};
+ql = requests.post('https://gen3.commons.io/api/v0/submission/graphql/', json=query, headers=headers)
+print(ql.text) # display the response
 
 # Data download via API endpoint request:
-r = requests.get('https://gen3.commons.io/user/data/download/file-uuid', headers={'Authorization': 'bearer '+ t.json()['access_token']})
+durl = 'https://gen3.commons.io/api/v0/submission/&lt;program&gt;/&lt;project&gt;/export?format=tsv&amp;ids=' + ids[0:-1] # define the download url with the UUIDs of the records to download in &quot;ids&quot; list
+dl = requests.get(durl, headers=headers)
+print(dl.text) # display response
 
 # Data upload via API endpoint request:
-u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=tsv, headers={'content-type': 'text/tab-separated-values', 'Authorization': 'bearer '+ t.json()['access_token']})
+headers['content-type']='text/tab-separated-values' # add the content-type to header
+u = requests.put('https://gen3.commons.io/api/v0/submission/project-id', data=tsv, headers=headers)
 </code></pre>
 
 <p>If you receive an error like "You don't have access... ", then you will most likely need to update your API key or request a new access token.</p>
