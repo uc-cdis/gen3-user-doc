@@ -12,7 +12,7 @@ pages:
         - Guide Overview: user-guide/guide-overview.md
         - Data Contribution: user-guide/data-contribution.md
         - Data Access: user-guide/data-access.md
-        - Data Analysis: user-guide/data-anaylsis.md
+        - Data Analysis: user-guide/data-analysis.md
     - Appendices:
         - Data Commons Architecture: appendices/architecture.md
         - Data Dictionary: appendices/data-dictionary.md
