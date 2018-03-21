@@ -1,9 +1,22 @@
+<h2> Data Analysis in the Gen3 Commons </h2>
 * * *
-# Data Analysis in the Commons Workspace
+# Running a Jupyter Server in the Commons Workspace
 * * *
+The Gen3 data portal provides a Workspace where users can run a Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
+![Data portal Workspace button](/img/workspace_button.png)
 
-The Gen3 data portal provides a Workspace where users can run a Jupyter server for data exploration and analysis.
+Click "Start Server" to start the Jupyter server in your Workspace:
+![Start Server](/img/start_server.png)
 
+Or if a server is already running, click on "My Server" to access your files.
+![Workspace home](/img/my_server.png)
+
+The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once.
+![Python Notebook](/img/python_notebook.png)
+![Python Notebook](/img/R_jupyter_notebook_workspace.gif)
+
+Terminal sessions can be started
+![Terminal Session](/img/terminal_session.png)
 
 * * *
 # Running a Jupyter server on a virtual machine (VM)
