@@ -109,9 +109,6 @@
     <li class="toctree-l3"><a href="#appendix-managing-timepoints-in-a-submission">Appendix: Managing timepoints in a submission</a></li>
     
 
-    <li class="toctree-l3"><a href="#appendix-minimum-technical-data-elements">Appendix: Minimum Technical Data Elements</a></li>
-    
-
     </ul>
                 </li>
                 <li class="">
@@ -525,33 +522,42 @@ Alternatively if they were diagnosed 2 years before the study began and you want
 <h3> No Time Series </h3>
 
 <p>The days_to_procurement and days_to_collection are required fields. If you do not have any data for these, we allow escape values of "Unknown" and "Not Applicable". Please use "Unknown" in the instances where you have established a time series but are unable to pin down the date of the event. Use "Not Applicable" if you do not have a time series at all.</p>
-<h2 id="appendix-minimum-technical-data-elements">Appendix: Minimum Technical Data Elements<a class="headerlink" href="#appendix-minimum-technical-data-elements" title="Permanent link"></a></h2>
-<p>To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the <a href="../../appendices/mtde/">“Minimum Technical Data Elements” (MTDE)</a>.   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  </p>
-<p>For example:</p>
-<p><a href="https://data.gen3.org/dd/biospecimen">Biospecimen Node</a></p>
-<pre><code>* Blood Tube Type
-* Procurement Temperature
-* Shipment Temperature
-</code></pre>
-<p><a href="https://data.gen3.org/dd/sample">Sample Node</a></p>
-<pre><code>* Composition
-* Blood Fractionation Method
-* Hours to Fractionation Upper/Lower
-    * From blood draw to completion of fractionation
-</code></pre>
-<p><a href="https://data.gen3.org/dd/aliquot">Aliquot Node</a></p>
-<pre><code>* Clinical or Contrived
-* Hours to Freezer Upper/Lower
-    * From completion of fractionation to freezing
-* Storage Temperature
-</code></pre>
-<p><a href="https://data.gen3.org/dd/analyte">Analyte Node</a></p>
-<pre><code>* Analyte Isolation Method
-</code></pre>
-<p><a href="https://data.gen3.org/dd/quantification_assay">Quantification Assay Node</a></p>
-<pre><code>* Assay Method
-* DNA quantification method
-</code></pre>
+<!---
+## Appendix: Minimum Technical Data Elements
+
+To facilitate cross analysis and improve the usability of the Gen3 commons, all data contributors should submit what are considered the [“Minimum Technical Data Elements” (MTDE)](../appendices/mtde/).   These pre-analytic fields were determined through an iterative series of conversations with data contributors and the “Data Experience” Gen3 group.  
+
+For example:
+
+[Biospecimen Node](https://data.gen3.org/dd/biospecimen)
+
+    * Blood Tube Type
+    * Procurement Temperature
+    * Shipment Temperature
+
+[Sample Node](https://data.gen3.org/dd/sample)
+
+    * Composition
+    * Blood Fractionation Method
+    * Hours to Fractionation Upper/Lower
+        * From blood draw to completion of fractionation
+
+[Aliquot Node](https://data.gen3.org/dd/aliquot)
+
+    * Clinical or Contrived
+    * Hours to Freezer Upper/Lower
+        * From completion of fractionation to freezing
+    * Storage Temperature
+
+[Analyte Node](https://data.gen3.org/dd/analyte)
+
+    * Analyte Isolation Method
+
+[Quantification Assay Node](https://data.gen3.org/dd/quantification_assay)
+
+    * Assay Method
+    * DNA quantification method
+--->
               
             </div>
           </div>
