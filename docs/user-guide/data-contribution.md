@@ -383,6 +383,7 @@ Days to values can also be negative. If you have an index_date event that occurs
 
 The days_to_procurement and days_to_collection are required fields. If you do not have any data for these, we allow escape values of "Unknown" and "Not Applicable". Please use "Unknown" in the instances where you have established a time series but are unable to pin down the date of the event. Use "Not Applicable" if you do not have a time series at all.
 
+<!---
 ## Appendix: Minimum Technical Data Elements
 
 
@@ -418,3 +419,4 @@ For example:
 
 	* Assay Method
 	* DNA quantification method
+--->

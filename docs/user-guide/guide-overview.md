@@ -14,7 +14,7 @@
 
 * [Working with the API](/appendices/api-gen3/)
 * [Working with the Proxy and Whitelist](/appendices/proxy-whitelist/)
-* [Minimum Technical Data Elements (MTDE)](/appendices/mtde/)
+<!---* [Minimum Technical Data Elements (MTDE)](/appendices/mtde/)--->
 * [Data Dictionary Viewer](/appendices/data-dictionary/)
 * [Template Metadata TSVs](/appendices/template-tsvs/)
 * [Managing Submission Timepoints](/appendices/timepoints/)

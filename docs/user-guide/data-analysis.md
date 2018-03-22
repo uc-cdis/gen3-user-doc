@@ -5,7 +5,7 @@
 The Gen3 data portal provides a Workspace where users can run a Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 ![Data portal Workspace button](/img/workspace_button.png)
 
-Click "Start Server" to start the Jupyter server in your Workspace:
+Click "Start My Server" to start the Jupyter server in your Workspace:
 ![Start Server](/img/start_server.png)
 
 Or if a server is already running, click on "My Server" to access your files.
@@ -26,7 +26,7 @@ Terminal sessions can also be started in the Workspace and used to download othe
 # Running a Jupyter server on a virtual machine (VM)
 * * *
 
-The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a starting python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: [https://github.com/occ-data/gen3-functions](https://github.com/occ-data/gen3-functions).    The Gen3 community is encouraged to add to the functions library or improve the notebook.  
+The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: [https://github.com/occ-data/gen3-functions](https://github.com/occ-data/gen3-functions).    The Gen3 community is encouraged to add to the functions library or improve the notebook.  
 
 > NOTE:   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master` in the `functions` folder.   It has already been initialized to sync with this repository.
 
