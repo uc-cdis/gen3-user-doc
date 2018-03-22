@@ -12,7 +12,11 @@ Or if a server is already running, click on "My Server" to access your files.
 ![Workspace home](/img/my_server.png)
 
 The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once.
-![Python Notebook](/img/python_jupyter_authentication.gif)
+
+This illustrates downloading the credentails.json from the "Identity" page in the data portal, then uploading that file to my Jupyter Server and reading it in a Python Jupyter notebook:
+![Python Notebook](/img/authentication.gif)
+
+This illustrates creating a new Jupyter notebook in the R language:
 ![Python Notebook](/img/R_jupyter_notebook_workspace.gif)
 
 Terminal sessions can also be started in the Workspace and used to download other tools.
