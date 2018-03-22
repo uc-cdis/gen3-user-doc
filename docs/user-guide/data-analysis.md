@@ -13,7 +13,12 @@ Or if a server is already running, click on "My Server" to access your files.
 
 The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once.
 
-This illustrates downloading the credentails.json from the "Identity" page in the data portal, then uploading that file to my Jupyter Server and reading it in a Python Jupyter notebook:
+While editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "save" button or "File" and "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as".
+
+
+Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "upload" button from the server's home page.
+
+This illustrates downloading the credentials.json from the "Identity" page in the data portal, then uploading that file to my Jupyter Server and reading it in a Python Jupyter notebook:
 ![Python Notebook](/img/authentication.gif)
 
 This illustrates creating a new Jupyter notebook in the R language:
@@ -21,6 +26,9 @@ This illustrates creating a new Jupyter notebook in the R language:
 
 Terminal sessions can also be started in the Workspace and used to download other tools.
 ![Terminal Session](/img/terminal_session.gif)
+
+You can manage active Notebook and terminal processes by clicking on "Running". Clicking "shutdown" will terminate the terminal session or close the Jupyter notebook. Be sure to save your notebooks/files before terminating the Jupyter processes.
+![Manage Running Sessions](/img/running.gif)
 
 * * *
 # Running a Jupyter server on a virtual machine (VM)
