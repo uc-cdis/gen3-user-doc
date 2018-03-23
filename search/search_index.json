@@ -22,12 +22,12 @@
         }, 
         {
             "location": "/user-guide/guide-overview/", 
-            "text": "User Guide Overview\n\uf0c1\n\n\n\n\nThis documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:\n\n\n\n\n\nHow to submit your data to the Gen3 data commons\n\n\nHow to query, access, and analyze data in the Gen3 commons\n\n\n\n\n\n\nAppendices\n\uf0c1\n\n\n\n\n\n\nWorking with the API\n\n\nWorking with the Proxy and Whitelist\n\n\n\n\nData Dictionary Viewer\n\n\nTemplate Metadata TSVs\n\n\nManaging Submission Timepoints", 
+            "text": "User Guide Overview\n\uf0c1\n\n\n\n\nThis documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:\n\n\n\n\n\nHow to submit your data to the Gen3 data commons\n\n\nHow to query and access data in the Gen3 commons\n\n\nHow to analyze data in the Jupyter Workspace\n\n\n\n\n\n\nAppendices\n\uf0c1\n\n\n\n\n\n\nWorking with the API\n\n\nWorking with the Proxy and Whitelist\n\n\n\n\nData Dictionary Viewer\n\n\nTemplate Metadata TSVs\n\n\nManaging Submission Timepoints", 
             "title": "Guide Overview"
         }, 
         {
             "location": "/user-guide/guide-overview/#user-guide-overview", 
-            "text": "This documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:   How to submit your data to the Gen3 data commons  How to query, access, and analyze data in the Gen3 commons", 
+            "text": "This documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:   How to submit your data to the Gen3 data commons  How to query and access data in the Gen3 commons  How to analyze data in the Jupyter Workspace", 
             "title": "User Guide Overview"
         }, 
         {
