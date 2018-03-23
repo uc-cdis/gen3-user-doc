@@ -14,6 +14,7 @@ Or if a server is already running, click on "My Server" to access your files.
 The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set as well to support, e.g., Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
 
 After editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "save" icon or "File" and then "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as". Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "upload" button from the server's home page.
+![Upload Save Download Notebook](/img/upload_save_download.gif)
 
 The following clip illustrates downloading the credentials.json from the "Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named "Gen3_authentication.ipynb":
 ![Python Notebook](/img/authentication.gif)
