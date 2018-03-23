@@ -1,6 +1,6 @@
 <h2> Data Analysis in the Gen3 Commons </h2>
 * * *
-# Running Jupyter Servers in Commons Workspace
+# Running a Jupyter Server in the Commons Workspace
 * * *
 The Gen3 data portal provides a Workspace where users can run a Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 ![Data portal Workspace button](/img/workspace_button.png)
