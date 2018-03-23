@@ -11,23 +11,20 @@ Click "Start My Server" to start the Jupyter server in your Workspace:
 Or if a server is already running, click on "My Server" to access your files.
 ![Workspace home](/img/my_server.png)
 
-The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once.
+The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set as well to support, e.g., Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
 
-While editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "save" button or "File" and "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as".
+After editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "save" icon or "File" and then "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as". Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "upload" button from the server's home page.
 
-
-Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "upload" button from the server's home page.
-
-This illustrates downloading the credentials.json from the "Identity" page in the data portal, then uploading that file to my Jupyter Server and reading it in a Python Jupyter notebook:
+The following clip illustrates downloading the credentials.json from the "Identity" page in the data portal, then uploading that file to the Jupyter Workspace and reading it in a Python notebook named "Gen3_authentication.ipynb":
 ![Python Notebook](/img/authentication.gif)
 
-This illustrates creating a new Jupyter notebook in the R language:
+This clip demonstrates creating a new Jupyter notebook in the R language:
 ![Python Notebook](/img/R_jupyter_notebook_workspace.gif)
 
 Terminal sessions can also be started in the Workspace and used to download other tools.
 ![Terminal Session](/img/terminal_session.gif)
 
-You can manage active Notebook and terminal processes by clicking on "Running". Clicking "shutdown" will terminate the terminal session or close the Jupyter notebook. Be sure to save your notebooks/files before terminating the Jupyter processes.
+You can manage active Notebook and terminal processes by clicking on "Running". Clicking "shutdown" will terminate the terminal session or close the Jupyter notebook. Be sure to save your notebooks before terminating them.
 ![Manage Running Sessions](/img/running.gif)
 
 * * *
