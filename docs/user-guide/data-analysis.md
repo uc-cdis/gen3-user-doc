@@ -11,7 +11,7 @@ Click "Start My Server" to start the Jupyter server in your Workspace:
 Or if a server is already running, click on "My Server" to access your files.
 ![Workspace home](/img/my_server.png)
 
-The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set as well to support, e.g., Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
+The Jupyter Workspace supports interactive programming sessions in the Python and R languages. Code blocks are entered in cells, which can be executed individually in any order or all at once. Code documentation and comments can also be entered in cells, and the cell type can be set to support, e.g., Markdown. Results, including plots, tables, and graphics, can be generated in the workspace and downloaded as files.
 
 After editing a Jupyter notebook, it can be saved in the Workspace to revisit later by clicking the "save" icon or "File" and then "Save and checkpoint". Notebooks and files can also be downloaded from the server to your local computer by clicking "File" then "Download as". Similarly, notebooks and files can be uploaded to the Jupyter server from a local computer by clicking on the "upload" button from the server's home page.
 ![Upload Save Download Notebook](/img/upload_save_download.gif)
