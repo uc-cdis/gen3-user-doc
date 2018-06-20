@@ -1,15 +1,50 @@
-## Data Access Overview
+<h2> Data Access Overview </h2>
 * * *
 
-## 1. Send credentials and get welcome email
+The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases). When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine in a virtual private cloud.
+
+* * *
+## Accessing data from within a browser
+* * *
+
+Once data files are [registered](/user-guide/data-contributed/#9-register-data-files-in-storage-with-the-gen3-data-portal/), their address in s3 object storage can be obtained by providing the file's UUID to the following URL:
+https://data.gen3.org/index/index/<UUID>
+
+Data files can be downloaded by providing the file's UUID to the following URL:
+https://data.gen3.org/user/data/download/<UUID>
+
+* * *
+## Downloading data with the cdis-data-client
+* * *
+
+Data files can also be downloaded using the "cdis-data-client", which provides a simple command-line interface for downloading and uploading data files.
+[Download the latest release of the client here.](https://github.com/uc-cdis/cdis-data-client/releases)
+
+Once downloaded and installed, the client can be configured with the API credentials.json downloaded from your Profile in the data portal:
+`./cdis-data-client configure --profile <profile_name> --cred /path/to/api/credentials.json`
+
+The client will then prompt you for the API. Enter the API of your commons, e.g.:
+`API endpoint: https://gen3.datacommons.io/`
+
+
+To download a data file, pass the file's UUID to the client:
+`cdis-data-client download --profile <profile_name> --file ./filename.tsv --uuid d7a5XXXX-XXXX-XXXX-XXXX-XXXX53583014`
+
+In the above command, 'download' mode is specified, the 'profile_name' we configured with the API credentails earlier is used, and a filename ("filename.tsv") was specified for our local copy of the downloaded file.
+
+* * *
+## Accessing data from the Virtual Private Cloud
+* * *
+
+### 1. Send credentials and get welcome email
 * * *
 <h3>Send SSH Key and Oauth to Gen3 commons team.</h3>
 
-To access the VPC, users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <Gen3-support@datacommons.io>.   
+To access the Virtual Private Cloud (VPC), users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <Gen3-support@datacommons.io>.   
 
 > NOTE:   Do not send your private ssh key.   This is confidential and should never be shared with anyone.  
 
-The pubkey will be used to access the login node and any VMs setup for the user.    The email will be used to permit access to:
+The public ssh key will be used to access the login node and any virtual machinnes (VMs) setup for the user.  The email will be used to permit access to:
 
 * [Bionimbus](http://bionimbus-pdc.opensciencedatacloud.org/storage/) to receive s3 data storage credentials
 * [data.Gen3.org](https://data.Gen3.org/) for browser based querying of metadata.
@@ -28,23 +63,23 @@ Github has a very nice [ssh tutorial](https://help.github.com/articles/connectin
 
 <h3>Receive a welcome email</h3>
 
-Gen3 members with the appropriate signed legal documents will be sent an email that gives the following unique information:
+Gen3 users with the appropriate signed legal documents will be sent an email that gives the following unique information:
 
-* username (this is used to ssh to the VPC login node) - eg:  `ssh -A <username>@34.197.164.18`
+* username (this is used to ssh to the VPC login node) - eg:  `ssh -A <username>@<login-ip-address>`
 * an IP associated with your new VM
 
 * * *
-## 2. SSH to Virtual Machine: config
+### 2. SSH to Virtual Machine: config
 * * *
 
-<h3>How will I access the Login Node and my Virtual Machine (VM)?</h3>
+<h3>How will I access the Login Node and my Virtual Machine?</h3>
 
-Gen3 Commons users will login to the Virtual Private Cloud (VPC) headnode, then hop over to their analysis VM.   For more information on the [VPC architecture](../appendices/architecture/).
+Gen3 Commons users may login to the Virtual Private Cloud (VPC) headnode, then hop over to an analysis virtual machine (VM).   For more information on the [VPC architecture](../appendices/architecture/).
 
 In your [welcome email](#1-send-credentials-and-get-welcome-email) you received your username and your vm.   In order to access your VM, you first must access the VPC login node.   This configuration helps ensure the security of the Gen3 commons by having your VM in a private subnet.   Using the credentials from your welcome email this can be done in the following order:
 
-1.   SSH to login node:   `ssh -A <username>@34.197.164.18`
-2.   SSH from login node to your VM:  `ssh -A ubuntu@<my_VM_ip>`
+1.   SSH to login node:   `ssh -A <username>@3<login-node-IP>`
+2.   SSH from login node to your VM:  `ssh -A ubuntu@<my_VM_IP>`
 
 >NOTE 1:   `34.197.164.18` is the IP for the login node.   This is unlikely to change.   
 
@@ -52,10 +87,10 @@ In your [welcome email](#1-send-credentials-and-get-welcome-email) you received 
 
 >NOTE 3:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  
 
-Advanced users can manage these connections however they see fit.   For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel.  To 'multihop' in this context is to use a single command to get to your VM.    What follows are instructions for updating your `.ssh/config` file to get to your VM in a single command.
+Advanced users can manage these connections however they see fit. For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel. To 'multihop' in this context is to use a single command to get to your VM. What follows are instructions for updating your `.ssh/config` file to get to your VM in a single command.
 
 * * *
-## 3. Setting up an ssh config for 'multihop'
+### 3. Setting up an ssh config for 'multihop'
 * * *
 
 To start, go to your .ssh directory in your laptop home directory.
@@ -112,7 +147,7 @@ ssh analysis
 If you've done everything correctly, you should now be in the analysis VM.  
 
 * * *
-## 4. Access "raw" data storage from Virtual Machine
+### 4. Access "raw" data storage from Virtual Machine
 * * *
 
 <h3> Add s3 'raw' data storage credentials to your VM </h3>

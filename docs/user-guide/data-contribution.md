@@ -122,6 +122,8 @@ While this diagram represents an earlier version of the Gen3 data model, the req
 
 ![Submission Order Diagram](/img/submission-order.png)
 
+Note that metadata describing data files that will be uploaded to s3 object storage need to include the file_size, md5sum, and the address of the file in s3 object storage (e.g., s3://data-bucket/folder/file.txt). Therefore, before submitting data_file metadata TSVs, make sure all of that information is included and correct. Once data_files are submitted, their metadata cannot be modified without deletion and re-creation.
+
 * * *
 ## 5. Access metadata submission portal
 * * *
@@ -246,7 +248,7 @@ EXAMPLE:
 * * *
 
 <h3>Overview</h3>
-Now that you've successfully submitted and validated your project metadata, it's time to upload your 'raw' data to the Gen3 Commons.   The Gen3 commons utilize [object storage](https://en.wikipedia.org/wiki/Object_storage).   
+Now that you've successfully submitted and validated your project metadata, it's time to upload your 'raw' data to the Gen3 Commons. The Gen3 commons utilizes [object storage](https://en.wikipedia.org/wiki/Object_storage).   
 &nbsp;
 This page details how users gain and manage the credentials to access a project folder.   The [following page](#8-upload-raw-data-to-object-storage) will detail submitting data to the project folder.   
 
@@ -333,13 +335,44 @@ You can now upload all the files in the prepared folder on your local computer u
 
 
 ```
-aws s3 cp --sse AES256 [/path/folder/] s3://gen3-data/[foldername] --recursive --profile [profilename]
+aws s3 cp --sse AES256 </local/folder/path/> s3://gen3-data/<remote/folder/path/> --recursive --profile <profile_name>
 ```
 > EXTRA:  In an object store, a "folder" or "dir" can't exist with nothing in it.   Thus, if you were to 'ls' before moving any files into it, you wouldn't see the project folder you have access to.   In the example above you're essentially uploading all your data and "creating a folder" in a single step.   
+
+The following command synchronizes a local folder with a remote s3 folder. Any files already existing in the remote folder won't be copied:
+```
+aws s3 sync --sse AES256 </local/path/> s3://gen3-data-bucket/<remote/path> --profile <profile_name>
+```
 
 Other useful commands and AWS CLI documentation can be found at:
  <https://www.opensciencedatacloud.org/support/pdc.html> and
  <https://aws.amazon.com/cli/>
+
+
+* * *
+## 9. Register data files in storage with the Gen3 data portal
+* * *
+
+Once contributed data files have been uploaded to s3 object storage and the metadata describing them have been submitted to the Gen3 data portal, the files must be "registered" in order to be downloadable using the data portal file explorer or cdis-data-client.
+
+File registration is achieved by submitting the URL address of files in s3 as the metadata property "urls". For example, say the following three files listed in the s3 bucket 's3://gen3-data/folder1/' need to be registered:
+```
+~$ aws s3 ls s3://gen3-data/folder1/ --profile <myprofile>
+2018-02-05 11:12:18      43449 file1.txt
+2018-02-06 09:12:33      80416 file2.txt
+2018-01-25 15:26:22      93839 file3.txt
+```
+
+If the metadata TSV describing these files was already submitted, it can simply be updated by adding a column 'urls' to the TSV and entering the full s3 path for each file in that column, e.g.,:
+
+| type | filename | file_size | etc... | urls |
+| :------------- | :------------- | :------------- | :------------- | :------------- |
+| data_file | file1.txt | 43449 | ... | s3://gen3-data/folder1/file1.txt |
+| data_file | file2.txt | 80416 | ... | s3://gen3-data/folder1/file2.txt |
+| data_file | file3.txt | 93839 | ... | s3://gen3-data/folder1/file3.txt |
+
+> Note 1: Once the data files are registered, their metadata cannot be changed. If changes need to be made at this point, the metadata record/entity must be deleted and re-created.
+Note 2: Once files are registered, they can be downloaded using the [cdis-data-client or using the file explorer](/user-guide/data-access/).
 
 * * *
 ## Appendix: Data Dictionary Viewer
