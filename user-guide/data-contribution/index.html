@@ -103,6 +103,9 @@
     <li class="toctree-l3"><a href="#8-upload-raw-data-to-object-storage">8. Upload "raw" data to object storage</a></li>
     
 
+    <li class="toctree-l3"><a href="#9-register-data-files-in-storage-with-the-gen3-data-portal">9. Register data files in storage with the Gen3 data portal</a></li>
+    
+
     <li class="toctree-l3"><a href="#appendix-data-dictionary-viewer">Appendix: Data Dictionary Viewer</a></li>
     
 
@@ -303,6 +306,7 @@ Gen3 data contributors will need to prepare metadata for their submission in tab
 
 <p>While this diagram represents an earlier version of the Gen3 data model, the required submission logic for current versions of the model will be very similar.</p>
 <p><img alt="Submission Order Diagram" src="../../img/submission-order.png" /></p>
+<p>Note that metadata describing data files that will be uploaded to s3 object storage need to include the file_size, md5sum, and the address of the file in s3 object storage (e.g., s3://data-bucket/folder/file.txt). Therefore, before submitting data_file metadata TSVs, make sure all of that information is included and correct. Once data_files are submitted, their metadata cannot be modified without deletion and re-creation.</p>
 <hr />
 <h2 id="5-access-metadata-submission-portal">5. Access metadata submission portal<a class="headerlink" href="#5-access-metadata-submission-portal" title="Permanent link"></a></h2>
 <hr />
@@ -400,7 +404,7 @@ Gen3 data contributors will need to prepare metadata for their submission in tab
 <hr />
 <h3>Overview</h3>
 
-<p>Now that you've successfully submitted and validated your project metadata, it's time to upload your 'raw' data to the Gen3 Commons.   The Gen3 commons utilize <a href="https://en.wikipedia.org/wiki/Object_storage">object storage</a>. <br />
+<p>Now that you've successfully submitted and validated your project metadata, it's time to upload your 'raw' data to the Gen3 Commons. The Gen3 commons utilizes <a href="https://en.wikipedia.org/wiki/Object_storage">object storage</a>. <br />
 &nbsp;
 This page details how users gain and manage the credentials to access a project folder.   The <a href="#8-upload-raw-data-to-object-storage">following page</a> will detail submitting data to the project folder.   </p>
 <blockquote>
@@ -482,15 +486,69 @@ AWS Secret Access Key [****************]:
 <h3> Uploading your data </h3>
 
 <p>You can now upload all the files in the prepared folder on your local computer using the AWS CLI and the profiles you configured in <a href="#7-get-and-configure-s3-data-storage-credentials">step 7</a>. Below is the command to copy a folder filled with all your submission files on your local computer to your project folder in a commons. You need to change the name of /path/folder/ to the name of the path of the folder you want to upload.</p>
-<pre><code>aws s3 cp --sse AES256 [/path/folder/] s3://gen3-data/[foldername] --recursive --profile [profilename]
+<pre><code>aws s3 cp --sse AES256 &lt;/local/folder/path/&gt; s3://gen3-data/&lt;remote/folder/path/&gt; --recursive --profile &lt;profile_name&gt;
 </code></pre>
 
 <blockquote>
 <p>EXTRA:  In an object store, a "folder" or "dir" can't exist with nothing in it.   Thus, if you were to 'ls' before moving any files into it, you wouldn't see the project folder you have access to.   In the example above you're essentially uploading all your data and "creating a folder" in a single step.   </p>
 </blockquote>
+<p>The following command synchronizes a local folder with a remote s3 folder. Any files already existing in the remote folder won't be copied:</p>
+<pre><code>aws s3 sync --sse AES256 &lt;/local/path/&gt; s3://gen3-data-bucket/&lt;remote/path&gt; --profile &lt;profile_name&gt;
+</code></pre>
+
 <p>Other useful commands and AWS CLI documentation can be found at:
  <a href="https://www.opensciencedatacloud.org/support/pdc.html">https://www.opensciencedatacloud.org/support/pdc.html</a> and
  <a href="https://aws.amazon.com/cli/">https://aws.amazon.com/cli/</a></p>
+<hr />
+<h2 id="9-register-data-files-in-storage-with-the-gen3-data-portal">9. Register data files in storage with the Gen3 data portal<a class="headerlink" href="#9-register-data-files-in-storage-with-the-gen3-data-portal" title="Permanent link"></a></h2>
+<hr />
+<p>Once contributed data files have been uploaded to s3 object storage and the metadata describing them have been submitted to the Gen3 data portal, the files must be "registered" in order to be downloadable using the data portal file explorer or cdis-data-client.</p>
+<p>File registration is achieved by submitting the URL address of files in s3 as the metadata property "urls". For example, say the following three files listed in the s3 bucket 's3://gen3-data/folder1/' need to be registered:</p>
+<pre><code>~$ aws s3 ls s3://gen3-data/folder1/ --profile &lt;myprofile&gt;
+2018-02-05 11:12:18      43449 file1.txt
+2018-02-06 09:12:33      80416 file2.txt
+2018-01-25 15:26:22      93839 file3.txt
+</code></pre>
+
+<p>If the metadata TSV describing these files was already submitted, it can simply be updated by adding a column 'urls' to the TSV and entering the full s3 path for each file in that column, e.g.,:</p>
+<table>
+<thead>
+<tr>
+<th align="left">type</th>
+<th align="left">filename</th>
+<th align="left">file_size</th>
+<th align="left">etc...</th>
+<th align="left">urls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">data_file</td>
+<td align="left">file1.txt</td>
+<td align="left">43449</td>
+<td align="left">...</td>
+<td align="left">s3://gen3-data/folder1/file1.txt</td>
+</tr>
+<tr>
+<td align="left">data_file</td>
+<td align="left">file2.txt</td>
+<td align="left">80416</td>
+<td align="left">...</td>
+<td align="left">s3://gen3-data/folder1/file2.txt</td>
+</tr>
+<tr>
+<td align="left">data_file</td>
+<td align="left">file3.txt</td>
+<td align="left">93839</td>
+<td align="left">...</td>
+<td align="left">s3://gen3-data/folder1/file3.txt</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note 1: Once the data files are registered, their metadata cannot be changed. If changes need to be made at this point, the metadata record/entity must be deleted and re-created.
+Note 2: Once files are registered, they can be downloaded using the <a href="../../user-guide/data-access/">cdis-data-client or using the file explorer</a>.</p>
+</blockquote>
 <hr />
 <h2 id="appendix-data-dictionary-viewer">Appendix: Data Dictionary Viewer<a class="headerlink" href="#appendix-data-dictionary-viewer" title="Permanent link"></a></h2>
 <hr />
