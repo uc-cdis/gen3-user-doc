@@ -8,29 +8,35 @@ The sponsor of a Gen3 data commons typically decides how users will access data 
 * * *
 
 Once data files are [registered](/user-guide/data-contributed/#9-register-data-files-in-storage-with-the-gen3-data-portal/), their address in s3 object storage can be obtained by providing the file's UUID to the following URL:
-https://data.gen3.org/index/index/<UUID>
+https://data.gen3.org/index/index/UUID
 
 Data files can be downloaded by providing the file's UUID to the following URL:
-https://data.gen3.org/user/data/download/<UUID>
+https://data.gen3.org/user/data/download/UUID
 
 * * *
 ## Downloading data with the cdis-data-client
 * * *
 
 Data files can also be downloaded using the "cdis-data-client", which provides a simple command-line interface for downloading and uploading data files.
+
 [Download the latest release of the client here.](https://github.com/uc-cdis/cdis-data-client/releases)
 
 Once downloaded and installed, the client can be configured with the API credentials.json downloaded from your Profile in the data portal:
-`./cdis-data-client configure --profile <profile_name> --cred /path/to/api/credentials.json`
+```
+./cdis-data-client configure --profile <profile_name> --cred /path/to/api/credentials.json
+```
 
 The client will then prompt you for the API. Enter the API of your commons, e.g.:
-`API endpoint: https://gen3.datacommons.io/`
-
+```
+API endpoint: https://gen3.datacommons.io/
+```
 
 To download a data file, pass the file's UUID to the client:
-`cdis-data-client download --profile <profile_name> --file ./filename.tsv --uuid d7a5XXXX-XXXX-XXXX-XXXX-XXXX53583014`
+```
+cdis-data-client download --profile <profile_name> --file ./filename.tsv --uuid d7a5XXXX-XXXX-XXXX-XXXX-XXXX53583014
+```
 
-In the above command, 'download' mode is specified, the 'profile_name' we configured with the API credentails earlier is used, and a filename ("filename.tsv") was specified for our local copy of the downloaded file.
+In the above command, `download` mode is specified, the `profile_name` we configured with the API credentails earlier is used, and a filename (`filename.tsv`) was specified for our local copy of the downloaded file.
 
 * * *
 ## Accessing data from the Virtual Private Cloud
