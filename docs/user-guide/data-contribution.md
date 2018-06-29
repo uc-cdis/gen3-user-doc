@@ -1,9 +1,9 @@
 ## Project Submission Overview
 * * *
 
-* Sign relevant legal documents, fill out forms, and get credentials
-* Prepare and submit metadata to the Windmill Data Portal
-* Prepare and submit full dataset (w/o metadata tsvs) to object storage.
+* Sign relevant legal documents, fill out forms, and get credentials.
+* Prepare and submit project metadata to the Windmill Data Portal.
+* Prepare and submit data files to object storage.
 
 <h3>Steps to Contribute a Project to the Gen3 Commons</h3>
 
@@ -12,10 +12,9 @@
 3. [Prepare metadata that fits the data model](data-contribution/#4-prepare-metadata-that-fits-the-data-model)
 4. [Access metadata submission portal](data-contribution/#5-access-metadata-that-fits-the-data-model)
 5. [Submit and validate project metadata tsvs](data-contribution/#6-submit-and-validate-project-metadata-tsvs)
-6. [Get and configure s3 data storage credentials](data-contribution/#7-get-and-configure-s3-data-storage-credentials)
-7. [Upload "raw" data to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
+6. [Upload data files to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
 
-\* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons.   To do so, repeat steps 2-8 above.
+\* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons. To do so, repeat steps 2-6 above.
 
 
 <h3>Why Do Gen3 Commons Use a Data Model?</h3>
