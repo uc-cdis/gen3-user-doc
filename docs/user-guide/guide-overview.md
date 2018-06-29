@@ -5,8 +5,9 @@
 <p style="text-align:left">This documentation includes the following user guides for assisting contributors with submitting their data to the Gen3 data commons and accessing their data:</p>
 
 
-* [How to submit your data to the Gen3 data commons](/user-guide/data-contribution/)
-* [How to query and access data in the Gen3 commons](/user-guide/data-access/)
+* [How to submit metadata to the Windmill data portal](/user-guide/data-contribution/)
+* [How to query and access metadata in the Gen3 commons](/user-guide/data-access/)
+* [How to download and upload data files in a Gen3 commons](/user-guide/cdis-data-client/)
 * [How to analyze data in the Jupyter Workspace](/user-guide/data-analysis)
 
 * * *

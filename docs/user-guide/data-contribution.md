@@ -1,20 +1,19 @@
 ## Project Submission Overview
 * * *
 
-* Sign documents, fill out forms, get credentials
-* Prepare and submit metadata to commons API
+* Sign relevant legal documents, fill out forms, and get credentials
+* Prepare and submit metadata to the Windmill Data Portal
 * Prepare and submit full dataset (w/o metadata tsvs) to object storage.
 
 <h3>Steps to Contribute a Project to the Gen3 Commons</h3>
 
 1. [Review and sign legal](data-contribution/#1-review-and-sign-legal-agreement)
-2. [Complete the data inventory form](data-contribution/#2-complete-the-data-inventory-form)
-3. [Receive project name and access credentials](data-contribution/#3-receive-project-name-api-credentials_1)
-4. [Prepare metadata that fits the data model](data-contribution/#4-prepare-metadata-that-fits-the-data-model)
-5. [Access metadata submission portal](data-contribution/#5-access-metadata-that-fits-the-data-model)
-6. [Submit and validate project metadata tsvs](data-contribution/#6-submit-and-validate-project-metadata-tsvs)
-7. [Get and configure s3 data storage credentials](data-contribution/#7-get-and-configure-s3-data-storage-credentials)
-8. [Upload "raw" data to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
+2. [Receive project name and access credentials](data-contribution/#3-receive-project-name-api-credentials_1)
+3. [Prepare metadata that fits the data model](data-contribution/#4-prepare-metadata-that-fits-the-data-model)
+4. [Access metadata submission portal](data-contribution/#5-access-metadata-that-fits-the-data-model)
+5. [Submit and validate project metadata tsvs](data-contribution/#6-submit-and-validate-project-metadata-tsvs)
+6. [Get and configure s3 data storage credentials](data-contribution/#7-get-and-configure-s3-data-storage-credentials)
+7. [Upload "raw" data to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
 
 \* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons.   To do so, repeat steps 2-8 above.
 
@@ -42,29 +41,24 @@ Contact:
 * For Submission/Access Questions:   gen3-support@datacommons.io
 
 * * *
-## 1. Review and sign legal agreement
+## 1. Review and sign legal agreements
 * * *
 
-To use the Gen3 commons, please review and sign the following agreements and return them to info@gen3.org.   The most current versions (and past versions for transparency) of all of the below documents can be found at:  
-[https://www.gen3.org/data-governance/](https://www.gen3.org/data-governance/)
+In order to ensure the rights and interests of data contributors and study participants are protected, there are legal agreements that must be signed prior to data submission, data access, or data portal access.
 
+The Gen3 data commons sponsor should inform new users about which documents are relevant. Please review the relevant policies and sign and return the relevant legal agreements to "support@datacommons.io".   
 
-* [Data Contributor Agreement (DCA)](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/59e4dc6ddc2b4a1166d7157a/1508170862005/Gen3-Data-Contributor-Agreement_2017.pd.pdf)
-* [Data Services/Use Agreement (DUA)](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/59e4dc87ace86425635ae05b/1508170887770/Gen3-Data+Use+Ageement.pdf)
+CDIS recommends at least the following agreements be signed by the appropriate parties:
+* Data Contributor Agreement - signed by persons submitting data
+* Data Use/Access Agreement - signed by Principal Investigator (PI) requesting access for organization
+* Data Commons Services Agreement - signed by individuals using Windmill data portal services or downloading/analyzing data
+> If you only wish to contribute data, you do not need to sign the DUA.  
 
-If you only wish to contribute data, you do not need to sign the DUA.  
-These documents may also reference the:
+These documents may also reference the following policies:
+* Privacy and Security Agreement
+* Intellectual Property Rights (IPR) Policy
+* Publication Policy
 
-* [Privacy and Security Agreement](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58c1fff66b8f5b630c9d367e/1489108983165/Gen3-Privacy-Security-Policy-16-v4.pdf)
-* [Intellectual Property Rights (IPR) Policy](https://static1.squarespace.com/static/586beed3d482e928249e756e/t/58ac8debf7e0ab22fa54afe9/1487703531906/gen3-ipr-13-v1.pdf)
-
-
-* * *
-## 2. Complete the data inventory form
-* * *
-Prepare a pre-submission [data inventory form](https://goo.gl/forms/).
-
-Having this information helps the Gen3 submission team prepare for your project and setup your storage access credentials using the authentication method you provide in the form.  
 
 * * *
 ## 3. Receive project name / API credentials
