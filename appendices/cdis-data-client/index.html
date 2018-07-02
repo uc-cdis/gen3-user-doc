@@ -186,12 +186,13 @@
 <hr />
 <p>The CDIS data client can be downloaded as a <a href="https://github.com/uc-cdis/cdis-data-client/releases">compiled binary file</a> for Windows, Linux or Mac OS, or it can be installed from source using Google's <a href="https://golang.org/dl/">GO language</a>.</p>
 <ul>
-<li>
-<p>To install the binary, simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command <code>/path/to/binary/cdis-data-client &lt;options&gt;</code>.</p>
-</li>
-<li>
-<p>To install using GO:</p>
-</li>
+<li>To install the binary, simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command</li>
+</ul>
+<pre><code>/path/to/binary/cdis-data-client &lt;options&gt;
+</code></pre>
+
+<ul>
+<li>To install using GO:</li>
 <li>Install Go tools: https://golang.org/doc/install</li>
 <li>Download and install cdis-data-client:</li>
 </ul>
@@ -237,9 +238,11 @@ go install .
 <h2 id="5-provide-a-manifest-file-for-bulk-uploaddownload">5) Provide a manifest file for bulk upload/download<a class="headerlink" href="#5-provide-a-manifest-file-for-bulk-uploaddownload" title="Permanent link"></a></h2>
 <hr />
 <p>The CDIS data client currently does not take a manifest file; this functionality is currently being implemented. In the meantime, users who need to semi-automate upload or download of a collection of files can modify the following shell script to fit their needs.</p>
-<p>The following shell script can be run from the command-line like:
-<code>sh cdc_manifest.sh &lt;profile_name&gt; &lt;manifest_filename&gt;</code>
-Where <profile_name> is the name of the profile configured in <a href="../link to step 2">step 2</a> above, and <manifest_filename> is the filename/path of the manifest file.</p>
+<p>The following shell script can be run from the command-line like:</p>
+<pre><code>sh cdc_manifest.sh &lt;profile_name&gt; &lt;manifest_filename&gt;
+</code></pre>
+
+<p>Where <profile_name> is the name of the profile configured in <a href="../link to step 2">step 2</a> above, and <manifest_filename> is the filename/path of the manifest file.</p>
 <p>The manifest file should not contain headers and each row should be only a UUID and filename separated by a tab, for example:</p>
 <pre><code>a82ff17c-2fc0-475a-9c21-50c19950b082    filename-1.txt
 b82ff17c-2fc0-475a-9c21-50c19950b082    filename-2.txt
