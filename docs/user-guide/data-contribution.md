@@ -25,17 +25,17 @@ In order to ensure the rights and interests of data contributors and study parti
 
 The Gen3 data commons sponsor in collaboration with the commons operator should distribute the relevant documents to new users. Please review the referenced policies and sign and return the relevant legal agreements to "support@datacommons.io".
 
-CDIS recommends at least the following agreements be signed by the appropriate parties:
+CDIS recommends at least the following legal agreements be signed by and policies be available to the appropriate parties:
 
-* Data Contributor Agreement - signed by persons submitting data
-* Data Use/Access Agreement - signed by Principal Investigator (PI) requesting access for organization
-* Data Commons Services Agreement - signed by individuals using Windmill data portal services or downloading/analyzing data
+* Legal Agreements
+    * Data Contributor Agreement - signed by persons submitting data
+    * Data Use/Access Agreement - signed by Principal Investigator (PI) requesting access for organization
+    * Data Commons Services Agreement - signed by individuals using Windmill data portal services or downloading/analyzing data
 
-These documents may also reference the following policies:
-
-* Privacy and Security Agreement
-* Intellectual Property Rights (IPR) Policy
-* Publication Policy
+* Policies
+	* Privacy and Security Agreement
+	* Intellectual Property Rights (IPR) Policy
+	* Publication Policy
 
 Notes:
 
