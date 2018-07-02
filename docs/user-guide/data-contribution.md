@@ -65,7 +65,7 @@ Data contributors will also need to select an appropriate name for their project
 <mycompanyname>_ProjectID
 ```
 <h3>Breakdown:</h3>
-* "<mycompanyname>" identifies the contributing organization
+* "mycompanyname" identifies the contributing organization
 * "P00x" identifies the submission number for said organization
 * "ProjectID" could also be used for a more descriptive identifier
 
