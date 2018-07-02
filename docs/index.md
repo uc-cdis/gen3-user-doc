@@ -13,18 +13,21 @@ The Gen3 software stack is a [collection of microservices](https://cdis.uchicago
 
 This documentation describes the commons and provides a [user guide to assist data contributors and analysts](/user-guide/guide-overview/).
 
-<h3>Mission</h3>
+<h3>Guiding Principles</h3>
 
 * OPEN DATA
+
 We believe that data must be open and accessible within the research community to collectively achieve the critical mass of data necessary to power data-driven research, insight, and discovery.
 
 * OPEN-SOURCE
+
 We believe that collaboration creates a knowledge pool that not only drives better software development, but also connects us to a active community in pursuit of shared social impact.  We have long benefitted from open-source software and are committed to contributing to future generations of software and scholars.
 
 * OPEN INFRASTRUCTURE
+
 We believe that rapid innovation is most effectively achieved through an open infrastructure environment where portability and compatibility are maximized and knowledge is distributed broadly.
 
-For more information visit:  [CDIS Guiding Principles](https://cdis.uchicago.edu/guiding-principles)
+For more information visit: [CDIS Guiding Principles](https://cdis.uchicago.edu/guiding-principles)
 
 <h3>Support</h3>
 Operation of the Gen3 commons is supported by generous grants from Amazon Web Services' [Grants for Research Credit Program](https://aws.amazon.com/research-credits/) and Microsoft Azure's [Research Grant Program](https://www.microsoft.com/en-us/research/academic-program/microsoft-azure-for-research/).
