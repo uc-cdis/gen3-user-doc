@@ -81,7 +81,9 @@ The data model organizes experimental metadata variables, or "properties", into 
 
 For example, clinical variables like a primary cancer diagnosis or a subject's gender or race might go into the "diagnosis" or "demographic" nodes, respectively, while sample-related variables like how a tumor sample was collected and what analyte was extracted from it might go into the "biospecimen" or "analyte" nodes, respectively. Data files also have associated metadata variables like file size, format, and the file's location in object storage, and these properties are grouped into nodes that describe various types of data files, for example, "mri_image" for an MRI image data file.
 
-Finally, each node in the data dictionary is linked in a logical manner to other nodes, which facilitates generating a visual overview, or graphical model, of a project. The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project in the [BRAINCommons](https://www.braincommons.org/).
+Finally, each node in the data dictionary is linked in a logical manner to other nodes, which facilitates generating a visual overview, or graphical model, of a project.
+
+The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project in the [BRAINCommons](https://www.braincommons.org/):
 
 ![image of dd](/img/data-model.png)
 
