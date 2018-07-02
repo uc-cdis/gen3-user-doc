@@ -112,12 +112,12 @@ Example, blank TSV templates can be found [here](/appendices/template-tsvs/) and
 * * *
 <h3>Determine Submission Order via Node Links</h3>
 * * *
-
 The prepared TSV files must be submitted in a specific order due to node links. Referring back to the graphical data model, you cannot submit a node without first submitting the nodes to which it is linked upstream. If you submit a metadata record out of order, that is, if you submit a record with a link to an upstream node that doesn't yet exist, the validator will reject the submission on the basis that the dependency you point to is not present with the error message "INVALID_LINK".
 
 
 The "program" and "project" nodes are the most upstream nodes and are created by a commons administrator. So, the first node submitted by data contributor is usually the "study" or "experiment" node, which points directly upstream to the "project" node. Next, the study participants are recorded in the "case" node, and subsequently any clinical information (demographics, diagnoses, etc.), biospecimen data (biopsy samples, extracted analytes), etc., is linked to each case. Finally, metadata describing the actual raw data files to be uploaded to object storage are the last nodes submitted.
 
+* * *
 <h3>Specifying Required Links</h3>
 * * *
 At least one link is required for every record in a TSV, and sometimes multiple links should be specified. The links are specified in a TSV with the variable header "<node>s.submitter_id", where <node> is the upstream node a record is linking to. The value of this variable is the specific submitter_id of the link (the record in that upstream node which the current record is linked to).
@@ -211,7 +211,7 @@ If you see anything other than success, check the other fields for any informati
 
 The "action" above can be used to identify if the node was created new or just updated; when you resubmit, that is, submit to a node with the same submitter id, you will update the existing node. Other useful information includes the "id" for the record. This is the UUID for the record and is unique throughout the entirety of the data commons. The other "unique_key" provided is the tuple "project_id" and "submitter_id", which is to say the "submitter_id" combined with the "project_id" is a universal identifier for this record.
 
-To confirm that a data file is properly registered, enter the UUID of a data file record in the index API endpoint of your data commons: usually "<data.commons-name.org>/index/index/<UUID>", where "data.commons-name.org" is the URL of the Windmill data portal and <UUID> is the specific UUID of a registered data file. You should see a JSON response that contains the url that was registered. If the record was not registered successfully, you will likely see an error message (you must be logged in or you will get an "access denied" type error).
+To confirm that a data file is properly registered, enter the UUID of a data file record in the index API endpoint of your data commons: usually "data.commons-name.org/index/index/UUID", where "data.commons-name.org" is the URL of the Windmill data portal and UUID is the specific UUID of a registered data file. You should see a JSON response that contains the url that was registered. If the record was not registered successfully, you will likely see an error message (you must be logged in or you will get an "access denied" type error).
 
 * * *
 <h3> Troubleshooting and finishing your submission</h3>
@@ -226,7 +226,7 @@ The best first step is to go through the outputs from the individual entities. I
 * * *
 Please contact the support team to let us know when your submission is complete.
 
-You may receive errors for what you think is a valid submission. If you feel what you have provided for a particular entity is valid, please contact the commons support team at support@datacommons.io. We will be happy to accommodate any necessary changes. We can always add new nodes, properties, or values.
+You may receive errors for what you think is a valid submission. If you feel what you have provided for a particular entity is valid, please contact the commons support team at `support@datacommons.io`. We will be happy to accommodate any necessary changes. We can always add new nodes, properties, or values.
 
 * * *
 <h3>How can I learn more about my existing submission?</h3>
@@ -242,5 +242,7 @@ Data files such as sequencing data (BAM, FASTQ), assay results, images, PDFs, et
 For detailed instructions, visit [the cdis-data client documentation](/appendices/cdis-data-client/). The metadata TSVs you prepared do not need to be submitted to the object store, as they have already been submitted via the API.
 
 * Downloaded the [compiled binary](https://github.com/uc-cdis/cdis-data-client/releases) for your operating system.
-* Configure a profile with credentials: `./cdis-data-client configure --profile <profile> --cred <credentials.json>`
-* Upload a data file using its UUID: `./cdis-data-client upload --profile <profile> --uuid <UUID> --file=<filename>`
+* Configure a profile with credentials:
+`./cdis-data-client configure --profile <profile> --cred <credentials.json>`
+* Upload a data file using its UUID:
+`./cdis-data-client upload --profile <profile> --uuid <UUID> --file=<filename>`
