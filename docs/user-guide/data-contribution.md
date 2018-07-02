@@ -29,15 +29,18 @@ CDIS recommends at least the following agreements be signed by the appropriate p
 * Data Contributor Agreement - signed by persons submitting data
 * Data Use/Access Agreement - signed by Principal Investigator (PI) requesting access for organization
 * Data Commons Services Agreement - signed by individuals using Windmill data portal services or downloading/analyzing data
-> If your organization will be both contributing and analyzing data, all three docs are required.
-> Note that Windmill accounts are not to be shared by individuals. Each individual requesting data portal access needs to sign and return a DCSA, and the PI needs to also return a DUA for the organization.
-> If you only wish to contribute data, you do not need to sign the DUA.
 
 These documents may also reference the following policies:
 * Privacy and Security Agreement
 * Intellectual Property Rights (IPR) Policy
 * Publication Policy
->It is the user's responsibility to ensure that the relevant policies are reviewed before signing legal agreements.
+
+Notes:
+* If your organization will be both contributing and analyzing data, all three docs are required.
+* If you only wish to contribute data, you do not need to sign the DUA.
+* Windmill accounts are not to be shared by individuals. Each individual requesting data portal access needs to sign and return a DCSA, and the PI needs to also return a DUA for the organization.
+* It is the user's responsibility to ensure that the relevant policies are reviewed before signing legal agreements.
+
 
 * * *
 ## 2. Provide Login Account and Project Name
