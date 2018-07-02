@@ -96,8 +96,6 @@
         
             <li><a class="toctree-l4" href="#3-setting-up-an-ssh-config-for-multihop">3. Setting up an ssh config for 'multihop'</a></li>
         
-            <li><a class="toctree-l4" href="#4-access-raw-data-storage-from-virtual-machine">4. Access "raw" data storage from Virtual Machine</a></li>
-        
         </ul>
     
 
@@ -180,11 +178,11 @@
                 <h2> Data Access Overview </h2>
 
 <hr />
-<p>The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the <a href="https://github.com/uc-cdis/cdis-data-client/releases">cdis-data-client</a>. When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine in a virtual private cloud.</p>
+<p>The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the <a href="https://github.com/uc-cdis/cdis-data-client/releases">cdis-data-client</a>. When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine (VM) in a virtual private cloud (VPC).</p>
 <hr />
 <h2 id="accessing-data-from-within-a-browser">Accessing data from within a browser<a class="headerlink" href="#accessing-data-from-within-a-browser" title="Permanent link"></a></h2>
 <hr />
-<p>Once data files are <a href="../../user-guide/data-contributed/#9-register-data-files-in-storage-with-the-gen3-data-portal/">registered</a>, their address in s3 object storage can be obtained by providing the file's UUID to the following URL:
+<p>Once data files are <a href="../../user-guide/data-contribution/#-register-data-files-with-the-windmill-data-portal/">registered</a>, their address in s3 object storage can be obtained by providing the file's UUID to the following URL:
 https://data.gen3.org/index/index/UUID</p>
 <p>Data files can be downloaded by providing the file's UUID to the following URL:
 https://data.gen3.org/user/data/download/UUID</p>
@@ -209,20 +207,13 @@ https://data.gen3.org/user/data/download/UUID</p>
 <hr />
 <h2 id="accessing-data-from-the-virtual-private-cloud">Accessing data from the Virtual Private Cloud<a class="headerlink" href="#accessing-data-from-the-virtual-private-cloud" title="Permanent link"></a></h2>
 <hr />
+<p>If additional security is required, the cdis-data-client can be installed on a VM in the VPC to download files. The following instructions detail how to login to a VM.</p>
 <h3 id="1-send-credentials-and-get-welcome-email">1. Send credentials and get welcome email<a class="headerlink" href="#1-send-credentials-and-get-welcome-email" title="Permanent link"></a></h3>
 <hr />
-<p><h3>Send SSH Key and Oauth to Gen3 commons team.</h3></p>
-<p>To access the Virtual Private Cloud (VPC), users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#71;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;">&#71;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;</a>.   </p>
+<p><h3>Send public SSH Key and OpenConnectID account to Gen3 commons team.</h3></p>
+<p>To access the Virtual Private Cloud (VPC), users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;</a>.   </p>
 <blockquote>
 <p>NOTE:   Do not send your private ssh key.   This is confidential and should never be shared with anyone.  </p>
-</blockquote>
-<p>The public ssh key will be used to access the login node and any virtual machinnes (VMs) setup for the user.  The email will be used to permit access to:</p>
-<ul>
-<li><a href="http://bionimbus-pdc.opensciencedatacloud.org/storage/">Bionimbus</a> to receive s3 data storage credentials</li>
-<li><a href="https://data.Gen3.org/">data.Gen3.org</a> for browser based querying of metadata.</li>
-</ul>
-<blockquote>
-<p>NOTE:  for Gen3 members that were also their organization's contact for data submission, you already have access to your s3 credentials and the commons metadata API <data.Gen3.org>.   Just send your pubkey.  </p>
 </blockquote>
 <h4> I'm not familiar with SSH - how do I generate a keypair? </h4>
 
@@ -254,9 +245,8 @@ https://data.gen3.org/user/data/download/UUID</p>
 <li>SSH from login node to your VM:  <code>ssh -A ubuntu@&lt;my_VM_IP&gt;</code></li>
 </ol>
 <blockquote>
-<p>NOTE 1:   <code>34.197.164.18</code> is the IP for the login node.   This is unlikely to change.   </p>
-<p>NOTE 2:  the <code>-A</code> flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the <a href="#1-send-credentials-and-get-welcome-email">previous step</a>.</p>
-<p>NOTE 3:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  </p>
+<p>NOTE:  the <code>-A</code> flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the <a href="#1-send-credentials-and-get-welcome-email">previous step</a>.</p>
+<p>NOTE 2:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  </p>
 </blockquote>
 <p>Advanced users can manage these connections however they see fit. For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel. To 'multihop' in this context is to use a single command to get to your VM. What follows are instructions for updating your <code>.ssh/config</code> file to get to your VM in a single command.</p>
 <hr />
@@ -300,29 +290,6 @@ cd ~/.ssh
 </code></pre>
 
 <p>If you've done everything correctly, you should now be in the analysis VM.  </p>
-<hr />
-<h3 id="4-access-raw-data-storage-from-virtual-machine">4. Access "raw" data storage from Virtual Machine<a class="headerlink" href="#4-access-raw-data-storage-from-virtual-machine" title="Permanent link"></a></h3>
-<hr />
-<h3> Add s3 'raw' data storage credentials to your VM </h3>
-
-<p>Now you'll need to add your storage credentials to your analysis VM.   Details on getting your credentials from the <a href="https://bionimbus-pdc.opensciencedatacloud.org/storage/">Bionimbus storage portal</a> are outlined in the <a href="../../user-guide/data-contribution/">data contribution section</a> of this documentation.   If you are only accessing data and did not contribute, please follow those directions to acquire your keys using the Oauth you provided in <a href="#1-send-credentials-and-get-welcome-email">Step 1</a> of the Data Access section.   </p>
-<p>If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the Gen3 commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  </p>
-<p>As a reminder, the command to setup a profile is:
-<code>aws configure --profile &lt;CREATE YOUR PROFILE NAME&gt;</code></p>
-<h4> Example:  Configure an s3 profile in your VM </h4>
-
-<p><img alt="Configure s3 Profile" src="../../img/configure-S3.gif" /></p>
-<h3>Review contents of the Gen3 Commons</h3>
-
-<p>You can now review the 'raw' data folders in the Gen3 object storage.   </p>
-<p><code>aws s3 ls s3://commons-data/ --profile &lt;profilename&gt;</code></p>
-<p>To peek inside a folder:</p>
-<p><code>aws s3 ls s3://commons-data/&lt;foldername&gt;/ --profile &lt;profilename&gt;</code></p>
-<p>You can use other commands to pull files from the s3 object storage into your VM. If you're not familiar with AWScli commands, we recommend reviewing the <a href="http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html">high-level docs</a> or the <a href="http://docs.aws.amazon.com/cli/latest/reference/s3/">complete documentation</a>.</p>
-<blockquote>
-<p>NOTE:   Remember, that since your access is read only (except any projects you've submitted associated with your keys), you will only be able to read, not write to the project folders in the commons. <br />
-NOTE2:   If you are using keys with write access to your project folders in the commons, be VERY CAREFUL.   Don't delete any data you'll have to resubmit later.      </p>
-</blockquote>
 <h3> Ready to work! </h3>
 
 <p>You're ready to use whatever tools you wish to analyze data in the commons within your VM.   For requests for alternative configurations, analysis storage, or other needs please contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;">&#103;&#101;&#110;&#51;&#45;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#100;&#97;&#116;&#97;&#99;&#111;&#109;&#109;&#111;&#110;&#115;&#46;&#105;&#111;</a>.</p>

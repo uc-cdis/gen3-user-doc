@@ -84,22 +84,22 @@
     <a class="current" href="./">Data Analysis</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#running-a-jupyter-server-in-the-commons-workspace">Running a Jupyter Server in the Commons Workspace</a></li>
+    <li class="toctree-l3"><a href="#jupyterhub-using-windmills-workspace">JupyterHub: Using Windmill's Workspace</a></li>
     
 
     <li class="toctree-l3"><a href="#running-a-jupyter-server-on-a-virtual-machine-vm">Running a Jupyter server on a virtual machine (VM)</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l4" href="#running-the-notebook-in-your-vm">Running the notebook in your VM</a></li>
-        
-            <li><a class="toctree-l4" href="#port-forwarding-to-your-vm">Port forwarding to your VM</a></li>
-        
-            <li><a class="toctree-l4" href="#access-the-notebook-in-via-browser">Access the notebook in via browser</a></li>
-        
-            <li><a class="toctree-l4" href="#review-and-follow-the-notebook">Review and follow the notebook</a></li>
-        
-        </ul>
+
+    <li class="toctree-l3"><a href="#running-the-notebook-in-your-vm">Running the notebook in your VM</a></li>
+    
+
+    <li class="toctree-l3"><a href="#port-forwarding-to-your-vm">Port forwarding to your VM</a></li>
+    
+
+    <li class="toctree-l3"><a href="#access-the-notebook-in-via-browser">Access the notebook in via browser</a></li>
+    
+
+    <li class="toctree-l3"><a href="#review-and-follow-the-notebook">Review and follow the notebook</a></li>
     
 
     </ul>
@@ -176,10 +176,11 @@
               
                 <h2> Data Analysis in the Gen3 Commons </h2>
 
+<p>How data is accessed in a Gen3 Data Commons must be agreed upon by the sponsor(s), data contributor(s), and the operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud. In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers.</p>
 <hr />
-<h1 id="running-a-jupyter-server-in-the-commons-workspace">Running a Jupyter Server in the Commons Workspace<a class="headerlink" href="#running-a-jupyter-server-in-the-commons-workspace" title="Permanent link"></a></h1>
+<h2 id="jupyterhub-using-windmills-workspace">JupyterHub: Using Windmill's Workspace<a class="headerlink" href="#jupyterhub-using-windmills-workspace" title="Permanent link"></a></h2>
 <hr />
-<p>The Gen3 data portal provides a Workspace where users can run a Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
+<p>The Windmill data portal may provide a Workspace where users can access a personalized Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 <img alt="Data portal Workspace button" src="../../img/workspace_button.png" /></p>
 <p>Click "Start My Server" to start the Jupyter server in your Workspace:
 <img alt="Start Server" src="../../img/start_server.png" /></p>
@@ -197,7 +198,7 @@
 <p>You can manage active Notebook and terminal processes by clicking on "Running". Clicking "shutdown" will terminate the terminal session or close the Jupyter notebook. Be sure to save your notebooks before terminating them.
 <img alt="Manage Running Sessions" src="../../img/running.gif" /></p>
 <hr />
-<h1 id="running-a-jupyter-server-on-a-virtual-machine-vm">Running a Jupyter server on a virtual machine (VM)<a class="headerlink" href="#running-a-jupyter-server-on-a-virtual-machine-vm" title="Permanent link"></a></h1>
+<h2 id="running-a-jupyter-server-on-a-virtual-machine-vm">Running a Jupyter server on a virtual machine (VM)<a class="headerlink" href="#running-a-jupyter-server-on-a-virtual-machine-vm" title="Permanent link"></a></h2>
 <hr />
 <p>The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: <a href="https://github.com/occ-data/gen3-functions">https://github.com/occ-data/gen3-functions</a>.    The Gen3 community is encouraged to add to the functions library or improve the notebook.  </p>
 <blockquote>

@@ -90,6 +90,12 @@
 
     <li class="toctree-l3"><a href="#4-prepare-metadata-tsvs-for-each-node-in-your-project">4. Prepare metadata TSVs for each node in your project</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#register-data-files-with-the-windmill-data-portal">Register data files with the Windmill data portal</a></li>
+        
+        </ul>
+    
 
     <li class="toctree-l3"><a href="#5-submit-tsvs-and-validate-metadata">5. Submit TSVs and validate metadata</a></li>
     
@@ -295,7 +301,7 @@ Data contributors will also need to select an appropriate name for their project
 <p>In the above example, if "case-01" was enrolled in both "study-01" and "study-02", then there would be two columns to specify these links in the case.tsv file: "studies.submitter_id#1" and "studies.submitter_id#2". The values would be "study-01" for one of them and "study-02" for the other.</p>
 <p>Once the "case.tsv" file is uploaded and creates the record "case-01" in the "case" node, if "case-01" had a diagnosis record linked to it, then in the "diagnosis.tsv" file to be uploaded next, there would be a column header "cases.submitter_id" and the value would be "case-01" (the case's "submitter_id") to link this diagnosis record to that case.</p>
 <hr />
-<p><h3>Register data files with the Windmill data portal</h3></p>
+<h3 id="register-data-files-with-the-windmill-data-portal">Register data files with the Windmill data portal<a class="headerlink" href="#register-data-files-with-the-windmill-data-portal" title="Permanent link"></a></h3>
 <hr />
 <p>Special attention must be given to "data file" nodes, which house variables that describe actual, raw data files that are to up be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the <a href="https://github.com/uc-cdis/cdis-data-client/releases">cdis-data-client</a>.</p>
 <p>Registration of data files simply means adding a column in the data file node's TSV named "urls" and entering the URL/address of each file in object storage (row in the TSV) in that column. This is usually a location in a project folder of a data commons bucket in s3 object storage, e.g.: "s3://commons-bucket/project-name/filename".</p>
