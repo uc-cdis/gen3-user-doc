@@ -1,13 +1,13 @@
 <h2> Data Access Overview </h2>
 * * *
 
-The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases). When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine in a virtual private cloud.
+The sponsor of a Gen3 data commons typically decides how users will access data in object storage. In some cases, approved users may be allowed to download data directly to their local computer from within an internet browser or with the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases). When more security is required, users may be required to download and analyze data in a protected environment, such as a virtual machine (VM) in a virtual private cloud (VPC).
 
 * * *
 ## Accessing data from within a browser
 * * *
 
-Once data files are [registered](/user-guide/data-contributed/#9-register-data-files-in-storage-with-the-gen3-data-portal/), their address in s3 object storage can be obtained by providing the file's UUID to the following URL:
+Once data files are [registered](/user-guide/data-contribution/#-register-data-files-with-the-windmill-data-portal/), their address in s3 object storage can be obtained by providing the file's UUID to the following URL:
 https://data.gen3.org/index/index/UUID
 
 Data files can be downloaded by providing the file's UUID to the following URL:
@@ -42,20 +42,15 @@ In the above command, `download` mode is specified, the `profile_name` we config
 ## Accessing data from the Virtual Private Cloud
 * * *
 
+If additional security is required, the cdis-data-client can be installed on a VM in the VPC to download files. The following instructions detail how to login to a VM.
+
 ### 1. Send credentials and get welcome email
 * * *
-<h3>Send SSH Key and Oauth to Gen3 commons team.</h3>
+<h3>Send public SSH Key and OpenConnectID account to Gen3 commons team.</h3>
 
-To access the Virtual Private Cloud (VPC), users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <Gen3-support@datacommons.io>.   
+To access the Virtual Private Cloud (VPC), users will need to send their public ssh key (or "pubkey") and an email that supports Oauth (often gmail) to <support@datacommons.io>.   
 
 > NOTE:   Do not send your private ssh key.   This is confidential and should never be shared with anyone.  
-
-The public ssh key will be used to access the login node and any virtual machinnes (VMs) setup for the user.  The email will be used to permit access to:
-
-* [Bionimbus](http://bionimbus-pdc.opensciencedatacloud.org/storage/) to receive s3 data storage credentials
-* [data.Gen3.org](https://data.Gen3.org/) for browser based querying of metadata.
-
->NOTE:  for Gen3 members that were also their organization's contact for data submission, you already have access to your s3 credentials and the commons metadata API <data.Gen3.org>.   Just send your pubkey.  
 
 <h4> I'm not familiar with SSH - how do I generate a keypair? </h4>
 
@@ -87,11 +82,9 @@ In your [welcome email](#1-send-credentials-and-get-welcome-email) you received 
 1.   SSH to login node:   `ssh -A <username>@3<login-node-IP>`
 2.   SSH from login node to your VM:  `ssh -A ubuntu@<my_VM_IP>`
 
->NOTE 1:   `34.197.164.18` is the IP for the login node.   This is unlikely to change.   
+>NOTE:  the `-A` flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the [previous step](#1-send-credentials-and-get-welcome-email).
 
->NOTE 2:  the `-A` flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the [previous step](#1-send-credentials-and-get-welcome-email).
-
->NOTE 3:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  
+>NOTE 2:   You can't login to your analysis VM (in the private subnet) without first logging in to the login node (in the public subnet).  
 
 Advanced users can manage these connections however they see fit. For other users, we recommend updating your SSH config file so you can setup a 'multihop' ssh tunnel. To 'multihop' in this context is to use a single command to get to your VM. What follows are instructions for updating your `.ssh/config` file to get to your VM in a single command.
 
@@ -151,36 +144,6 @@ ssh analysis
 ```
 
 If you've done everything correctly, you should now be in the analysis VM.  
-
-* * *
-### 4. Access "raw" data storage from Virtual Machine
-* * *
-
-<h3> Add s3 'raw' data storage credentials to your VM </h3>
-Now you'll need to add your storage credentials to your analysis VM.   Details on getting your credentials from the [Bionimbus storage portal](https://bionimbus-pdc.opensciencedatacloud.org/storage/) are outlined in the [data contribution section](/user-guide/data-contribution/) of this documentation.   If you are only accessing data and did not contribute, please follow those directions to acquire your keys using the Oauth you provided in [Step 1](#1-send-credentials-and-get-welcome-email) of the Data Access section.   
-
-If you did contribute data you should use an existing key.   They will still have "read/write" permission to your project folder, but will also have permission to "read" other data in the Gen3 commons.   If you submitted multiple projects and have multiple keys, all will have the same "read" permissions for data - it only matters which one you pick if you still intend to write data to your project folder from your VM.  
-
-As a reminder, the command to setup a profile is:
-`aws configure --profile <CREATE YOUR PROFILE NAME>`
-
-<h4> Example:  Configure an s3 profile in your VM </h4>
-![Configure s3 Profile](/img/configure-S3.gif)
-
-<h3>Review contents of the Gen3 Commons</h3>
-
-You can now review the 'raw' data folders in the Gen3 object storage.   
-
-`aws s3 ls s3://commons-data/ --profile <profilename>`
-
-To peek inside a folder:
-
-`aws s3 ls s3://commons-data/<foldername>/ --profile <profilename>`
-
-You can use other commands to pull files from the s3 object storage into your VM. If you're not familiar with AWScli commands, we recommend reviewing the [high-level docs](http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html) or the [complete documentation](http://docs.aws.amazon.com/cli/latest/reference/s3/).
-
->NOTE:   Remember, that since your access is read only (except any projects you've submitted associated with your keys), you will only be able to read, not write to the project folders in the commons.   
->NOTE2:   If you are using keys with write access to your project folders in the commons, be VERY CAREFUL.   Don't delete any data you'll have to resubmit later.      
 
 <h3> Ready to work! </h3>
 

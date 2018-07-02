@@ -1,8 +1,11 @@
 <h2> Data Analysis in the Gen3 Commons </h2>
+
+How data is accessed in a Gen3 Data Commons must be agreed upon by the sponsor(s), data contributor(s), and the operator(s). Some data commons have rules that data cannot be downloaded outside of a Virtual Private Cloud. In these cases, data analysts may need to access and configure a virtual machine (VM) in the VPC where all analyses will be done. Other data commons may be able to grant users permissions to download data files directly to their local computers.
+
 * * *
-# Running a Jupyter Server in the Commons Workspace
+## JupyterHub: Using Windmill's Workspace
 * * *
-The Gen3 data portal provides a Workspace where users can run a Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
+The Windmill data portal may provide a Workspace where users can access a personalized Jupyter server for data exploration and analysis. To access the workspace, click "Workspace" in the top navigation bar of the data portal.
 ![Data portal Workspace button](/img/workspace_button.png)
 
 Click "Start My Server" to start the Jupyter server in your Workspace:
@@ -29,8 +32,9 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 ![Manage Running Sessions](/img/running.gif)
 
 * * *
-# Running a Jupyter server on a virtual machine (VM)
+## Running a Jupyter server on a virtual machine (VM)
 * * *
+
 
 The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: [https://github.com/occ-data/gen3-functions](https://github.com/occ-data/gen3-functions).    The Gen3 community is encouraged to add to the functions library or improve the notebook.  
 

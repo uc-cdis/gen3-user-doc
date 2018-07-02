@@ -130,7 +130,7 @@ In the above example, if "case-01" was enrolled in both "study-01" and "study-02
 Once the "case.tsv" file is uploaded and creates the record "case-01" in the "case" node, if "case-01" had a diagnosis record linked to it, then in the "diagnosis.tsv" file to be uploaded next, there would be a column header "cases.submitter_id" and the value would be "case-01" (the case's "submitter_id") to link this diagnosis record to that case.
 
 * * *
-<h3>Register data files with the Windmill data portal</h3>
+###Register data files with the Windmill data portal
 * * *
 
 Special attention must be given to "data file" nodes, which house variables that describe actual, raw data files that are to up be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases).
