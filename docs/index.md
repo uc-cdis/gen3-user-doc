@@ -2,16 +2,16 @@
 ![CDIS Logo](/img/UC-CDIS-logo.png)
 
 * * *
-## Welcome to Gen3 Documentation
+## Welcome to the Generic Gen3 Data Commons Documentation
 * * *
 
 <h3> Overview </h3>
 
-The Gen3 data commons allows approved researchers access to raw unprocessed datasets in a scalable, reproducible, privacy and security protected manner. This documentation describes the commons and provides a [user guide](/user-guide/guide-overview/) to assist contributors.
+The Center for Data Intensive Science (CDIS) at the University of Chicago has developed the [Gen3 software stack](https://cdis.uchicago.edu/gen3/) to help accelerate scientific discovery through creation of a collaborative infrastructure that enables sharing of information between stakeholders in industry, academia, and regulatory agencies.
+
+The Gen3 software stack is a [collection of microservices](https://cdis.uchicago.edu/gen3/) that enable the standing-up of data commons, which allows different partner organizations to pool data and grants approved researchers access to harmonized datasets in a scalable, reproducible, and secure manner. This documentation describes the commons and provides a [user guide](/user-guide/guide-overview/) to assist data contributors and analysts.
 
 <h3> Mission </h3>
-
-The Gen3 commons was developed to accelerate scientific discovery through creation of a collaborative infrastructure that enables sharing of information between stakeholders in industry, academia, and regulatory agencies.
 
 Gen3 is managed by the Center for Data Intensive Science (CDIS) at the University of Chicago.
 
