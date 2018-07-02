@@ -35,7 +35,6 @@ You can manage active Notebook and terminal processes by clicking on "Running". 
 ## Running a Jupyter server on a virtual machine (VM)
 * * *
 
-
 The bioinformatics team at the Center for Data Intensive Science (CDIS) at University of Chicago has put together a basic python library and a sample analysis notebook to help jumpstart commons analyses.    Both can be found in your VM in the analysis folder.    They can also be found at: [https://github.com/occ-data/gen3-functions](https://github.com/occ-data/gen3-functions).    The Gen3 community is encouraged to add to the functions library or improve the notebook.  
 
 > NOTE:   As the Gen3 community updates repositories, you can keep them up to date using `git pull origin master` in the `functions` folder.   It has already been initialized to sync with this repository.
@@ -64,16 +63,12 @@ unset http_proxy;
 unset https_proxy;
 ```
 
-What follows in this wiki is a guide to setting up this Jupyter notebook so that you can run everything in your browser.   In the notebook, you'll learn about basic Gen3 commons operations like:  
+What follows in this wiki is a guide to setting up this Jupyter notebook so that you can run everything in your browser.   In the notebook, you'll learn about basic data commons operations like:  
 
 * Querying the API for metadata associated with submissions
 * Pulling data into your VM for analysis
 * Running a simple analysis over a file and collection of files
 * Plotting the results
-
-In the Jupyter notebook, many of the calls rely on more complex functions described in the [analysis_functions file](https://github.com/occ-data/gen3-functions/blob/master/analysis_functions_v2.py).   It is worth taking the time to understand how this file works so you can use and customize it or build your own tools.    
-
-We would gladly publish and share any tools, Docker images, function libraries, notebooks, etc via Github or via this Sage Synapse profile.   Just contact <gen3-support@datacommons.io> for more information.
 
 ## Running the notebook in your VM
 
@@ -121,4 +116,4 @@ If you're not familiar with Jupyter notebooks, you have a few options to run the
 When you're done working, we encourage you to shut down your Jupyter server via `ctrl + c` in the VM that's running it.  You don't have to do this every time, but you should do it when you don't need it any more.   
 
 <h4> VM Termination </h4>
-At this point in the Gen3 commons development, you should contact <Gen3-support@datacommons.io> when you no longer need your VM active.   Active VMs accrue hourly charges (currently paid for by the Consortium and grants), so it's important to not waste valuable resources.   
+At this point in the Gen3 commons development, you should contact support@datacommons.io when you no longer need your VM active.   Active VMs accrue hourly charges (currently paid for by the Consortium and grants), so it's important to not waste valuable resources.   

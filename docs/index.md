@@ -52,5 +52,5 @@ Other secure and compliant Gen3 member systems (including cloud based systems) c
 
 * Email:
 	* General Inquiries: <cdis@uchicago.edu>
-	* Technical Support: <support@opensciencedatacloud.org>
+	* Technical Support: <support@opensciencedatacloud.org> and <support@datacommons.io>	
 * * *

@@ -14,6 +14,7 @@ pages:
         - Data Access: user-guide/data-access.md
         - Data Analysis: user-guide/data-analysis.md
     - Appendices:
+        - CDIS Data Client: appendices/cdis-data-client.md
         - Data Commons Architecture: appendices/architecture.md
         - Data Dictionary: appendices/data-dictionary.md
         - Working with the API: appendices/api-gen3.md

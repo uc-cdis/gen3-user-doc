@@ -64,6 +64,7 @@ Gen3 users with the appropriate signed legal documents will be sent an email tha
 <h3>SSH to Virtual Machine</h3>
 * * *
 In some data commons, you may need to ssh in to a "login" node prior to accessing your personal virtual machine:
+
 1.   SSH to login node:   `ssh -A <username>@3<login-node-IP>`
 2.   SSH from login node to your VM:  `ssh -A ubuntu@<my_VM_IP>`
 
@@ -72,6 +73,7 @@ In some data commons, you may need to ssh in to a "login" node prior to accessin
 It is recommended to update the SSH config file to use a 'multihop' ssh tunnel. To 'multihop' in this context is to use a single command to get to your VM. What follows are instructions for updating your `.ssh/config` file to get to your VM in a single command.
 
 Go to your .ssh directory in your laptop home directory: `cd ~/.ssh`
+
 Within this directory, edit the file named "config" (if it doesn't exist, create it first): `vim config`
 
 In this file you can specify various hosts for access via ssh. Your host for the head login node should look something like this:

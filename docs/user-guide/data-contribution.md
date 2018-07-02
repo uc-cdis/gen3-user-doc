@@ -8,12 +8,13 @@
 
 <h3>Steps to Contribute a Data Project to the Gen3 Commons</h3>
 
-1. [Review and sign legal](data-contribution/#1-review-and-sign-legal-agreement)
-2. [Provide Login Account and Project Name](data-contribution/#3-receive-project-name-api-credentials_1)
-3. [Review the data model](data-contribution/#4-review-the-data-model)
+1. [Review and sign legal agreements](data-contribution/#1-review-and-sign-legal-agreements)
+2. [Provide login account and project name](data-contribution/#2-provide-login-account-and-project-name)
+3. [Review the data model](data-contribution/#3-review-the-data-model)
 4. [Prepare metadata TSVs for each node in your project](data-contribution/#4-prepare-metadata-tsvs-for-each-node-in-your-project)
-5. [Submit TSVs and validate metadata](data-contribution/#6-submit-tsvs-and-validate-metadata)
-6. [Upload data files to object storage](data-contribution/#8-upload-raw-data-to-object-storage)
+5. [Register data files with the Windmill data portal](data-contribution/#5-register-data-files-with-the-windmill-data-portal)
+6. [Submit TSVs and validate metadata](data-contribution/#6-submit-tsvs-and-validate-metadata)
+7. [Upload data files to object storage](data-contribution/#8-upload-data-files-to-object-storage)
 
 \* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons. To do so, repeat steps 2-6 above.
 
@@ -134,7 +135,7 @@ In the above example, if "case-01" was enrolled in both "study-01" and "study-02
 Once the "case.tsv" file is uploaded and creates the record "case-01" in the "case" node, if "case-01" had a diagnosis record linked to it, then in the "diagnosis.tsv" file to be uploaded next, there would be a column header "cases.submitter_id" and the value would be "case-01" (the case's "submitter_id") to link this diagnosis record to that case.
 
 * * *
-###Register data files with the Windmill data portal
+## 5. Register data files with the Windmill data portal
 * * *
 
 Special attention must be given to "data file" nodes, which house variables that describe actual, raw data files that are to up be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the [cdis-data-client](https://github.com/uc-cdis/cdis-data-client/releases).
@@ -162,7 +163,7 @@ Please make sure you check with the commons operator to make sure you have the c
 Also be aware that metadata describing data files that will be uploaded to s3 object storage need to include the file size and md5sum in addition to the address of the file in s3 object storage. Therefore, before submitting data file metadata TSVs, make sure all of that information is included and correct so that data downloaders can confirm completeness of their download via the md5sum and file size.
 
 * * *
-## 5. Submit TSVs and validate metadata
+## 6. Submit TSVs and validate metadata
 * * *
 
 <h3> Begin your metadata TSV submissions</h3>
@@ -234,7 +235,7 @@ You may receive errors for what you think is a valid submission. If you feel wha
 When you are viewing a project, you can click on a node name to view the records in that node. From here you can download, view, or completely delete records associated with any project you have delete access to.
 
 * * *
-## 6. Upload data files to object storage
+## 7. Upload data files to object storage
 * * *
 
 <h3> Preparing your data </h3>
