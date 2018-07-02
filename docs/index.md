@@ -9,7 +9,9 @@
 
 The Center for Data Intensive Science (CDIS) at the University of Chicago has developed the [Gen3 software stack](https://cdis.uchicago.edu/gen3/) to help accelerate scientific discovery through creation of a collaborative infrastructure that enables sharing of information between stakeholders in industry, academia, and regulatory agencies.
 
-The Gen3 software stack is a [collection of microservices](https://cdis.uchicago.edu/gen3/) that enable the standing-up of data commons, which allows different partner organizations to pool data and grants approved researchers access to harmonized datasets in a scalable, reproducible, and secure manner. This documentation describes the commons and provides a [user guide](/user-guide/guide-overview/) to assist data contributors and analysts.
+The Gen3 software stack is a [collection of microservices](https://cdis.uchicago.edu/gen3/) that enable the standing-up of data commons, which allows different partner organizations to pool data and grants approved researchers access to harmonized datasets in a scalable, reproducible, and secure manner.
+
+This documentation describes the commons and provides a [user guide to assist data contributors and analysts](/user-guide/guide-overview/).
 
 <h3> Mission </h3>
 
