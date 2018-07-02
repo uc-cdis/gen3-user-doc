@@ -85,8 +85,7 @@ For example, clinical variables like a primary cancer diagnosis or a subject's g
 
 Finally, each node in the data dictionary is linked in a logical manner to other nodes, which facilitates generating a visual overview, or graphical model, of a project. The following image displays the data dictionary viewer, the 'biospecimen' node entry in the dictionary, and an example graphical model of a project in the [BRAINCommons](braincommons.org).
 
-![image of dd](/img/data-model.png/)
-
+![image of dd](/img/data-model.png)
 
 <h3>Why Do Gen3 Commons Use a Data Model?</h3>
 
