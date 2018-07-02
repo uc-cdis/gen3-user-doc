@@ -277,12 +277,12 @@
         }, 
         {
             "location": "/appendices/template-tsvs/", 
-            "text": "Template TSVs for metadata submission\n\uf0c1\n\n\n\n\nThis folder contains all potential entities that could be submitted to the Gen3 data model. Some of the entities are optional.\n\n\nYou can find a complete and detailed description of the new data dictionary \nhere\n.\n\n\nA project will need to be created and you need to be \ngranted submitter access\n before you submit everything under a project.  You will start your submission from \nstudy.tsv\n.\n\n\nstudy.tsv\n\n\ncase.tsv\n\n\nbiospecimen.tsv\n\n\nsample.tsv\n\n\naliquot.tsv\n\n\nanalyte.tsv", 
+            "text": "Template TSVs for metadata submission\n\uf0c1\n\n\n\n\nHere are some sample TSV file templates for example nodes in a Gen3 data dictionary.\n\n\nYou should look at \"Dictionary\" section of your Gen3 data commons to find the complete list of nodes and their template TSVs.\n\n\nstudy.tsv\n\n\ncase.tsv\n\n\nbiospecimen.tsv\n\n\nsample.tsv\n\n\naliquot.tsv\n\n\nanalyte.tsv", 
             "title": "Template TSVs"
         }, 
         {
             "location": "/appendices/template-tsvs/#template-tsvs-for-metadata-submission", 
-            "text": "This folder contains all potential entities that could be submitted to the Gen3 data model. Some of the entities are optional.  You can find a complete and detailed description of the new data dictionary  here .  A project will need to be created and you need to be  granted submitter access  before you submit everything under a project.  You will start your submission from  study.tsv .  study.tsv  case.tsv  biospecimen.tsv  sample.tsv  aliquot.tsv  analyte.tsv", 
+            "text": "Here are some sample TSV file templates for example nodes in a Gen3 data dictionary.  You should look at \"Dictionary\" section of your Gen3 data commons to find the complete list of nodes and their template TSVs.  study.tsv  case.tsv  biospecimen.tsv  sample.tsv  aliquot.tsv  analyte.tsv", 
             "title": "Template TSVs for metadata submission"
         }
     ]
