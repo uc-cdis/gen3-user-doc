@@ -16,8 +16,6 @@
 6. [Submit TSVs and validate metadata](data-contribution/#6-submit-tsvs-and-validate-metadata)
 7. [Upload data files to object storage](data-contribution/#7-upload-data-files-to-object-storage)
 
-\* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons. To do so, repeat steps 2-6 above.
-
 * * *
 ## 1. Review and sign legal agreements
 * * *
