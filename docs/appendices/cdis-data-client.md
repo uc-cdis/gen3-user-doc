@@ -8,7 +8,10 @@ The CDIS data client provides an easy-to-use, command-line interface for uploadi
 * * *
 The CDIS data client can be downloaded as a [compiled binary file](https://github.com/uc-cdis/cdis-data-client/releases) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/).
 
-* To install the binary, simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command `/path/to/binary/cdis-data-client <options>`.
+* To install the binary, simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command
+```
+/path/to/binary/cdis-data-client <options>
+```
 
 * To install using GO:
 - Install Go tools: https://golang.org/doc/install
@@ -65,7 +68,9 @@ Example:
 The CDIS data client currently does not take a manifest file; this functionality is currently being implemented. In the meantime, users who need to semi-automate upload or download of a collection of files can modify the following shell script to fit their needs.
 
 The following shell script can be run from the command-line like:
-`sh cdc_manifest.sh <profile_name> <manifest_filename>`
+```
+sh cdc_manifest.sh <profile_name> <manifest_filename>
+```
 Where <profile_name> is the name of the profile configured in [step 2](link to step 2) above, and <manifest_filename> is the filename/path of the manifest file.
 
 The manifest file should not contain headers and each row should be only a UUID and filename separated by a tab, for example:

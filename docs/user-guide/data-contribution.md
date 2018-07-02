@@ -14,7 +14,7 @@
 4. [Prepare metadata TSVs for each node in your project](data-contribution/#4-prepare-metadata-tsvs-for-each-node-in-your-project)
 5. [Register data files with the Windmill data portal](data-contribution/#5-register-data-files-with-the-windmill-data-portal)
 6. [Submit TSVs and validate metadata](data-contribution/#6-submit-tsvs-and-validate-metadata)
-7. [Upload data files to object storage](data-contribution/#8-upload-data-files-to-object-storage)
+7. [Upload data files to object storage](data-contribution/#7-upload-data-files-to-object-storage)
 
 \* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons. To do so, repeat steps 2-6 above.
 
