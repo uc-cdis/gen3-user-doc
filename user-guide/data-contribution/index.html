@@ -90,17 +90,14 @@
 
     <li class="toctree-l3"><a href="#4-prepare-metadata-tsvs-for-each-node-in-your-project">4. Prepare metadata TSVs for each node in your project</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l4" href="#register-data-files-with-the-windmill-data-portal">Register data files with the Windmill data portal</a></li>
-        
-        </ul>
+
+    <li class="toctree-l3"><a href="#5-register-data-files-with-the-windmill-data-portal">5. Register data files with the Windmill data portal</a></li>
     
 
-    <li class="toctree-l3"><a href="#5-submit-tsvs-and-validate-metadata">5. Submit TSVs and validate metadata</a></li>
+    <li class="toctree-l3"><a href="#6-submit-tsvs-and-validate-metadata">6. Submit TSVs and validate metadata</a></li>
     
 
-    <li class="toctree-l3"><a href="#6-upload-data-files-to-object-storage">6. Upload data files to object storage</a></li>
+    <li class="toctree-l3"><a href="#7-upload-data-files-to-object-storage">7. Upload data files to object storage</a></li>
     
 
     </ul>
@@ -120,6 +117,10 @@
 		
     <span class="caption-text">Appendices</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../appendices/cdis-data-client/">CDIS Data Client</a>
+                </li>
                 <li class="">
                     
     <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
@@ -194,12 +195,13 @@
 <h3>Steps to Contribute a Data Project to the Gen3 Commons</h3>
 
 <ol>
-<li><a href="../data-contribution/#1-review-and-sign-legal-agreement">Review and sign legal</a></li>
-<li><a href="../data-contribution/#3-receive-project-name-api-credentials_1">Provide Login Account and Project Name</a></li>
-<li><a href="../data-contribution/#4-review-the-data-model">Review the data model</a></li>
+<li><a href="../data-contribution/#1-review-and-sign-legal-agreements">Review and sign legal agreements</a></li>
+<li><a href="../data-contribution/#2-provide-login-account-and-project-name">Provide login account and project name</a></li>
+<li><a href="../data-contribution/#3-review-the-data-model">Review the data model</a></li>
 <li><a href="../data-contribution/#4-prepare-metadata-tsvs-for-each-node-in-your-project">Prepare metadata TSVs for each node in your project</a></li>
+<li><a href="../data-contribution/#5-register-data-files-with-the-windmill-data-portal">Register data files with the Windmill data portal</a></li>
 <li><a href="../data-contribution/#6-submit-tsvs-and-validate-metadata">Submit TSVs and validate metadata</a></li>
-<li><a href="../data-contribution/#8-upload-raw-data-to-object-storage">Upload data files to object storage</a></li>
+<li><a href="../data-contribution/#8-upload-data-files-to-object-storage">Upload data files to object storage</a></li>
 </ol>
 <p>* NOTE:  Gen3 members are encouraged to submit multiple projects to the commons. To do so, repeat steps 2-6 above.</p>
 <hr />
@@ -313,7 +315,7 @@ Data contributors will also need to select an appropriate name for their project
 <p>In the above example, if "case-01" was enrolled in both "study-01" and "study-02", then there would be two columns to specify these links in the case.tsv file: "studies.submitter_id#1" and "studies.submitter_id#2". The values would be "study-01" for one of them and "study-02" for the other.</p>
 <p>Once the "case.tsv" file is uploaded and creates the record "case-01" in the "case" node, if "case-01" had a diagnosis record linked to it, then in the "diagnosis.tsv" file to be uploaded next, there would be a column header "cases.submitter_id" and the value would be "case-01" (the case's "submitter_id") to link this diagnosis record to that case.</p>
 <hr />
-<h3 id="register-data-files-with-the-windmill-data-portal">Register data files with the Windmill data portal<a class="headerlink" href="#register-data-files-with-the-windmill-data-portal" title="Permanent link"></a></h3>
+<h2 id="5-register-data-files-with-the-windmill-data-portal">5. Register data files with the Windmill data portal<a class="headerlink" href="#5-register-data-files-with-the-windmill-data-portal" title="Permanent link"></a></h2>
 <hr />
 <p>Special attention must be given to "data file" nodes, which house variables that describe actual, raw data files that are to up be uploaded to object storage by the data contributor and later downloaded by data analysts. Specifically, data files must be "registered" in order to be downloadable using the Windmill data portal or the <a href="https://github.com/uc-cdis/cdis-data-client/releases">cdis-data-client</a>.</p>
 <p>Registration of data files simply means adding a column in the data file node's TSV named "urls" and entering the URL/address of each file in object storage (row in the TSV) in that column. This is usually a location in a project folder of a data commons bucket in s3 object storage, e.g.: "s3://commons-bucket/project-name/filename".</p>
@@ -366,7 +368,7 @@ Data contributors will also need to select an appropriate name for their project
 <p>Please make sure you check with the commons operator to make sure you have the correct commons bucket name prior to submitting a data file node TSV. Once the data files are registered, their metadata cannot be easily changed: the metadata record must be deleted and re-created.</p>
 <p>Also be aware that metadata describing data files that will be uploaded to s3 object storage need to include the file size and md5sum in addition to the address of the file in s3 object storage. Therefore, before submitting data file metadata TSVs, make sure all of that information is included and correct so that data downloaders can confirm completeness of their download via the md5sum and file size.</p>
 <hr />
-<h2 id="5-submit-tsvs-and-validate-metadata">5. Submit TSVs and validate metadata<a class="headerlink" href="#5-submit-tsvs-and-validate-metadata" title="Permanent link"></a></h2>
+<h2 id="6-submit-tsvs-and-validate-metadata">6. Submit TSVs and validate metadata<a class="headerlink" href="#6-submit-tsvs-and-validate-metadata" title="Permanent link"></a></h2>
 <hr />
 <h3> Begin your metadata TSV submissions</h3>
 
@@ -423,7 +425,7 @@ Data contributors will also need to select an appropriate name for their project
 <hr />
 <p>When you are viewing a project, you can click on a node name to view the records in that node. From here you can download, view, or completely delete records associated with any project you have delete access to.</p>
 <hr />
-<h2 id="6-upload-data-files-to-object-storage">6. Upload data files to object storage<a class="headerlink" href="#6-upload-data-files-to-object-storage" title="Permanent link"></a></h2>
+<h2 id="7-upload-data-files-to-object-storage">7. Upload data files to object storage<a class="headerlink" href="#7-upload-data-files-to-object-storage" title="Permanent link"></a></h2>
 <hr />
 <h3> Preparing your data </h3>
 

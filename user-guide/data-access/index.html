@@ -104,6 +104,10 @@
     <ul class="subnav">
                 <li class="">
                     
+    <a class="" href="../../appendices/cdis-data-client/">CDIS Data Client</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../appendices/architecture/">Data Commons Architecture</a>
                 </li>
                 <li class="">
@@ -216,15 +220,17 @@ https://data.gen3.org/user/data/download/UUID</p>
 <hr />
 <p><h3>SSH to Virtual Machine</h3></p>
 <hr />
-<p>In some data commons, you may need to ssh in to a "login" node prior to accessing your personal virtual machine:
-1.   SSH to login node:   <code>ssh -A &lt;username&gt;@3&lt;login-node-IP&gt;</code>
-2.   SSH from login node to your VM:  <code>ssh -A ubuntu@&lt;my_VM_IP&gt;</code></p>
+<p>In some data commons, you may need to ssh in to a "login" node prior to accessing your personal virtual machine:</p>
+<ol>
+<li>SSH to login node:   <code>ssh -A &lt;username&gt;@3&lt;login-node-IP&gt;</code></li>
+<li>SSH from login node to your VM:  <code>ssh -A ubuntu@&lt;my_VM_IP&gt;</code></li>
+</ol>
 <blockquote>
 <p>NOTE:  the <code>-A</code> flag forwards all the keys in your key chain.   For more details on managing SSH keys, check the guides linked in the <a href="#1-send-credentials-and-get-welcome-email">previous step</a>.</p>
 </blockquote>
 <p>It is recommended to update the SSH config file to use a 'multihop' ssh tunnel. To 'multihop' in this context is to use a single command to get to your VM. What follows are instructions for updating your <code>.ssh/config</code> file to get to your VM in a single command.</p>
-<p>Go to your .ssh directory in your laptop home directory: <code>cd ~/.ssh</code>
-Within this directory, edit the file named "config" (if it doesn't exist, create it first): <code>vim config</code></p>
+<p>Go to your .ssh directory in your laptop home directory: <code>cd ~/.ssh</code></p>
+<p>Within this directory, edit the file named "config" (if it doesn't exist, create it first): <code>vim config</code></p>
 <p>In this file you can specify various hosts for access via ssh. Your host for the head login node should look something like this:</p>
 <pre><code>Host login-node
     Hostname &lt;ip.address.of.login.node&gt;

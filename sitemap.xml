@@ -40,6 +40,12 @@
     
         
     <url>
+     <loc>https://uc-cdis.github.io/gen3-user-doc//appendices/cdis-data-client/</loc>
+     <lastmod>2018-07-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://uc-cdis.github.io/gen3-user-doc//appendices/architecture/</loc>
      <lastmod>2018-07-02</lastmod>
      <changefreq>daily</changefreq>

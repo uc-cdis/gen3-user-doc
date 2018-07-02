@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="University of Chicago, CDIS">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>CDIS Data Client - Gen3 User Doc</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "CDIS Data Client";
+    var mkdocs_page_input_path = "appendices/cdis-data-client.md";
+    var mkdocs_page_url = "/appendices/cdis-data-client/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-27795084-5', 'mkdocs.org');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Gen3 User Doc</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Guide</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../user-guide/guide-overview/">Guide Overview</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-contribution/">Data Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-access/">Data Access</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-guide/data-analysis/">Data Analysis</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Appendices</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">CDIS Data Client</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#download-and-upload-files-using-the-cdis-data-client">Download and Upload Files using the CDIS Data Client</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#1-installation-instructions">1) Installation Instructions</a></li>
+        
+            <li><a class="toctree-l4" href="#2-configure-a-profile-with-credentials">2) Configure a Profile with Credentials</a></li>
+        
+            <li><a class="toctree-l4" href="#3-upload-a-data-file-using-its-uuid">3) Upload a data file using its UUID</a></li>
+        
+            <li><a class="toctree-l4" href="#4-download-a-data-file-using-its-uuid">4) Download a data file using its UUID</a></li>
+        
+            <li><a class="toctree-l4" href="#5-provide-a-manifest-file-for-bulk-uploaddownload">5) Provide a manifest file for bulk upload/download</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../architecture/">Data Commons Architecture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data-dictionary/">Data Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../api-gen3/">Working with the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../proxy-whitelist/">Working with the Proxy and Whitelist</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../timepoints/">Managing Timepoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../template-tsvs/">Template TSVs</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Gen3 User Doc</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Appendices &raquo;</li>
+        
+      
+    
+    <li>CDIS Data Client</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <hr />
+<h1 id="download-and-upload-files-using-the-cdis-data-client">Download and Upload Files using the CDIS Data Client<a class="headerlink" href="#download-and-upload-files-using-the-cdis-data-client" title="Permanent link"></a></h1>
+<hr />
+<p>The CDIS data client provides an easy-to-use, command-line interface for uploading and downloading data files from a Gen3 data commons.</p>
+<hr />
+<h2 id="1-installation-instructions">1) Installation Instructions<a class="headerlink" href="#1-installation-instructions" title="Permanent link"></a></h2>
+<hr />
+<p>The CDIS data client can be downloaded as a <a href="https://github.com/uc-cdis/cdis-data-client/releases">compiled binary file</a> for Windows, Linux or Mac OS, or it can be installed from source using Google's <a href="https://golang.org/dl/">GO language</a>.</p>
+<ul>
+<li>
+<p>To install the binary, simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command <code>/path/to/binary/cdis-data-client &lt;options&gt;</code>.</p>
+</li>
+<li>
+<p>To install using GO:</p>
+</li>
+<li>Install Go tools: https://golang.org/doc/install</li>
+<li>Download and install cdis-data-client:</li>
+</ul>
+<pre><code>mkdir -p $GOPATH/src/github.com/uc-cdis` sudo mkdir -p /usr/local/go/src/github.com/uc-cdis
+cd $GOPATH/src/github.com/uc-cdis` cd /usr/local/go/src/github.com/uc-cdis
+git clone git@github.com:uc-cdis/cdis-data-client.git
+cd cdis-data-client
+go get -d ./...
+go install .
+</code></pre>
+
+<p>The program can be executed from the command-line after adding <code>/path/to/go/bin</code> to your $PATH environment variable, e.g.: <code>export PATH=$PATH:/usr/local/go/bin</code></p>
+<hr />
+<h2 id="2-configure-a-profile-with-credentials">2) Configure a Profile with Credentials<a class="headerlink" href="#2-configure-a-profile-with-credentials" title="Permanent link"></a></h2>
+<hr />
+<p>The CDIS data client needs to be configured with API credentials downloaded from the user's data commons profile, usually downloaded as a file named 'credentials.json'. After running the configure command, the user will be prompted to enter the API endpoint of the commons.</p>
+<p>Example:</p>
+<pre><code>./cdis-data-client configure --profile &lt;profile-name&gt; --cred &lt;/path/to/credentials.json&gt;
+./cdis-data-client configure --profile bc --cred /Users/Me/Documents/creds/bc-credentials.json
+&lt;terminal-prompt&gt;$ API endpoint: https://data.braincommons.org/
+</code></pre>
+
+<p>When successfully executed, this will create a configuration file located at, e.g., <code>~/.cdis/config</code>, which contains all the API keys and urls associated with each commons profile configured.</p>
+<hr />
+<h2 id="3-upload-a-data-file-using-its-uuid">3) Upload a data file using its UUID<a class="headerlink" href="#3-upload-a-data-file-using-its-uuid" title="Permanent link"></a></h2>
+<hr />
+<p>When metadata records are created in any node in a Gen3 data portal, these records are assigned a unique, 128-bit ID called a 'UUID'.  When metadata records describing a data file in object storage are created in a project, <a href="../link to file registration documentation, which isn't done!">the URL of the data file's address in object storage is specified to "register" the file</a>. Once a data file is registered by creating its metadata record in the data portal, its UUID can be provided to the CDIS data client along with the local path of the file to upload that file to object storage.</p>
+<p>Example:</p>
+<pre><code>./cdis-data-client upload --profile &lt;profile-name&gt; --uuid f6923cf3-xxxx-xxxx-xxxx-14ab3f84f9d6 --file=&quot;~/Documents/file_to_upload&quot;
+./cdis-data-client upload --profile bc --uuid b82ff17c-2fc0-475a-9c21-50c19950b082  --file=&quot;test.txt&quot;
+</code></pre>
+
+<hr />
+<h2 id="4-download-a-data-file-using-its-uuid">4) Download a data file using its UUID<a class="headerlink" href="#4-download-a-data-file-using-its-uuid" title="Permanent link"></a></h2>
+<hr />
+<p>Once a data file is registered and uploaded to object storage, its UUID can be provided to the CDIS data client to download the file. A filename can also be specified for the local copy of the file with the '--file <filename>' option.</p>
+<p>Example:</p>
+<pre><code> ./cdis-data-client download --profile &lt;profile-name&gt; --uuid 206dfaa6-bcf1-4bc9-b2d0-77179f0f48fc --file=&quot;~/Documents/name_the_file.json&quot;
+ ./cdis-data-client download --profile bc --uuid b82ff17c-2fc0-475a-9c21-50c19950b082  --file=&quot;test.txt&quot;
+</code></pre>
+
+<hr />
+<h2 id="5-provide-a-manifest-file-for-bulk-uploaddownload">5) Provide a manifest file for bulk upload/download<a class="headerlink" href="#5-provide-a-manifest-file-for-bulk-uploaddownload" title="Permanent link"></a></h2>
+<hr />
+<p>The CDIS data client currently does not take a manifest file; this functionality is currently being implemented. In the meantime, users who need to semi-automate upload or download of a collection of files can modify the following shell script to fit their needs.</p>
+<p>The following shell script can be run from the command-line like:
+<code>sh cdc_manifest.sh &lt;profile_name&gt; &lt;manifest_filename&gt;</code>
+Where <profile_name> is the name of the profile configured in <a href="../link to step 2">step 2</a> above, and <manifest_filename> is the filename/path of the manifest file.</p>
+<p>The manifest file should not contain headers and each row should be only a UUID and filename separated by a tab, for example:</p>
+<pre><code>a82ff17c-2fc0-475a-9c21-50c19950b082    filename-1.txt
+b82ff17c-2fc0-475a-9c21-50c19950b082    filename-2.txt
+c82ff17c-2fc0-475a-9c21-50c19950b082    filename-3.txt
+</code></pre>
+
+<p>Here is the example shell script for uploading files. The script text should be added to a file named, e.g., 'cdc_manifest.sh', and the script should then be run in the directory containing the files:</p>
+<pre><code>#!/bin/bash
+cat $2 | while read line
+do
+f=`echo $line | tr -d '\r'`
+uuid=$(echo $f | awk '{print $1}')
+fname=$(echo $f | awk '{print $2}')
+if [ -f &quot;$fname&quot; ]
+then
+    echo Uploading file $fname with UUID $uuid
+    cdis-data-client upload --profile $1 --uuid $uuid --file $fname
+    echo Upload of $fname complete!
+else
+    echo $file not found.
+    exit 1
+fi
+done
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../architecture/" class="btn btn-neutral float-right" title="Data Commons Architecture">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../user-guide/data-analysis/" class="btn btn-neutral" title="Data Analysis"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017 <a href="https://cdis.uchicago.edu">CDIS at UChicago</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/uc-cdis/gen3-user-doc/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../user-guide/data-analysis/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
