@@ -37,12 +37,11 @@ CDIS recommends at least the following legal agreements be signed by and policie
 	* Intellectual Property Rights (IPR) Policy
 	* Publication Policy
 
-Notes:
-
-* If your organization will be both contributing and analyzing data, all three docs are required.
-* If you only wish to contribute data, you do not need to sign the DUA.
-* Windmill accounts are not to be shared by individuals. Each individual requesting data portal access needs to sign and return a DCSA, and the PI needs to also return a DUA for the organization.
-* It is the user's responsibility to ensure that the relevant policies are reviewed before signing legal agreements.
+* Notes:
+	* If your organization will be both contributing and analyzing data, all three docs are required.
+	* If you only wish to contribute data, you do not need to sign the DUA.
+	* Windmill accounts are not to be shared by individuals. Each individual requesting data portal access needs to sign and return a DCSA, and the PI needs to also return a DUA for the organization.
+	* It is the user's responsibility to ensure that the relevant policies are reviewed before signing legal agreements.
 
 
 * * *
