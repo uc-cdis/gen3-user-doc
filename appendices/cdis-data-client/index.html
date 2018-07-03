@@ -219,7 +219,7 @@ go install .
 <hr />
 <h2 id="3-upload-a-data-file-using-its-uuid">3) Upload a data file using its UUID<a class="headerlink" href="#3-upload-a-data-file-using-its-uuid" title="Permanent link"></a></h2>
 <hr />
-<p>When metadata records are created in any node in a Gen3 data portal, these records are assigned a unique, 128-bit ID called a 'UUID'.  When metadata records describing a data file in object storage are created in a project, <a href="../link to file registration documentation, which isn't done!">the URL of the data file's address in object storage is specified to "register" the file</a>. Once a data file is registered by creating its metadata record in the data portal, its UUID can be provided to the CDIS data client along with the local path of the file to upload that file to object storage.</p>
+<p>When metadata records are created in any node in a Gen3 data portal, these records are assigned a unique, 128-bit ID called a 'UUID'.  When metadata records describing a data file in object storage are created in a project, <a href="../../user-guide/data-contribution/#5-register-data-files-with-the-windmill-data-portal">the URL of the data file's address in object storage is specified to "register" the file</a>. Once a data file is registered by creating its metadata record in the data portal, its UUID can be provided to the CDIS data client along with the local path of the file to upload that file to object storage.</p>
 <p>Example:</p>
 <pre><code>./cdis-data-client upload --profile &lt;profile-name&gt; --uuid f6923cf3-xxxx-xxxx-xxxx-14ab3f84f9d6 --file=&quot;~/Documents/file_to_upload&quot;
 ./cdis-data-client upload --profile bc --uuid b82ff17c-2fc0-475a-9c21-50c19950b082  --file=&quot;test.txt&quot;
@@ -242,7 +242,7 @@ go install .
 <pre><code>sh cdc_manifest.sh &lt;profile_name&gt; &lt;manifest_filename&gt;
 </code></pre>
 
-<p>Where <profile_name> is the name of the profile configured in <a href="../link to step 2">step 2</a> above, and <manifest_filename> is the filename/path of the manifest file.</p>
+<p>Where <profile_name> is the name of the profile configured in <a href="../../appendices/cdis-data-client/#2-configure-a-profile-with-credentials">step 2</a> above, and <manifest_filename> is the filename/path of the manifest file.</p>
 <p>The manifest file should not contain headers and each row should be only a UUID and filename separated by a tab, for example:</p>
 <pre><code>a82ff17c-2fc0-475a-9c21-50c19950b082    filename-1.txt
 b82ff17c-2fc0-475a-9c21-50c19950b082    filename-2.txt
