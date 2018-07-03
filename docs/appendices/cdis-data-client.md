@@ -43,7 +43,7 @@ When successfully executed, this will create a configuration file located at, e.
 * * *
 ## 3) Upload a data file using its UUID
 * * *
-When metadata records are created in any node in a Gen3 data portal, these records are assigned a unique, 128-bit ID called a 'UUID'.  When metadata records describing a data file in object storage are created in a project, [the URL of the data file's address in object storage is specified to "register" the file](link to file registration documentation, which isn't done!). Once a data file is registered by creating its metadata record in the data portal, its UUID can be provided to the CDIS data client along with the local path of the file to upload that file to object storage.
+When metadata records are created in any node in a Gen3 data portal, these records are assigned a unique, 128-bit ID called a 'UUID'.  When metadata records describing a data file in object storage are created in a project, [the URL of the data file's address in object storage is specified to "register" the file](/user-guide/data-contribution/#5-register-data-files-with-the-windmill-data-portal). Once a data file is registered by creating its metadata record in the data portal, its UUID can be provided to the CDIS data client along with the local path of the file to upload that file to object storage.
 
 Example:
 ```
@@ -71,7 +71,7 @@ The following shell script can be run from the command-line like:
 ```
 sh cdc_manifest.sh <profile_name> <manifest_filename>
 ```
-Where <profile_name> is the name of the profile configured in [step 2](link to step 2) above, and <manifest_filename> is the filename/path of the manifest file.
+Where <profile_name> is the name of the profile configured in [step 2](/appendices/cdis-data-client/#2-configure-a-profile-with-credentials) above, and <manifest_filename> is the filename/path of the manifest file.
 
 The manifest file should not contain headers and each row should be only a UUID and filename separated by a tab, for example:
 ```
