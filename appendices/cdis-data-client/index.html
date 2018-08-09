@@ -228,7 +228,7 @@ go install .
 <hr />
 <h2 id="4-download-a-data-file-using-its-uuid">4) Download a data file using its UUID<a class="headerlink" href="#4-download-a-data-file-using-its-uuid" title="Permanent link"></a></h2>
 <hr />
-<p>Once a data file is registered and uploaded to object storage, its UUID can be provided to the CDIS data client to download the file. A filename can also be specified for the local copy of the file with the '--file <filename>' option.</p>
+<p>Once a data file is registered and uploaded to object storage, its UUID can be provided to the CDIS data client to download the file. A filename can also be specified for the local copy of the file with the '--file \&lt;filename>' option.</p>
 <p>Example:</p>
 <pre><code> ./cdis-data-client download --profile &lt;profile-name&gt; --uuid 206dfaa6-bcf1-4bc9-b2d0-77179f0f48fc --file=&quot;~/Documents/name_the_file.json&quot;
  ./cdis-data-client download --profile bc --uuid b82ff17c-2fc0-475a-9c21-50c19950b082  --file=&quot;test.txt&quot;
@@ -242,7 +242,7 @@ go install .
 <pre><code>sh cdc_manifest.sh &lt;profile_name&gt; &lt;manifest_filename&gt;
 </code></pre>
 
-<p>Where <profile_name> is the name of the profile configured in <a href="../../appendices/cdis-data-client/#2-configure-a-profile-with-credentials">step 2</a> above, and <manifest_filename> is the filename/path of the manifest file.</p>
+<p>Where <code>&lt;profile_name&gt;</code> is the name of the profile configured in <a href="../../appendices/cdis-data-client/#2-configure-a-profile-with-credentials">step 2</a> above, and <code>&lt;manifest_filename&gt;</code> is the filename/path of the manifest file.</p>
 <p>The manifest file should not contain headers and each row should be only a UUID and filename separated by a tab, for example:</p>
 <pre><code>a82ff17c-2fc0-475a-9c21-50c19950b082    filename-1.txt
 b82ff17c-2fc0-475a-9c21-50c19950b082    filename-2.txt
