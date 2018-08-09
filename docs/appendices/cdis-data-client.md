@@ -53,7 +53,7 @@ Example:
 * * *
 ## 4) Download a data file using its UUID
 * * *
-Once a data file is registered and uploaded to object storage, its UUID can be provided to the CDIS data client to download the file. A filename can also be specified for the local copy of the file with the '--file <filename>' option.
+Once a data file is registered and uploaded to object storage, its UUID can be provided to the CDIS data client to download the file. A filename can also be specified for the local copy of the file with the '--file \<filename\>' option.
 
 Example:
 ```
@@ -71,7 +71,7 @@ The following shell script can be run from the command-line like:
 ```
 sh cdc_manifest.sh <profile_name> <manifest_filename>
 ```
-Where <profile_name> is the name of the profile configured in [step 2](/appendices/cdis-data-client/#2-configure-a-profile-with-credentials) above, and <manifest_filename> is the filename/path of the manifest file.
+Where `<profile_name>` is the name of the profile configured in [step 2](/appendices/cdis-data-client/#2-configure-a-profile-with-credentials) above, and `<manifest_filename>` is the filename/path of the manifest file.
 
 The manifest file should not contain headers and each row should be only a UUID and filename separated by a tab, for example:
 ```
