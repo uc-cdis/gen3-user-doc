@@ -53,7 +53,7 @@ Example:
 * * *
 ## 4) Download a data file using its UUID
 * * *
-Once a data file is registered and uploaded to object storage, its UUID can be provided to the CDIS data client to download the file. A filename can also be specified for the local copy of the file with the '--file \<filename\>' option.
+Once a data file is registered and uploaded to object storage, its UUID can be provided to the CDIS data client to download the file. A filename can also be specified for the local copy of the file with the `--file filename` option.
 
 Example:
 ```
