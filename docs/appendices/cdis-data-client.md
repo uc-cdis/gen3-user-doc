@@ -8,7 +8,7 @@ The CDIS data client provides an easy-to-use, command-line interface for uploadi
 * * *
 The CDIS data client can be downloaded as a [compiled binary file](https://github.com/uc-cdis/cdis-data-client/releases) for Windows, Linux or Mac OS, or it can be installed from source using Google's [GO language](https://golang.org/dl/).
 * * *
-1) To install the binary, simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command
+1) To install the binary (recommended), simply download the binary file to the location of your choice and add that location to your path. The program is executed from the command-line by running the command
 ```
 /path/to/binary/cdis-data-client <options>
 ```
